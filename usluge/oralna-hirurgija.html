@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="sr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <title>Oralna hirurgija — Ordinacija Premium Dental</title>
+</head>
+
+<body data-service="oralna-hirurgija">
+  <a href="#main"
+    class="skip-link fixed left-4 top-4 z-[100] -translate-y-24 rounded-full bg-gold-500 px-6 py-3 text-[13px] font-medium uppercase tracking-[0.16em] text-ink-900 transition-transform duration-300 focus:translate-y-0">
+    Preskoči na sadržaj
+  </a>
+
+  <div id="topbar" class="hidden lg:flex h-11 items-center bg-petrol-700 text-ivory-50/85 text-[13px] relative z-50">
+    <div class="container-lux flex items-center justify-between">
+      <span>Pon–Pet 08:00–20:00 · Sub 09:00–14:00</span>
+      <div class="flex items-center gap-6">
+        <a href="tel:+381111234567" class="hover:text-gold-500 transition-colors">☎ 011 / 123-4567</a>
+        <a href="mailto:info@premiumdental.rs" class="hover:text-gold-500 transition-colors">✉ info@ordinacija.rs</a>
+      </div>
+      <div class="flex items-center gap-4" data-render="topbar-social"></div>
+    </div>
+  </div>
+
+  <header id="site-header" class="fixed top-11 left-0 right-0 z-50 transition-all duration-500" data-render="header">
+  </header>
+
+  <main id="main" data-service-content></main>
+
+  <footer id="site-footer" class="bg-ink-950 text-stone-300 pt-20 pb-24 lg:pb-8" data-render="footer"></footer>
+  <div id="floating-actions" data-render="floating-actions"></div>
+
+  <script type="module" src="/src/service-main.ts"></script>
+</body>
+
+</html>

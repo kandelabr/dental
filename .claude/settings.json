@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node ./_screenshot.mjs \"/c/Users/mihaj/AppData/Local/Temp/claude/c--Users-mihaj-OneDrive-Documents-dental/c87c4cc5-606e-4e4b-a54c-ec28320c5938/scratchpad\")",
+      "Bash(python3 -c ' *)",
+      "Bash(npm run *)"
+    ]
+  }
+}

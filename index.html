@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="sr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <title>Ordinacija Premium Dental — Osmeh koji govori</title>
+</head>
+
+<body>
+  <a href="#main"
+    class="skip-link fixed left-4 top-4 z-[100] -translate-y-24 rounded-full bg-gold-500 px-6 py-3 text-[13px] font-medium uppercase tracking-[0.16em] text-ink-900 transition-transform duration-300 focus:translate-y-0">
+    Preskoči na sadržaj
+  </a>
+
+  <!-- 0. Top utility bar -->
+  <div id="topbar" class="hidden lg:flex h-11 items-center bg-petrol-700 text-ivory-50/85 text-[13px] relative z-50">
+    <div class="container-lux flex items-center justify-between">
+      <span>Pon–Pet 08:00–20:00 · Sub 09:00–14:00</span>
+      <div class="flex items-center gap-6">
+        <a href="tel:+381111234567" class="hover:text-gold-500 transition-colors">☎ 011 / 123-4567</a>
+        <a href="mailto:info@premiumdental.rs" class="hover:text-gold-500 transition-colors">✉ info@ordinacija.rs</a>
+      </div>
+      <div class="flex items-center gap-4" data-render="topbar-social"></div>
+    </div>
+  </div>
+
+  <!-- 1. Header -->
+  <header id="site-header" class="fixed top-11 left-0 right-0 z-50 transition-all duration-500" data-render="header">
+  </header>
+
+  <main id="main">
+    <!-- 2. Hero -->
+    <section id="pocetna" aria-label="Početna" class="relative min-h-[100svh] flex items-center overflow-hidden">
+      <img src="https://images.unsplash.com/photo-1571772996211-2f02c9727629?auto=format&fit=crop&w=1920&q=70" alt=""
+        class="absolute inset-0 h-full w-full object-cover animate-slow-zoom" loading="eager" fetchpriority="high"
+        decoding="async" />
+      <div class="absolute inset-0 bg-gradient-to-r from-ink-950/95 via-ink-900/75 to-ink-900/30"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-ink-950 via-transparent to-ink-950/40"></div>
+      <div class="absolute inset-0 opacity-[0.035] pointer-events-none" aria-hidden="true">
+        <svg width="100%" height="100%">
+          <filter id="grain-hero">
+            <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch" />
+          </filter>
+          <rect width="100%" height="100%" filter="url(#grain-hero)" />
+        </svg>
+      </div>
+      <div class="absolute inset-x-0 top-0 h-[60%] pointer-events-none" aria-hidden="true"
+        style="background: radial-gradient(60% 50% at 50% 0%, rgba(159,212,206,0.16), transparent 70%);"></div>
+
+      <div class="container-lux relative z-10 py-32">
+        <div class="max-w-[720px]">
+          <p class="eyebrow text-gold-300">Premium dentalna nega u Beogradu</p>
+          <h1 class="mt-6 text-[2.5rem] leading-[1.05] md:text-7xl lg:text-[5.75rem] text-ivory-50">
+            Kada drugi kažu „ne može“,<br /><span class="italic text-gold-300">mi imamo način.</span>
+          </h1>
+          <p class="mt-8 max-w-[46ch] text-[0.9375rem] md:text-[1.0625rem] leading-relaxed text-stone-300">
+            Sve vrste implantata. Fiksno protetsko rešenje. Jedan tim.
+          </p>
+          <div class="mt-10 flex flex-col sm:flex-row gap-4">
+            <a href="#kontakt" class="btn-gold">Zakažite besplatan pregled</a>
+            <a href="#nas-rad" class="btn-ghost text-ivory-50 border-ivory-50/25">Pogledajte naš rad</a>
+          </div>
+          <p class="mt-4 text-[13px] tracking-wide text-stone-300/80">Prvi pregled je besplatan.</p>
+          <div
+            class="mt-12 pt-10 border-t border-white/10 flex flex-nowrap gap-x-8 gap-y-3 overflow-x-auto no-scrollbar">
+            <span class="flex items-center gap-2 whitespace-nowrap text-[13px] text-stone-300"><svg
+                class="h-4 w-4 text-gold-500 shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2l2.6 6.6L21 9l-5 4.6L17.4 21 12 17.3 6.6 21 8 13.6 3 9l6.4-.4z" />
+              </svg>20+ godina iskustva</span>
+            <span class="flex items-center gap-2 whitespace-nowrap text-[13px] text-stone-300"><svg
+                class="h-4 w-4 text-gold-500 shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2l2.6 6.6L21 9l-5 4.6L17.4 21 12 17.3 6.6 21 8 13.6 3 9l6.4-.4z" />
+              </svg>5 godina garancije</span>
+            <span class="flex items-center gap-2 whitespace-nowrap text-[13px] text-stone-300"><svg
+                class="h-4 w-4 text-gold-500 shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2l2.6 6.6L21 9l-5 4.6L17.4 21 12 17.3 6.6 21 8 13.6 3 9l6.4-.4z" />
+              </svg>Bezbolna terapija u sedaciji</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hidden xl:block absolute right-16 bottom-16 z-10">
+        <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=400&q=70"
+          alt="Dr Marko Marković" class="arch w-40 h-48 object-cover border-2 border-gold-500/60" loading="lazy"
+          decoding="async" />
+      </div>
+
+      <div class="absolute bottom-8 inset-x-0 flex flex-col items-center gap-3 text-ivory-50/70 z-10">
+        <span class="relative h-12 w-px bg-white/20 overflow-hidden">
+          <span class="absolute top-0 left-0 h-3 w-px bg-gold-500 animate-bounce"></span>
+        </span>
+        <span class="eyebrow text-ivory-50/60">Skrolujte</span>
+      </div>
+    </section>
+
+    <!-- 3. Statistika -->
+    <section id="statistika" aria-label="Statistika" class="bg-ivory-100 py-16 md:py-20">
+      <div class="container-lux" data-render="stats"></div>
+    </section>
+
+    <!-- 4. Tri koraka do osmeha -->
+    <section id="proces" aria-label="Tri koraka do osmeha" class="bg-ivory-50 py-20 md:py-28 lg:py-36">
+      <div class="container-lux" data-render="steps"></div>
+    </section>
+
+    <!-- 5. O ordinaciji / doktor -->
+    <section id="o-nama" aria-label="O ordinaciji" class="bg-ivory-50 py-20 md:py-28 lg:py-36">
+      <div class="container-lux" data-render="about"></div>
+    </section>
+
+    <!-- 6. Usluge -->
+    <section id="usluge" aria-label="Usluge" class="bg-ivory-100 py-20 md:py-28 lg:py-36">
+      <div class="container-lux" data-render="services"></div>
+    </section>
+
+    <!-- 7. Spotlight "Zubi u 3 sata" -->
+    <section id="spotlight" aria-label="Zubi u 3 sata" class="dark-section py-24 md:py-32">
+      <div class="container-lux" data-render="spotlight"></div>
+    </section>
+
+    <!-- 8. Naš rad — Pre/Posle -->
+    <section id="nas-rad" aria-label="Naš rad" class="bg-ivory-50 py-20 md:py-28 lg:py-36">
+      <div class="container-lux" data-render="work"></div>
+    </section>
+
+    <!-- 9. Zašto pacijenti biraju nas -->
+    <section id="zasto-mi" aria-label="Zašto pacijenti biraju nas"
+      class="relative overflow-hidden bg-petrol-700 py-20 md:py-28 lg:py-36 text-ivory-50">
+      <div class="container-lux" data-render="advantages"></div>
+    </section>
+
+    <!-- 10. Iskustva pacijenata -->
+    <section id="iskustva" aria-label="Iskustva pacijenata" class="bg-ivory-100 py-20 md:py-28 lg:py-36">
+      <div class="container-lux" data-render="testimonials"></div>
+    </section>
+
+    <!-- 11. Cenovnik -->
+    <section id="cenovnik" aria-label="Cenovnik" class="bg-ivory-50 py-20 md:py-28 lg:py-36">
+      <div class="container-lux" data-render="prices"></div>
+    </section>
+
+    <!-- 13. FAQ -->
+    <section id="faq" aria-label="Česta pitanja" class="bg-ivory-100 py-20 md:py-28 lg:py-36">
+      <div class="container-lux" data-render="faq"></div>
+    </section>
+
+    <!-- 14. Blog -->
+    <section id="blog" aria-label="Saveti" class="bg-ivory-50 py-20 md:py-28 lg:py-36">
+      <div class="container-lux" data-render="blog"></div>
+    </section>
+
+    <!-- 15. CTA banner -->
+    <section aria-label="Zakažite pregled"
+      class="relative overflow-hidden bg-petrol-700 py-20 md:py-28 text-center text-ivory-50">
+      <div class="container-lux" data-render="cta"></div>
+    </section>
+
+    <!-- 16. Kontakt -->
+    <section id="kontakt" aria-label="Kontakt" class="bg-ivory-50 py-20 md:py-28 lg:py-36">
+      <div class="container-lux" data-render="contact"></div>
+    </section>
+  </main>
+
+  <!-- 17. Footer -->
+  <footer id="site-footer" class="bg-ink-950 text-stone-300 pt-20 pb-24 lg:pb-8" data-render="footer"></footer>
+
+  <!-- 18. Floating actions -->
+  <div id="floating-actions" data-render="floating-actions"></div>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
