@@ -21,6 +21,8 @@ export function createCarousel(root: HTMLElement, opts: CarouselOptions = {}): v
   const dotsWrap = $<HTMLElement>('[data-carousel-dots]', root)
   if (!track || !slides.length) return
 
+  let activeIndex = 0
+
   dotsWrap?.replaceChildren(
     ...slides.map((_, i) => {
       const dot = document.createElement('button')
@@ -41,7 +43,7 @@ export function createCarousel(root: HTMLElement, opts: CarouselOptions = {}): v
     track.scrollTo({ left: slide.offsetLeft, behavior: prefersReducedMotion() ? 'auto' : 'smooth' })
   }
 
-  const updateActiveDot = () => {
+  const updateActive = () => {
     const trackRect = track.getBoundingClientRect()
     let closest = 0
     let closestDist = Infinity
@@ -52,22 +54,17 @@ export function createCarousel(root: HTMLElement, opts: CarouselOptions = {}): v
         closest = i
       }
     })
+    activeIndex = closest
     dots.forEach((dot, i) => dot.setAttribute('data-active', String(i === closest)))
   }
 
-  on(prevBtn, 'click', () => {
-    const active = dots.findIndex((d) => d.getAttribute('data-active') === 'true')
-    scrollToSlide((active === -1 ? 0 : active) - 1)
-  })
-  on(nextBtn, 'click', () => {
-    const active = dots.findIndex((d) => d.getAttribute('data-active') === 'true')
-    scrollToSlide((active === -1 ? 0 : active) + 1)
-  })
+  on(prevBtn, 'click', () => scrollToSlide(activeIndex - 1))
+  on(nextBtn, 'click', () => scrollToSlide(activeIndex + 1))
   on(track, 'scroll', () => {
-    window.requestAnimationFrame(updateActiveDot)
+    window.requestAnimationFrame(updateActive)
   })
 
-  updateActiveDot()
+  updateActive()
 
   on(root, 'keydown', (e) => {
     const key = (e as KeyboardEvent).key

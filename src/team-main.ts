@@ -7,7 +7,7 @@ import { initLangSwitch } from './components/langSwitch'
 import { $ } from './lib/dom'
 
 document.addEventListener('DOMContentLoaded', () => {
-  document.title = 'Naš tim — Ordinacija Premium Dental'
+  document.title = 'Naš tim — House of Smile'
   mountSections()
 
   const mount = $<HTMLElement>('[data-team-content]')

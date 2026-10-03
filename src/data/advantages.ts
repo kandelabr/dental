@@ -3,7 +3,7 @@ import type { Advantage } from '../types'
 export const advantages: Advantage[] = [
   {
     number: '01',
-    title: '20+ godina prakse',
+    title: '10+ godina prakse',
     description: 'Hiljade uspešno završenih terapija i složenih slučajeva.',
   },
   {

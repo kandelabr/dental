@@ -9,10 +9,8 @@ import { testimonials } from '../data/testimonials'
 import { gallery, beforeAfterCases } from '../data/gallery'
 import { prices } from '../data/prices'
 import { faq } from '../data/faq'
-import { blog } from '../data/blog'
-import { media } from '../data/media'
 import { getServicePage } from '../data/servicePages'
-import { teamMembers } from '../data/team'
+import { teamIntro, teamMembers } from '../data/team'
 import { quickLinks, quickLinkHref } from '../data/quickLinks'
 import { homeHref, homeSection, serviceHref, teamHref } from './paths'
 
@@ -23,11 +21,31 @@ const socialIcons: Record<string, string> = {
     '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-8h2.7l.4-3.2h-3.1V7.7c0-.9.3-1.6 1.7-1.6h1.6V3.2C15.9 3 15 3 13.9 3c-2.5 0-4.2 1.5-4.2 4.3v2.5H7v3.2h2.7V21z"/></svg>',
 }
 
+function brandLink(opts?: { compact?: boolean; showTagline?: boolean }): string {
+  const compact = opts?.compact ?? false
+  const showTagline = opts?.showTagline ?? !compact
+  const imgSize = compact ? 'h-9 w-9' : 'h-12 w-12'
+  const titleSize = compact ? 'text-xl' : 'text-2xl'
+  return `
+  <a href="${homeHref()}" class="flex items-center gap-3 min-w-0">
+    <img src="/assets/logo.jpg" alt="${site.name}" class="${imgSize} shrink-0 rounded-full object-cover ring-1 ring-white/15" width="48" height="48" decoding="async" />
+    <span class="flex flex-col leading-none min-w-0">
+      <span class="font-display ${titleSize} tracking-wide truncate">${site.name}</span>
+      ${
+        showTagline
+          ? `<span class="mt-1.5 h-px w-8 bg-gold-500"></span>
+      <span class="mt-1.5 text-[10px] tracking-[0.3em] uppercase">Stomatološka ordinacija</span>`
+          : ''
+      }
+    </span>
+  </a>`
+}
+
 function socialLinks(sizeClass: string): string {
   return Object.entries(site.social)
     .map(
       ([key, href]) => `
-      <a href="${href}" class="${sizeClass} text-current hover:text-gold-500 transition-colors" aria-label="${key}">
+      <a href="${href}" target="_blank" rel="noopener noreferrer" class="${sizeClass} text-current hover:text-gold-500 transition-colors" aria-label="${key}">
         ${socialIcons[key] ?? ''}
       </a>`,
     )
@@ -94,11 +112,7 @@ function renderHeader(): string {
   return `
   <div id="header-inner" class="transition-all duration-500 border-b border-transparent text-ivory-50">
     <div class="container-lux flex items-center justify-between h-24" id="header-bar">
-      <a href="${homeHref()}" class="flex flex-col leading-none">
-        <span class="font-display text-2xl tracking-wide">Premium Dental</span>
-        <span class="mt-1.5 h-px w-8 bg-gold-500"></span>
-        <span class="mt-1.5 text-[10px] tracking-[0.3em] uppercase">Stomatološka ordinacija</span>
-      </a>
+      ${brandLink()}
 
       <nav class="hidden lg:flex items-center gap-9" aria-label="Glavna navigacija">
         ${navHtml}
@@ -126,7 +140,7 @@ function renderHeader(): string {
 
   <div data-drawer class="fixed inset-0 z-[60] bg-ink-950 text-ivory-50 translate-x-full transition-transform duration-500 ease-lux lg:hidden overflow-y-auto">
     <div class="container-lux flex items-center justify-between h-20">
-      <a href="${homeHref()}" class="font-display text-xl">Premium Dental</a>
+      ${brandLink({ compact: true, showTagline: false })}
       <button type="button" data-drawer-close aria-label="Zatvori meni" class="flex h-11 w-11 items-center justify-center rounded-full border border-white/20">
         <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 6l12 12M18 6L6 18"/></svg>
       </button>
@@ -152,7 +166,7 @@ function renderHeader(): string {
     </nav>
     <div class="container-lux flex flex-col gap-4 pb-12 border-t border-white/10 pt-8">
       <a href="${site.phoneHref}" class="text-xl font-display">${site.phone}</a>
-      <span class="text-stone-300 text-sm">Pon–Pet 08:00–20:00 · Sub 09:00–14:00</span>
+      <span class="text-stone-300 text-sm">Pon–Pet 12:00–20:00 · Sub po pozivu</span>
       <div class="flex items-center gap-4 pt-2">${socialLinks('h-5 w-5')}</div>
       <a href="${homeSection('kontakt')}" data-drawer-link class="btn-gold w-full mt-2">Zakaži pregled</a>
     </div>
@@ -210,31 +224,25 @@ function renderSteps(): string {
 function renderAbout(): string {
   return `
   <div class="grid lg:grid-cols-2 gap-16 items-center">
-    <div class="relative reveal max-w-md mx-auto lg:mx-0">
-      <img src="${media.doctorPortrait}" alt="${about.doctorName}" class="arch w-full aspect-[3/4] object-cover" loading="lazy" decoding="async" />
-      <img src="${media.clinicInterior}" alt="" aria-hidden="true" class="hidden sm:block absolute -bottom-10 -right-6 w-[45%] aspect-square object-cover rounded-2xl border-4 border-ivory-50 shadow-lift" loading="lazy" decoding="async" />
+    <div class="relative reveal max-w-lg mx-auto lg:mx-0">
+      <div class="arch relative aspect-[4/5] overflow-hidden bg-[#d4dae0]">
+        <img
+          src="${about.image}"
+          alt="${about.imageAlt}"
+          class="absolute left-1/2 top-1/2 max-w-none h-full w-auto"
+          style="transform: translate(-50%, -50%) scale(0.7)"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
       <span class="absolute -top-6 -left-6 hidden sm:flex h-28 w-28 -rotate-12 items-center justify-center rounded-full bg-gold-500 text-center text-ink-900 shadow-gold">
         <span class="font-display text-sm leading-tight px-3">${about.badge.toUpperCase()}</span>
       </span>
     </div>
     <div class="reveal" data-delay="100">
       <p class="eyebrow">O nama</p>
-      <h2 class="mt-5 text-3xl md:text-5xl lg:text-[3.5rem] text-ink-900">Posvećenost svakom pacijentu, bez kompromisa</h2>
       ${about.paragraphs.map((p) => `<p class="mt-6 text-[0.9375rem] md:text-[1.0625rem] leading-relaxed text-stone-500">${p}</p>`).join('')}
-      <ul class="mt-8 space-y-3">
-        ${about.checklist
-          .map(
-            (item) => `
-          <li class="flex items-center gap-3 text-ink-900">
-            <svg class="h-5 w-5 shrink-0 text-gold-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L19 7"/></svg>
-            <span>${item}</span>
-          </li>`,
-          )
-          .join('')}
-      </ul>
-      <p class="mt-8 font-display italic text-2xl text-petrol-700">${about.doctorName}</p>
-      <p class="text-sm text-stone-500">${about.doctorTitle}</p>
-      <a href="${teamHref()}" class="btn-dark mt-8">Upoznajte naš tim</a>
+      <a href="${teamHref()}" class="btn-dark mt-10">Upoznajte naš tim</a>
     </div>
   </div>`
 }
@@ -247,7 +255,7 @@ function renderServices(): string {
     <p class="eyebrow justify-center">Naše usluge</p>
     <h2 class="mt-5 text-3xl md:text-5xl lg:text-[3.5rem] text-ink-900">Kompletna stomatologija na jednom mestu</h2>
     <p class="mt-5 max-w-[56ch] mx-auto text-[0.9375rem] md:text-[1.0625rem] leading-relaxed text-stone-500">
-      Od preventive do kompleksnih rekonstrukcija — sve usluge objedinjene u jednoj ordinaciji.
+      Od preventivne do kompleksnih rekonstrukcija - sve usluge objedinjene u jednoj ordinaciji
     </p>
   </div>
   <div class="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -272,31 +280,30 @@ function renderServices(): string {
   </div>`
 }
 
-// ---------- Spotlight ----------
+// ---------- Spotlight (osiguranje) ----------
 
 function renderSpotlight(): string {
-  const benefits = ['Jedna intervencija', 'Bez čekanja mesecima', 'Sedacija — bez bola', 'Garancija 5 godina']
+  const insurers = ['Dunav osiguranje', 'Triglav', 'Globos', 'Delta Generali']
   return `
   <div class="absolute inset-0 opacity-[0.035] pointer-events-none" aria-hidden="true">
     <svg width="100%" height="100%"><filter id="grain-spotlight"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch" /></filter><rect width="100%" height="100%" filter="url(#grain-spotlight)" /></svg>
   </div>
   <div class="absolute inset-x-0 top-0 h-2/3 pointer-events-none" aria-hidden="true" style="background: radial-gradient(60% 50% at 50% 0%, rgba(159,212,206,0.16), transparent 70%);"></div>
-  <span class="absolute -right-10 top-1/2 -translate-y-1/2 text-[16rem] font-display text-white/[0.03] pointer-events-none select-none hidden lg:block" aria-hidden="true">03</span>
 
   <div class="relative grid lg:grid-cols-[1.05fr_1fr] gap-16 items-center">
     <div class="reveal">
-      <p class="eyebrow">Naša specijalnost</p>
-      <h2 class="mt-5 text-3xl md:text-5xl lg:text-[3.5rem] text-ivory-50">Zubi u <span class="italic text-gold-300">3 sata</span></h2>
+      <p class="eyebrow">Osiguranje</p>
+      <h2 class="mt-5 text-3xl md:text-5xl lg:text-[3.5rem] text-ivory-50">Refundacija uz <span class="italic text-gold-300">10%</span> niže cene</h2>
       <p class="mt-6 max-w-[52ch] text-[0.9375rem] md:text-[1.0625rem] leading-relaxed text-stone-300">
-        Kompletna rehabilitacija vilice u samo jednoj poseti — od vađenja do fiksne protetike, uz digitalno planiranje i terapiju u sedaciji.
+        Sklopljeni su ugovori sa vodećim osiguravajućim kućama u cilju refundacije — korisnici osiguranja ostvaruju terapiju po cenama nižim za 10%.
       </p>
-      <div class="mt-10 grid grid-cols-2 gap-6">
-        ${benefits
+      <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-5">
+        ${insurers
           .map(
-            (b) => `
+            (name) => `
           <div class="flex items-center gap-3">
             <svg class="h-5 w-5 shrink-0 text-gold-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L19 7"/></svg>
-            <span class="text-ivory-50">${b}</span>
+            <span class="text-ivory-50">${name}</span>
           </div>`,
           )
           .join('')}
@@ -307,10 +314,22 @@ function renderSpotlight(): string {
       </div>
     </div>
     <div class="relative reveal" data-delay="120">
-      <img src="${media.spotlight}" alt="Zubi u 3 sata terapija" class="w-full rounded-[1.75rem] shadow-lift aspect-[4/5] object-cover" loading="lazy" decoding="async" />
-      <div class="absolute -bottom-6 left-6 right-6 sm:right-auto sm:w-72 rounded-2xl bg-ivory-50/95 backdrop-blur p-6 shadow-lift">
-        <p class="font-display text-2xl text-petrol-700">4,9 ★</p>
-        <p class="mt-1 text-[13px] text-stone-500">Prosečna ocena 340+ pacijenata</p>
+      <div class="rounded-[1.75rem] border border-white/10 bg-white/[0.04] p-8 md:p-10 shadow-lift">
+        <p class="font-display text-6xl md:text-7xl text-gold-300">10%</p>
+        <p class="mt-4 text-xl text-ivory-50">niže cene za korisnike osiguranja</p>
+        <p class="mt-4 text-[0.9375rem] leading-relaxed text-stone-300">
+          Dunav osiguranje, Triglav, Globos i Delta Generali — refundacija putem sklopljenih ugovora.
+        </p>
+        <div class="mt-8 grid grid-cols-2 gap-3">
+          ${insurers
+            .map(
+              (name) => `
+            <div class="rounded-xl border border-white/10 bg-ink-950/40 px-4 py-3 text-center text-[12px] uppercase tracking-[0.12em] text-ivory-50/85">
+              ${name}
+            </div>`,
+            )
+            .join('')}
+        </div>
       </div>
     </div>
   </div>`
@@ -337,11 +356,11 @@ function renderWork(): string {
         <span class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex h-11 w-11 items-center justify-center rounded-full bg-gold-500 text-ink-900 shadow-gold">↔</span>
       </div>
     </div>
-    <div class="mt-6 flex justify-center gap-4">
+    <div class="mt-6 flex flex-wrap justify-center gap-3">
       ${beforeAfterCases
         .map(
           (c, i) => `
-        <button type="button" data-ba-thumb data-case-index="${i}" class="h-16 w-16 rounded-xl overflow-hidden ${i === 0 ? 'ring-2 ring-gold-500' : 'ring-1 ring-ivory-200'}" aria-label="${c.label}">
+        <button type="button" data-ba-thumb data-case-index="${i}" class="h-14 w-14 sm:h-16 sm:w-16 rounded-xl overflow-hidden ${i === 0 ? 'ring-2 ring-gold-500' : 'ring-1 ring-ivory-200'}" aria-label="${c.label}">
           <img src="${c.after}" alt="" class="h-full w-full object-cover" loading="lazy" decoding="async" />
         </button>`,
         )
@@ -365,28 +384,23 @@ function renderWork(): string {
 
 function renderAdvantages(): string {
   return `
-  <div class="grid lg:grid-cols-[1fr_1.15fr] gap-16">
-    <div class="reveal">
-      <p class="eyebrow">Zašto pacijenti biraju nas</p>
-      <h2 class="mt-5 text-3xl md:text-5xl lg:text-[3.5rem] text-ivory-50">Šest razloga za poverenje</h2>
-      <div class="mt-10 inline-flex h-40 w-40 items-center justify-center rounded-full border-2 border-double border-gold-500/60 text-center">
-        <span class="font-display text-lg leading-tight text-gold-300 px-4">Garancija<br />1 godina</span>
-      </div>
-    </div>
-    <div class="reveal" data-delay="100">
-      ${advantages
-        .map(
-          (a) => `
-        <div class="flex gap-5 py-5 border-b border-white/10">
-          <span class="font-display text-sm text-gold-300 pt-1">${a.number}</span>
-          <div>
-            <h3 class="text-xl text-ivory-50">${a.title}</h3>
-            <p class="mt-1 text-[0.9375rem] text-stone-300">${a.description}</p>
-          </div>
-        </div>`,
-        )
-        .join('')}
-    </div>
+  <div class="text-center reveal max-w-3xl mx-auto">
+    <p class="eyebrow justify-center text-gold-300">Prednosti</p>
+    <h2 class="mt-5 text-3xl md:text-5xl lg:text-[3.5rem] text-ivory-50">Zašto pacijenti biraju nas</h2>
+  </div>
+  <div class="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12">
+    ${advantages
+      .map(
+        (a, i) => `
+      <article class="reveal flex flex-col items-center text-center" data-delay="${(i % 3) * 80}">
+        <div class="flex h-44 w-44 md:h-48 md:w-48 flex-col items-center justify-center rounded-full border-2 border-double border-gold-500/60 px-5">
+          <span class="font-display text-sm text-gold-300">${a.number}</span>
+          <h3 class="mt-2 font-display text-lg leading-snug text-ivory-50">${a.title}</h3>
+        </div>
+        <p class="mt-5 max-w-[28ch] text-[0.9375rem] leading-relaxed text-stone-300">${a.description}</p>
+      </article>`,
+      )
+      .join('')}
   </div>`
 }
 
@@ -398,12 +412,12 @@ function renderTestimonials(): string {
     <p class="eyebrow justify-center">Iskustva</p>
     <h2 class="mt-5 text-3xl md:text-5xl lg:text-[3.5rem] text-ink-900">Šta kažu naši pacijenti</h2>
     <div class="mt-4 flex items-center justify-center gap-2">
-      <span class="font-display text-2xl text-petrol-700">4,9 / 5</span>
+      <span class="font-display text-2xl text-petrol-700">4,8 / 5</span>
       <span class="flex gap-0.5">${stars(5)}</span>
     </div>
   </div>
   <div class="mt-16 reveal">
-    <div data-carousel data-autoplay="6000" class="relative">
+    <div data-carousel class="relative">
       <div data-carousel-track class="flex gap-6 overflow-x-auto snap-x snap-mandatory no-scrollbar scroll-smooth">
         ${testimonials
           .map(
@@ -412,20 +426,13 @@ function renderTestimonials(): string {
             <span class="absolute -top-2 right-4 font-display text-8xl text-gold-100 select-none" aria-hidden="true">&rdquo;</span>
             <div class="relative flex gap-0.5">${stars(t.rating)}</div>
             <p class="relative mt-4 text-[0.9375rem] leading-relaxed text-stone-500 line-clamp-5">${t.quote}</p>
-            <div class="relative mt-6 flex items-center gap-3">
-              <img src="${t.avatar}" alt="" class="h-11 w-11 rounded-full object-cover" loading="lazy" decoding="async" />
-              <div>
-                <p class="text-ink-900 text-sm font-medium">${t.name}</p>
-                <p class="text-stone-500 text-[13px]">${t.city} · ${t.service}</p>
-              </div>
-            </div>
+            <p class="relative mt-6 text-ink-900 text-sm font-medium">${t.name}</p>
           </article>`,
           )
           .join('')}
       </div>
       <div class="mt-8 flex items-center justify-center gap-4">
         <button type="button" data-carousel-prev aria-label="Prethodno" class="flex h-11 w-11 items-center justify-center rounded-full border border-ivory-200 hover:bg-petrol-700 hover:text-ivory-50 hover:border-petrol-700 transition-colors">←</button>
-        <div data-carousel-dots class="flex items-center gap-2"></div>
         <button type="button" data-carousel-next aria-label="Sledeće" class="flex h-11 w-11 items-center justify-center rounded-full border border-ivory-200 hover:bg-petrol-700 hover:text-ivory-50 hover:border-petrol-700 transition-colors">→</button>
       </div>
     </div>
@@ -465,7 +472,7 @@ function renderPrices(): string {
             <div class="flex justify-between items-baseline py-4 border-b border-dashed border-ivory-200">
               <span class="text-ink-900">${row.name}</span>
               <span class="flex-1 mx-4 border-b border-dotted border-ivory-200 translate-y-[-4px]"></span>
-              <span class="font-display text-xl text-petrol-700 whitespace-nowrap">${row.price.toLocaleString('sr-RS')} <span class="text-sm text-stone-500 font-sans">EUR</span></span>
+              <span class="font-display text-xl text-petrol-700 whitespace-nowrap">${row.price}</span>
             </div>`,
             )
             .join('')}
@@ -503,34 +510,6 @@ function renderFaq(): string {
           </div>
         </div>
       </div>`,
-      )
-      .join('')}
-  </div>`
-}
-
-// ---------- Blog ----------
-
-function renderBlog(): string {
-  return `
-  <div class="text-center reveal">
-    <p class="eyebrow justify-center">Saveti</p>
-    <h2 class="mt-5 text-3xl md:text-5xl lg:text-[3.5rem] text-ink-900">Iz naše ordinacije</h2>
-  </div>
-  <div class="mt-14 grid md:grid-cols-3 gap-8">
-    ${blog
-      .map(
-        (post, i) => `
-      <article class="group reveal" data-delay="${i * 100}">
-        <a href="#" class="block overflow-hidden rounded-2xl aspect-[3/2]">
-          <img src="${post.image}" alt="${post.title}" class="h-full w-full object-cover transition-transform duration-700 ease-lux group-hover:scale-[1.06]" loading="lazy" decoding="async" />
-        </a>
-        <p class="mt-5 eyebrow">${post.date} · ${post.category}</p>
-        <h3 class="mt-3 text-xl md:text-2xl text-ink-900 transition-colors group-hover:text-petrol-500">
-          <a href="#">${post.title}</a>
-        </h3>
-        <p class="mt-2 text-[0.9375rem] leading-relaxed text-stone-500 line-clamp-2">${post.excerpt}</p>
-        <a href="#" class="mt-3 inline-block text-[13px] font-medium tracking-wide text-petrol-500 hover:text-gold-600">Pročitajte više →</a>
-      </article>`,
       )
       .join('')}
   </div>`
@@ -655,7 +634,7 @@ function renderContact(): string {
         ${Object.entries(site.social)
           .map(
             ([key, href]) => `
-          <a href="${href}" aria-label="${key}" class="flex h-11 w-11 items-center justify-center rounded-full bg-gold-100 text-petrol-700 hover:bg-gold-500 hover:text-ink-900 transition-colors">
+          <a href="${href}" target="_blank" rel="noopener noreferrer" aria-label="${key}" class="flex h-11 w-11 items-center justify-center rounded-full bg-gold-100 text-petrol-700 hover:bg-gold-500 hover:text-ink-900 transition-colors">
             <span class="h-5 w-5 block">${socialIcons[key] ?? ''}</span>
           </a>`,
           )
@@ -665,7 +644,7 @@ function renderContact(): string {
       <div class="mt-8 overflow-hidden rounded-2xl aspect-[16/10] grayscale hover:grayscale-0 transition duration-700">
         <iframe
           title="Lokacija ordinacije na mapi"
-          src="https://www.google.com/maps?q=Kneza+Milosa+12+Beograd&output=embed"
+          src="https://www.google.com/maps?q=Prizrenska+7+Stari+grad+Beograd&output=embed"
           class="h-full w-full border-0"
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
@@ -690,7 +669,7 @@ function renderFooter(): string {
   <div class="container-lux">
     <div class="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
       <div>
-        <span class="font-display text-2xl text-ivory-50">Premium Dental</span>
+        ${brandLink({ showTagline: false })}
         <p class="mt-4 text-[0.9375rem] leading-relaxed text-stone-300 max-w-[32ch]">
           Premium stomatološka ordinacija posvećena bezbolnoj terapiji, digitalnoj dijagnostici i dugotrajnim rezultatima.
         </p>
@@ -717,7 +696,7 @@ function renderFooter(): string {
           <li>${site.address}</li>
           <li><a href="${site.phoneHref}" class="hover:text-gold-500 transition-colors">${site.phone}</a></li>
           <li><a href="mailto:${site.email}" class="hover:text-gold-500 transition-colors">${site.email}</a></li>
-          <li>Pon–Pet 08:00–20:00 · Sub 09:00–14:00</li>
+          <li>Pon–Pet 12:00–20:00 · Sub po pozivu</li>
         </ul>
       </div>
     </div>
@@ -725,7 +704,7 @@ function renderFooter(): string {
     <div class="hairline mt-16"></div>
 
     <div class="pt-6 pb-[max(1.25rem,env(safe-area-inset-bottom))] flex flex-col md:flex-row gap-3 justify-between text-[13px]">
-      <span>© 2026 Ordinacija Premium Dental. Sva prava zadržana.</span>
+      <span>© 2026 ${site.name}. Sva prava zadržana.</span>
       <span class="flex gap-4">
         <a href="#" class="hover:text-gold-500 transition-colors">Uslovi korišćenja</a>
         <a href="#" class="hover:text-gold-500 transition-colors">Politika privatnosti</a>
@@ -775,7 +754,6 @@ const RENDERERS: Record<string, () => string> = {
   testimonials: renderTestimonials,
   prices: renderPrices,
   faq: renderFaq,
-  blog: renderBlog,
   cta: renderCta,
   contact: renderContact,
   footer: renderFooter,
@@ -793,40 +771,31 @@ export function renderServicePage(slug: string): string {
   }
 
   const otherServices = services.filter((s) => s.slug !== slug).slice(0, 4)
+  const hasSituations = Boolean(page.situations?.length)
 
-  return `
-  <section class="relative min-h-[72svh] flex items-end overflow-hidden">
-    <img src="${page.heroImage}" alt="" class="absolute inset-0 h-full w-full object-cover" loading="eager" fetchpriority="high" decoding="async" />
-    <div class="absolute inset-0 bg-gradient-to-r from-ink-950/95 via-ink-900/75 to-ink-900/35"></div>
-    <div class="absolute inset-0 bg-gradient-to-t from-ink-950 via-transparent to-ink-950/40"></div>
-    <div class="relative container-lux pb-16 pt-40 md:pb-24 md:pt-48">
-      <a href="${homeSection('usluge')}" class="inline-flex items-center gap-2 text-[13px] uppercase tracking-[0.14em] text-ivory-50/70 hover:text-gold-300 transition-colors">
-        ← Sve usluge
-      </a>
-      <p class="eyebrow text-gold-300 mt-8">${page.eyebrow}</p>
-      <h1 class="mt-5 max-w-[18ch] text-[2.35rem] leading-[1.08] md:text-6xl lg:text-[4.5rem] text-ivory-50">${page.headline}</h1>
-      <p class="mt-6 max-w-[48ch] text-[0.9375rem] md:text-[1.0625rem] leading-relaxed text-stone-300">${page.lead}</p>
-      <div class="mt-10 flex flex-col sm:flex-row gap-4">
-        <a href="${homeSection('kontakt')}" class="btn-gold">Zakažite besplatan pregled</a>
-        <a href="${homeSection('cenovnik')}" class="btn-ghost text-ivory-50 border-ivory-50/25">Pogledajte cenovnik</a>
+  const benefitsSection = hasSituations
+    ? `
+  <section class="bg-ink-900 text-ivory-50 py-20 md:py-28">
+    <div class="container-lux">
+      <div class="reveal max-w-3xl">
+        <p class="eyebrow text-gold-300">Indikacije</p>
+        <h2 class="mt-5 text-3xl md:text-5xl text-ivory-50">${page.benefitsTitle}</h2>
       </div>
-      <p class="mt-4 text-[13px] tracking-wide text-stone-300/80">Prvi pregled je besplatan.</p>
-    </div>
-  </section>
-
-  <section class="bg-ivory-50 py-20 md:py-28">
-    <div class="container-lux grid lg:grid-cols-2 gap-14 items-center">
-      <div class="reveal">
-        <p class="eyebrow">O usluzi</p>
-        <h2 class="mt-5 text-3xl md:text-5xl text-ink-900">${page.introTitle}</h2>
-        ${page.introText.map((t) => `<p class="mt-5 text-[0.9375rem] md:text-[1.0625rem] leading-relaxed text-stone-500">${t}</p>`).join('')}
-      </div>
-      <div class="reveal" data-delay="100">
-        <img src="${page.introImage}" alt="${page.eyebrow}" class="w-full rounded-[1.75rem] aspect-[4/5] object-cover shadow-lift" loading="lazy" decoding="async" />
+      <div class="mt-14 grid gap-8 md:grid-cols-3">
+        ${page.situations!
+          .map(
+            (s, i) => `
+          <article class="reveal border-t border-gold-500/40 pt-6" data-delay="${i * 80}">
+            <span class="font-display text-4xl text-gold-500">${String(i + 1).padStart(2, '0')}</span>
+            <h3 class="mt-4 text-xl text-ivory-50">${s.title}</h3>
+            <p class="mt-3 text-[0.9375rem] leading-relaxed text-stone-300">${s.text}</p>
+          </article>`,
+          )
+          .join('')}
       </div>
     </div>
-  </section>
-
+  </section>`
+    : `
   <section class="bg-ink-900 text-ivory-50 py-20 md:py-28">
     <div class="container-lux grid lg:grid-cols-2 gap-14">
       <div class="reveal">
@@ -845,12 +814,131 @@ export function renderServicePage(slug: string): string {
           .join('')}
       </ul>
     </div>
+  </section>`
+
+  const featureSections = (page.featureSections ?? [])
+    .map((section, index) => {
+      const tone = index % 2 === 0 ? 'bg-ivory-50' : 'bg-ivory-100'
+      return `
+  <section id="${section.id}" class="${tone} py-20 md:py-28 scroll-mt-28">
+    <div class="container-lux">
+      <div class="reveal max-w-3xl">
+        <p class="eyebrow">${section.eyebrow}</p>
+        <h2 class="mt-5 text-3xl md:text-5xl text-ink-900">${section.title}</h2>
+        ${section.text.map((t) => `<p class="mt-5 text-[0.9375rem] md:text-[1.0625rem] leading-relaxed text-stone-500">${t}</p>`).join('')}
+        ${section.tagline ? `<p class="mt-8 font-display italic text-xl md:text-2xl text-petrol-700">${section.tagline}</p>` : ''}
+      </div>
+      ${
+        section.steps?.length
+          ? `
+      <div class="mt-14">
+        ${section.stepsTitle ? `<h3 class="reveal font-display text-2xl md:text-3xl text-ink-900">${section.stepsTitle}</h3>` : ''}
+        <div class="mt-10 grid gap-8 md:grid-cols-2">
+          ${section.steps
+            .map(
+              (step, i) => `
+            <article class="reveal flex gap-5" data-delay="${i * 60}">
+              <span class="font-display text-3xl text-gold-500 shrink-0">${String(i + 1).padStart(2, '0')}</span>
+              <div>
+                <h4 class="text-lg text-ink-900">${step.title}</h4>
+                <p class="mt-2 text-[0.9375rem] leading-relaxed text-stone-500">${step.text}</p>
+              </div>
+            </article>`,
+            )
+            .join('')}
+        </div>
+      </div>`
+          : ''
+      }
+      ${
+        section.highlights?.length
+          ? `
+      <div class="mt-14 reveal">
+        ${section.highlightsTitle ? `<h3 class="font-display text-2xl md:text-3xl text-ink-900">${section.highlightsTitle}</h3>` : ''}
+        <ul class="mt-8 space-y-4 max-w-3xl">
+          ${section.highlights
+            .map(
+              (item) => `
+            <li class="flex items-start gap-4 border-b border-ivory-200 pb-4">
+              <svg class="mt-1 h-5 w-5 shrink-0 text-gold-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L19 7"/></svg>
+              <span class="text-[0.9375rem] leading-relaxed text-stone-500">${item}</span>
+            </li>`,
+            )
+            .join('')}
+        </ul>
+      </div>`
+          : ''
+      }
+    </div>
+  </section>`
+    })
+    .join('')
+
+  return `
+  <section class="relative min-h-[72svh] flex items-end overflow-hidden">
+    <img src="${page.heroImage}" alt="" class="absolute inset-0 h-full w-full object-cover ${page.heroImagePosition ?? 'object-center'}" loading="eager" fetchpriority="high" decoding="async" />
+    <div class="absolute inset-0 bg-gradient-to-r from-ink-950/95 via-ink-900/75 to-ink-900/35"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-ink-950 via-transparent to-ink-950/40"></div>
+    <div class="relative container-lux pb-16 pt-40 md:pb-24 md:pt-48">
+      <a href="${homeSection('usluge')}" class="inline-flex items-center gap-2 text-[13px] uppercase tracking-[0.14em] text-ivory-50/70 hover:text-gold-300 transition-colors">
+        ← Sve usluge
+      </a>
+      <p class="eyebrow text-gold-300 mt-8">${page.eyebrow}</p>
+      <h1 class="mt-5 max-w-[18ch] text-[2.35rem] leading-[1.08] md:text-6xl lg:text-[4.5rem] text-ivory-50">${page.headline}</h1>
+      <p class="mt-6 max-w-[48ch] text-[0.9375rem] md:text-[1.0625rem] leading-relaxed text-stone-300">${page.lead}</p>
+      <div class="mt-10 flex flex-col sm:flex-row gap-4">
+        <a href="${homeSection('kontakt')}" class="btn-gold">Zakažite besplatan pregled</a>
+        <a href="${homeSection('cenovnik')}" class="btn-ghost text-ivory-50 border-ivory-50/25">Pogledajte cenovnik</a>
+      </div>
+      <p class="mt-4 text-[13px] tracking-wide text-stone-300/80">Prvi pregled je besplatan.</p>
+    </div>
   </section>
+
+  <section ${page.introId ? `id="${page.introId}"` : ''} class="bg-ivory-50 py-20 md:py-28 scroll-mt-28">
+    <div class="container-lux grid lg:grid-cols-2 gap-14 items-center">
+      <div class="reveal">
+        <p class="eyebrow">O usluzi</p>
+        <h2 class="mt-5 text-3xl md:text-5xl text-ink-900">${page.introTitle}</h2>
+        ${page.introText.map((t) => `<p class="mt-5 text-[0.9375rem] md:text-[1.0625rem] leading-relaxed text-stone-500">${t}</p>`).join('')}
+        ${page.introTagline ? `<p class="mt-8 font-display italic text-xl md:text-2xl text-petrol-700">${page.introTagline}</p>` : ''}
+      </div>
+      <div class="reveal overflow-hidden rounded-[1.75rem] shadow-lift bg-ivory-100" data-delay="100">
+        <img src="${page.introImage}" alt="${page.eyebrow}" class="w-full aspect-[4/5] ${slug === 'implantologija' ? 'object-contain bg-white p-6' : `object-cover ${page.introImagePosition ?? 'object-center'}`}" loading="lazy" decoding="async" />
+      </div>
+    </div>
+    ${
+      page.introMethods?.length
+        ? `
+    <div class="container-lux mt-14 grid gap-8 md:grid-cols-2">
+      ${page.introMethods
+        .map(
+          (method, i) => `
+        <article ${method.id ? `id="${method.id}"` : ''} class="reveal scroll-mt-28 ${method.image ? '' : 'border-t border-gold-500/50 pt-6'}" data-delay="${i * 80}">
+          ${
+            method.image
+              ? `<div class="overflow-hidden rounded-[1.5rem] aspect-[4/5] mb-6">
+              <img src="${method.image}" alt="${method.title}" class="h-full w-full object-cover" loading="lazy" decoding="async" />
+            </div>`
+              : ''
+          }
+          <h3 class="font-display text-2xl text-ink-900">${method.title}</h3>
+          <p class="mt-3 text-[0.9375rem] md:text-[1.0625rem] leading-relaxed text-stone-500">${method.text}</p>
+        </article>`,
+        )
+        .join('')}
+    </div>`
+        : ''
+    }
+  </section>
+
+  ${benefitsSection}
+
+  ${page.featuresBeforeProcess ? featureSections : ''}
 
   <section class="bg-ivory-100 py-20 md:py-28">
     <div class="container-lux">
       <div class="text-center reveal max-w-3xl mx-auto">
-        <p class="eyebrow justify-center">Proces</p>
+        <p class="eyebrow justify-center">${page.processEyebrow ?? 'Proces'}</p>
         <h2 class="mt-5 text-3xl md:text-5xl text-ink-900">${page.processTitle}</h2>
       </div>
       <div class="mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -868,24 +956,31 @@ export function renderServicePage(slug: string): string {
     </div>
   </section>
 
+  ${page.featuresBeforeProcess ? '' : featureSections}
+
+  ${
+    page.gallery?.length
+      ? `
   <section class="bg-ivory-50 py-20 md:py-28">
     <div class="container-lux">
       <div class="reveal text-center">
         <p class="eyebrow justify-center">Galerija</p>
-        <h2 class="mt-5 text-3xl md:text-5xl text-ink-900">Ambijent i detalji rada</h2>
       </div>
-      <div class="mt-14 grid md:grid-cols-3 gap-6">
+      <div class="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4">
         ${page.gallery
-          .map(
-            (img, i) => `
-          <div class="reveal overflow-hidden rounded-2xl aspect-[4/5]" data-delay="${i * 80}">
-            <img src="${img.src}" alt="${img.alt}" class="h-full w-full object-cover transition-transform duration-700 ease-lux hover:scale-[1.04]" loading="lazy" decoding="async" />
-          </div>`,
-          )
+          .map((img, i) => {
+            const tall = i % 4 === 1
+            return `
+          <button type="button" data-lightbox data-lightbox-index="${i}" class="reveal block w-full overflow-hidden rounded-2xl ${tall ? 'row-span-2 aspect-[3/4]' : 'aspect-square'}" data-delay="${(i % 4) * 60}">
+            <img src="${img.src}" alt="${img.alt}" class="h-full w-full object-cover transition-transform duration-700 ease-lux hover:scale-[1.06]" loading="lazy" decoding="async" />
+          </button>`
+          })
           .join('')}
       </div>
     </div>
-  </section>
+  </section>`
+      : ''
+  }
 
   <section class="relative overflow-hidden bg-petrol-700 py-20 md:py-28 text-center text-ivory-50">
     <div class="absolute inset-0 pointer-events-none" aria-hidden="true" style="background: radial-gradient(60% 60% at 50% 30%, rgba(200,169,107,0.18), transparent 70%);"></div>
@@ -925,7 +1020,7 @@ export function renderServicePage(slug: string): string {
 export function renderTeamPage(): string {
   return `
   <section class="relative min-h-[60svh] flex items-end overflow-hidden">
-    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1600&q=70" alt="" class="absolute inset-0 h-full w-full object-cover" loading="eager" fetchpriority="high" decoding="async" />
+    <img src="/assets/o-nama/o_nama.jpg" alt="" class="absolute inset-0 h-full w-full object-cover object-center" loading="eager" fetchpriority="high" decoding="async" />
     <div class="absolute inset-0 bg-gradient-to-r from-ink-950/95 via-ink-900/80 to-ink-900/40"></div>
     <div class="absolute inset-0 bg-gradient-to-t from-ink-950 via-transparent to-ink-950/40"></div>
     <div class="relative container-lux pb-16 pt-40 md:pb-24 md:pt-48">
@@ -934,30 +1029,27 @@ export function renderTeamPage(): string {
       </a>
       <p class="eyebrow text-gold-300 mt-8">Naš tim</p>
       <h1 class="mt-5 max-w-[16ch] text-[2.35rem] leading-[1.08] md:text-6xl lg:text-[4.5rem] text-ivory-50">Ljudi iza vašeg novog osmeha</h1>
-      <p class="mt-6 max-w-[48ch] text-[0.9375rem] md:text-[1.0625rem] leading-relaxed text-stone-300">
-        Specijalisti, hirurzi i asistenti koji rade kao jedan tim — sa jasnim planom, pažnjom i premium standardom nege.
+      <p class="mt-6 max-w-[52ch] text-[0.9375rem] md:text-[1.0625rem] leading-relaxed text-stone-300">
+        ${teamIntro}
       </p>
     </div>
   </section>
 
   <section class="bg-ivory-50 py-20 md:py-28 lg:py-36">
     <div class="container-lux">
-      <div class="text-center reveal max-w-3xl mx-auto">
-        <p class="eyebrow justify-center">Stručnjaci</p>
-        <h2 class="mt-5 text-3xl md:text-5xl text-ink-900">Upoznajte članove tima</h2>
-      </div>
-
-      <div class="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="space-y-20 md:space-y-28">
         ${teamMembers
           .map(
             (m, i) => `
-          <article class="reveal group" data-delay="${(i % 3) * 80}">
-            <div class="overflow-hidden rounded-[1.5rem] aspect-[4/5]">
-              <img src="${m.image}" alt="${m.name}" class="h-full w-full object-cover transition-transform duration-700 ease-lux group-hover:scale-[1.04]" loading="lazy" decoding="async" />
+          <article class="reveal grid gap-10 lg:grid-cols-2 lg:gap-16 items-start ${i % 2 === 1 ? 'lg:[&>div:first-child]:order-2' : ''}" data-delay="80">
+            <div class="overflow-hidden rounded-[1.5rem] aspect-[4/5] max-w-md mx-auto lg:mx-0 lg:max-w-none">
+              <img src="${m.image}" alt="${m.name}" class="h-full w-full object-cover ${m.imagePosition ?? 'object-top'}" loading="lazy" decoding="async" />
             </div>
-            <h3 class="mt-6 font-display text-2xl text-ink-900">${m.name}</h3>
-            <p class="mt-1 text-[13px] uppercase tracking-[0.14em] text-gold-600">${m.role}</p>
-            <p class="mt-4 text-[0.9375rem] leading-relaxed text-stone-500">${m.bio}</p>
+            <div>
+              <h2 class="font-display text-3xl md:text-4xl text-ink-900">${m.name}</h2>
+              <p class="mt-2 text-[13px] uppercase tracking-[0.14em] text-gold-600">${m.role}</p>
+              ${m.bio.map((p) => `<p class="mt-5 text-[0.9375rem] md:text-[1.0625rem] leading-relaxed text-stone-500">${p}</p>`).join('')}
+            </div>
           </article>`,
           )
           .join('')}

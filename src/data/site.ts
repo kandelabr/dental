@@ -1,18 +1,21 @@
 import type { SiteInfo } from '../types'
 
 export const site: SiteInfo = {
-  name: 'Ordinacija Premium Dental',
-  phone: '011 / 123-4567',
-  phoneHref: 'tel:+381111234567',
-  mobile: '+381 60 123 4567',
-  whatsapp: 'https://wa.me/381601234567',
-  viber: 'viber://chat?number=%2B381601234567',
-  email: 'info@premiumdental.rs',
-  address: 'Kneza Miloša 12, 11000 Beograd, Srbija',
+  name: 'House of Smile',
+  phone: '062 / 765-101',
+  phoneHref: 'tel:+38162765101',
+  mobile: '+381 62 765 101',
+  whatsapp: 'https://wa.me/38162765101',
+  viber: 'viber://chat?number=%2B38162765101',
+  email: 'smilehouseofsmile@gmail.com',
+  address: 'Prizrenska 7, Stari grad, Beograd',
   hours: [
-    { day: 'Ponedeljak – Petak', time: '08:00 – 20:00' },
-    { day: 'Subota', time: '09:00 – 14:00' },
-    { day: 'Nedelja', time: 'Zatvoreno' },
+    { day: 'Ponedeljak – Petak', time: '12:00 – 20:00' },
+    { day: 'Subota', time: 'Po pozivu' },
+    { day: 'Nedelja', time: 'Neradna' },
   ],
-  social: { instagram: '#', facebook: '#' },
+  social: {
+    instagram: 'https://www.instagram.com/houseofsmilebgd.rs/',
+    facebook: 'https://www.facebook.com/people/House-of-smile/100089872863126/',
+  },
 } as const

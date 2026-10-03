@@ -1,14 +1,22 @@
 import { $$, on } from '../lib/dom'
-import { gallery } from '../data/gallery'
 
 let overlay: HTMLElement | null = null
 let currentIndex = 0
 let lastTrigger: HTMLElement | null = null
 let touchStartX = 0
+let items: { src: string; alt: string }[] = []
 
 export function initLightbox(): void {
   const triggers = $$<HTMLButtonElement>('[data-lightbox]')
   if (!triggers.length) return
+
+  items = triggers.map((btn) => {
+    const img = btn.querySelector('img')
+    return {
+      src: btn.getAttribute('data-lightbox-src') ?? img?.getAttribute('src') ?? '',
+      alt: btn.getAttribute('data-lightbox-alt') ?? img?.getAttribute('alt') ?? '',
+    }
+  })
 
   triggers.forEach((trigger) => {
     on(trigger, 'click', () => {
@@ -54,9 +62,9 @@ function buildOverlay(): HTMLElement {
 }
 
 function show(index: number): void {
-  if (!overlay) return
-  currentIndex = (index + gallery.length) % gallery.length
-  const item = gallery[currentIndex]
+  if (!overlay || !items.length) return
+  currentIndex = (index + items.length) % items.length
+  const item = items[currentIndex]
   if (!item) return
   const img = overlay.querySelector<HTMLImageElement>('[data-lightbox-image]')
   const counter = overlay.querySelector<HTMLElement>('[data-lightbox-counter]')
@@ -64,7 +72,7 @@ function show(index: number): void {
     img.src = item.src
     img.alt = item.alt
   }
-  if (counter) counter.textContent = `${currentIndex + 1} / ${gallery.length}`
+  if (counter) counter.textContent = `${currentIndex + 1} / ${items.length}`
 }
 
 function open(index: number): void {

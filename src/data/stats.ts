@@ -1,8 +1,8 @@
 import type { Stat } from '../types'
 
 export const stats: Stat[] = [
-  { value: 20, suffix: '+', label: 'Godina iskustva' },
-  { value: 12000, suffix: '+', label: 'Zadovoljnih pacijenata' },
-  { value: 4500, suffix: '+', label: 'Postavljenih implantata' },
-  { value: 4.9, suffix: '/5', label: 'Ocena pacijenata', decimals: 1 },
+  { value: 10, suffix: '+', label: 'Godina iskustva' },
+  { value: 5000, suffix: '+', label: 'Zadovoljnih pacijenata' },
+  { value: 1000, suffix: '+', label: 'Ugrađenih implantata' },
+  { value: 4.8, suffix: '/5', label: 'Ocena pacijenata', decimals: 1 },
 ]

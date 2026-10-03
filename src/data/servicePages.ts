@@ -4,30 +4,36 @@ export const servicePages: ServicePageContent[] = [
   {
     slug: 'implantologija',
     eyebrow: 'Implantologija',
-    headline: 'Zubni implanti koji vraćaju funkciju i osmeh',
-    lead: 'Trajno rešenje za izgubljene zube — uz 3D planiranje, premium materijale i bezbolnu ugradnju.',
-    heroImage:
-      'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1600&q=70',
+    headline: 'Zubni implantati koji vraćaju funkciju i osmeh',
+    lead: 'Trajno rešenje za izgubljene zube uz 3D planiranje i bezbolnu ugradnju.',
+    heroImage: '/assets/impantologija/Naslovna.jpg',
     introTitle: 'Moderni implantati umesto privremenih rešenja',
     introText: [
       'Gubitak zuba utiče na žvakanje, govor i samopouzdanje. Zubni implantati vraćaju prirodan osećaj i sprečavaju propadanje kosti vilice.',
-      'Radimo sa sertifikovanim titanijumskim sistemima i digitalnim planom ugradnje kako bi rezultat bio precizan, stabilan i dugovečan.',
+      'Radimo sa sertifikovanim titanijumskim sistemima Straumann grupa, Neodent Neoporos i digitalnim planom ugradnje kako bi rezultat bio precizan, stabilan i dugovečan.',
     ],
-    introImage:
-      'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1000&q=70',
-    benefitsTitle: 'Kada su implanti pravo rešenje?',
-    benefits: [
-      'Nedostatak jednog ili više zuba',
-      'Nestabilne proteze koje ometaju svakodnevnicu',
-      'Gubitak zuba zbog karijesa, traume ili parodontopatije',
-      'Želja za fiksnim, prirodnim osećajem bez lepljenja',
-      'Potreba za All-on-4 / All-on-6 rekonstrukcijom',
+    introImage: '/assets/impantologija/uvod.jpg',
+    benefitsTitle: 'Kada su implantati jasan odgovor na vašu situaciju',
+    benefits: [],
+    situations: [
+      {
+        title: 'Nedostatak jednog zuba',
+        text: 'Implantat nadoknađuje koren zuba, a na njega se stavlja krunica, čime se izbegava brušenje susednih zdravih zuba radi pravljenja mosta.',
+      },
+      {
+        title: 'Nedostatak više zuba',
+        text: 'Implantati služe kao stabilni nosači za zubne mostove.',
+      },
+      {
+        title: 'Potpuna bezubost',
+        text: 'Ugradnjom 4 do 6 implantata po vilici (metode poput All-on-4 ili All-on-6) omogućava se izrada fiksnih zubnih mostova ili stabilnih proteza koje ne spadaju i pružaju maksimalan komfor.',
+      },
     ],
     processTitle: 'Kako izgleda terapija',
     process: [
       {
         title: 'Pregled i 3D planiranje',
-        text: 'Analiziramo kost, desni i zagriz. Dobijate jasan plan terapije i cenu unapred.',
+        text: 'Analiziramo stanje kosti, desni i zagrižaj. Dobijate jasan plan terapije i cenu unapred.',
       },
       {
         title: 'Ugradnja implantata',
@@ -42,78 +48,182 @@ export const servicePages: ServicePageContent[] = [
         text: 'Postavljamo krunicu, most ili fiksnu protezu usklađenu sa vašim osmehom.',
       },
     ],
-    gallery: [
+    featureSections: [
       {
-        src: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=70',
-        alt: 'Ordinacija tokom implantološke terapije',
+        id: 'all-on-4',
+        eyebrow: 'All-on-4 & All-on-6',
+        title: 'All-on-4 i All-on-6',
+        text: [
+          'Gubitak svih zuba u vilici više ne mora da znači nošenje nestabilnih i nelagodnih akrilatnih proteza. Zahvaljujući napretku u implantologiji, metode All-on-4 i All-on-6 omogućavaju fiksiranje kompletnog zubnog niza (mosta) na samo četiri ili šest implantata.',
+          'Ove metode predstavljaju trajno, stabilno i estetski savršeno rešenje koje u potpunosti oponaša prirodne zube.',
+        ],
+        stepsTitle: 'Tok rada',
+        steps: [
+          {
+            title: 'Pregled i 3D dijagnostika (CT snimak)',
+            text: 'Detaljna analiza strukture kosti i planiranje precizne pozicije svakog implantata.',
+          },
+          {
+            title: 'Ugradnja implantata',
+            text: 'Bezbolna intervencija u lokalnoj anesteziji (ili analgosedaciji). Sutradan se izrađuje i postavlja privremeni most.',
+          },
+          {
+            title: 'Period zarastanja (oseointegracija)',
+            text: 'Čeka se 3 do 6 meseci da implantati potpuno srastu sa kosti.',
+          },
+          {
+            title: 'Izrada definitivnog rada',
+            text: 'Nakon zarastanja, izrađuje se trajni, visokokvalitetni keramički ili cirkonijumski most koji se trajno fiksira za implantate.',
+          },
+        ],
       },
       {
-        src: 'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=800&q=70',
-        alt: 'Digitalna dijagnostika',
-      },
-      {
-        src: 'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=800&q=70',
-        alt: 'Pacijent nakon terapije',
+        id: 'proteze-na-implantatima',
+        eyebrow: 'Proteze na implantatima',
+        title: 'Proteze na implantatima',
+        text: [
+          'Ekonomično rešenje: za stabilizaciju proteze na implantatima često je potreban manji broj implantata (najčešće 2 do 4 po vilici) u poređenju sa fiksnim mostovima na implantatima, što ovu proceduru čini finansijski dostupnijom.',
+          'Gubitak zuba više ne mora da znači nelagodnost, nestabilnost i stalni strah od pomeranja klasične proteze. Proteza na implantatima predstavlja savremeno i dugotrajno rešenje koje kombinuje jednostavnost totalne proteze sa neuporedivom stabilnošću zubnih implantata.',
+        ],
+        highlightsTitle: 'Zašto izabrati protezu na implantatima?',
+        highlights: [
+          'Maksimalna stabilnost: nema ispadanja, pomeranja niti šetanja proteze prilikom smeha ili razgovora.',
+          'Prirodan osećaj i veći komfor: proteza je znatno manja od klasične, posebno u gornjoj vilici, jer ne mora u potpunosti da pokriva nepce.',
+          'Moć žvakanja je obnovljena.',
+        ],
       },
     ],
+    gallery: Array.from({ length: 18 }, (_, i) => ({
+      src: `/assets/impantologija/d${i + 1}.jpg`,
+      alt: `Implantologija — rad ${i + 1}`,
+    })),
     ctaTitle: 'Spremni za trajno rešenje?',
-    ctaText: 'Zakažite besplatan pregled i saznajte da li su implanti pravi izbor za vas.',
+    ctaText: 'Zakažite besplatan pregled i saznajte da li su implantati pravi izbor za vas.',
   },
   {
     slug: 'estetska-stomatologija',
-    eyebrow: 'Estetska stomatologija i medicina',
+    eyebrow: 'Estetska medicina i stomatologija',
     headline: 'Osmeh koji izgleda prirodno i samouvereno',
     lead: 'Hollywood smile, lasersko beljenje za osmeh bez mana. Hijaluronski fileri i botoks.',
-    heroImage:
-      'https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1600&q=70',
-    introTitle: 'Estetika bez preterivanja',
+    heroImage: '/assets/estetska/naslovna.jpg',
+    introId: 'hollywood-smile',
+    introTitle: 'Šta je zapravo Hollywood Smile?',
     introText: [
-      'Cilj nije „veštački beli“ osmeh, već skladan rezultat koji prati boju kože, oblik usana i karakter lica.',
-      'Koristimo digitalni plan osmeha kako biste unapred videli mogući rezultat i doneli odluku bez pritiska.',
+      'Hollywood Smile je jedna od najefektnijih estetskih transformacija u savremenoj stomatologiji. Koristeći najsavremenije stomatološke materijale, korigujemo sve nedostatke: od boje i oblika, preko položaja zuba, pa sve do zatvaranja neželjenih razmaka.',
+      'U zavisnosti od stanja vaših prirodnih zuba, ovaj efekat postižemo kombinacijom vrhunskih metoda:',
     ],
-    introImage:
-      'https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1000&q=70',
+    introImage: '/assets/estetska/d10.jpg',
+    introMethods: [
+      {
+        id: 'fasete-viniri',
+        title: 'Keramičke fasete (Viniri)',
+        text: 'Ultra tanke ljuspice koje se lepe na prednju površinu zuba uz minimalno brušenje, idealne za korekciju boje i sitnih nepravilnosti.',
+      },
+      {
+        title: 'Bezmetalne krunice',
+        text: 'Vrhunac moderne estetske stomatologije. Pružaju maksimalnu čvrstinu i savršeno oponašaju prirodno prelamanje svetlosti.',
+      },
+    ],
     benefitsTitle: 'Šta možemo da korigujemo',
     benefits: [
       'Neujednačenu boju i senke na zubima',
       'Oštećenu ili istrošenu gleđ',
-      'Razmake, iverje i asimetriju',
+      'Razmake i asimetriju',
       'Želju za blagim ili izraženijim Hollywood smile-om',
       'Potrebu za brzim estetskim unapređenjem',
     ],
-    processTitle: 'Tok estetske terapije',
+    processEyebrow: 'Proces',
+    processTitle: 'Tok terapije',
     process: [
       {
-        title: 'Konsultacija i dizajn',
-        text: 'Definišemo cilj: prirodan, blistav ili potpuni makeover osmeha.',
+        title: 'Konsultacije i digitalni dizajn (Digital Smile Design)',
+        text: 'Slušamo vaše želje, analiziramo vaše lice i pravimo digitalni model. Pre nego što uopšte počnemo sa radom, vi možete videti kako će vaš novi osmeh izgledati!',
       },
       {
-        title: 'Priprema i mock-up',
-        text: 'Po potrebi radimo privremeni prikaz kako biste osetili budući izgled.',
+        title: 'Priprema zuba',
+        text: 'Minimalno i bezbolno oblikovanje zuba (u lokalnoj anesteziji) kako bi se napravilo mesto za fasete ili krunice.',
       },
       {
-        title: 'Realizacija',
-        text: 'Postavljamo veneers, bonding ili radimo kontrolisano beljenje.',
+        title: 'Izrada i proba',
+        text: 'Dok naša zubotehnička laboratorija precizno izrađuje vaš rad, nosite privremene zube tako da ni u jednom trenutku niste bez osmeha.',
       },
       {
-        title: 'Završna kontrola',
-        text: 'Usklađujemo detalje zagriza, boje i sjaja za dugotrajan rezultat.',
+        title: 'Cementiranje',
+        text: 'Postavljanje vašeg novog Hollywood Smile-a i trenutak kada u ogledalu ugledate osmeh koji ste oduvek želeli.',
       },
     ],
-    gallery: [
+    featureSections: [
       {
-        src: 'https://images.unsplash.com/photo-1600170311833-c2cf5280ce49?auto=format&fit=crop&w=800&q=70',
-        alt: 'Estetski osmeh',
+        id: 'lasersko-izbeljivanje',
+        eyebrow: 'Lasersko izbeljivanje',
+        title: 'FLASH sistem izbeljivanja zuba',
+        text: [
+          'Savremeniji pristup profesionalnom izbeljivanju.',
+          'Za razliku od konvencionalnih sistema, FLASH omogućava brže i neinvazivno izbeljivanje, uz nežan pristup zubima. U jednom tretmanu moguće je postići posvetljenje za nekoliko nijansi, uz očuvanje prirodne strukture zuba.',
+        ],
+        tagline: 'Jedan tretman. Nekoliko nijansi svetliji osmeh.',
+        steps: [
+          {
+            title: 'Konsultacija',
+            text: 'Doktor će proceniti boju vaših zuba i preporučiti najbolji tretman beljenja.',
+          },
+          {
+            title: 'Tretman beljenja',
+            text: 'Preparat se na zubima aktivira prema protokolu FLASH sistema, uz pažljivo kontrolisane uslove i nadzor stomatologa.',
+          },
+          {
+            title: 'Održavanje',
+            text: 'Saveti za održavanje rezultata beljenja i preporuke za dalju negu.',
+          },
+        ],
       },
       {
-        src: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=70',
-        alt: 'Beljenje zuba',
+        id: 'hijaluronski-fileri',
+        eyebrow: 'Fileri i botoks',
+        title: 'Hijaluronski fileri',
+        text: [
+          'Hijaluronski fileri su savremeni preparati na bazi hijaluronske kiseline koji se koriste za nadoknadu volumena, definisanje kontura i ublažavanje određenih bora, uz mogućnost postizanja veoma prirodnog rezultata.',
+          'U našem radu, svaki tretman planiramo individualno, vodeći računa o anatomiji, proporcijama i željama pacijenta. Cilj nije promena lica, već suptilno osvežavanje i naglašavanje njegove prirodne lepote.',
+          'Verujemo da najbolji estetski rezultat treba da izgleda prirodno, skladno i nenametljivo — svežije lice, a i dalje Vi.',
+        ],
+        tagline: 'Suptilna korekcija. Prirodna lepota. Individualan pristup.',
       },
       {
-        src: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=800&q=70',
-        alt: 'Rad u ordinaciji',
+        id: 'mezoterapija',
+        eyebrow: 'Fileri i botoks',
+        title: 'Mezoterapija',
+        text: [
+          'Mezoterapija je savremeni tretman koji podrazumeva aplikaciju pažljivo odabranih aktivnih sastojaka u površinske slojeve kože, sa ciljem intenzivne hidratacije, osvežavanja i poboljšanja njenog kvaliteta.',
+          'Tretman može doprineti ujednačenijem tenu, poboljšanoj teksturi, tonusu i elastičnosti kože, koja izgleda svežije, glatkije i blistavije, uz smanjen utisak umora i sivila.',
+          'U našem radu, svaki tretman planiramo individualno, u skladu sa potrebama i stanjem kože, kao i željama pacijenta. Cilj je suptilno osvežavanje, ujednačavanje tena i vraćanje prirodnog sjaja, bez promene izgleda.',
+        ],
+        tagline: 'Hidratacija kože. Ujednačen ten. Poboljšana tekstura. Individualan pristup.',
+      },
+      {
+        id: 'botoks',
+        eyebrow: 'Fileri i botoks',
+        title: 'Botoks',
+        text: [
+          'Botoks je savremeni estetski tretman koji deluje na mišiće odgovorne za nastanak dinamičkih bora, čime se njihov izgled ublažava i lice dobija odmorniji i svežiji izgled.',
+          'U našem radu, tretman planiramo individualno, uz pažljivo doziranje i poštovanje prirodne mimike lica. Cilj nije „zamrznut“ izraz, već suptilno omekšavanje bora i očuvanje prirodnog izgleda i karaktera lica.',
+        ],
+        tagline: 'Suptilna korekcija. Očuvana mimika. Prirodno svežiji izgled.',
+      },
+      {
+        id: 'lipoliza',
+        eyebrow: 'Fileri i botoks',
+        title: 'Lipoliza',
+        text: [
+          'Lipoliza je nehirurški tretman namenjen smanjenju lokalizovanih masnih naslaga na regijama koje su otporne na ishranu i fizičku aktivnost, čime se dobija poboljšanje izgleda kože, mikrocirkulacije i tonusa, a cilj je glatkija i zategnutija koža.',
+          'Tretman planiramo veoma pažljivo, prema stepenu celulita, stanju kože i željenom rezultatu.',
+        ],
+        tagline: 'Glatkija koža. Bolji tonus. Negovaniji izgled.',
       },
     ],
+    gallery: Array.from({ length: 11 }, (_, i) => ({
+      src: `/assets/estetska/d${i + 2}.jpg`,
+      alt: `Estetska stomatologija — rad ${i + 2}`,
+    })),
     ctaTitle: 'Želite novi osmeh?',
     ctaText: 'Prvi pregled je besplatan — dogovorimo estetski plan koji vam odgovara.',
   },
@@ -122,15 +232,13 @@ export const servicePages: ServicePageContent[] = [
     eyebrow: 'Protetika',
     headline: 'Krunice, mostovi i proteze vrhunskog kvaliteta',
     lead: 'Bezmetalna i cirkonijumska protetika koja vraća funkciju i prirodan izgled zuba.',
-    heroImage:
-      'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1600&q=70',
+    heroImage: '/assets/protetika/naslovna.jpg',
     introTitle: 'Fiksna i mobilna rešenja po meri',
     introText: [
-      'Od pojedinačne krunice do kompleksnih mostova — biramo materijal prema zagrizu, estetici i dugovečnosti.',
-      'Radimo u saradnji sa laboratorijom kako bi svaki rad bio precizan, udoban i vizuelno usklađen.',
+      'Od pojedinačnih krunica do kompleksnih mostova, svako protetsko rešenje planiramo individualno, u skladu sa zagrižajem, funkcijom i estetikom.',
+      'U saradnji sa zubotehničkom laboratorijom biramo odgovarajući materijal i precizno usklađujemo oblik i boju, kako bi rad bio što prirodniji, komforniji i dugotrajniji.',
     ],
-    introImage:
-      'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=1000&q=70',
+    introImage: '/assets/protetika/uvod.jpg',
     benefitsTitle: 'Zašto pacijenti biraju našu protetiku',
     benefits: [
       'Cirkonijum i bezmetalna keramika',
@@ -138,6 +246,42 @@ export const servicePages: ServicePageContent[] = [
       'Stabilnost pri žvakanju',
       'Rešenja za delimičan ili potpun gubitak zuba',
       'Jasna cena i pisani plan terapije',
+    ],
+    featuresBeforeProcess: true,
+    featureSections: [
+      {
+        id: 'keramicki-viniri',
+        eyebrow: 'Keramički viniri',
+        title: 'Keramički viniri',
+        text: [
+          'Keramički viniri (poznati i kao zubne fasete) su ultratanke, posebno prilagođene ljuspice od visokokvalitetne stomatološke keramike koje se trajno cementiraju na prednju površinu zuba. Njihova glavna uloga je da koriguju estetske nedostatke i pruže zubima savršen oblik, boju, veličinu i poravnanje.',
+          'Za razliku od klasičnih krunica, viniri pokrivaju samo prednji, vidljivi deo zuba, što ih čini izuzetno neinvazivnim i nežnim rešenjem prema prirodnoj zubnoj supstanci.',
+        ],
+        highlightsTitle: 'Zašto izabrati keramičke vinire?',
+        highlights: [
+          'Prirodan izgled i transparentnost: vrhunska keramika savršeno imitira optička svojstva prirodne zubne gleđi, uključujući način na koji reflektuje svetlost. Rezultat je potpuno prirodan osmeh koji niko neće primetiti da je estetska nadoknada.',
+          'Otpornost na prebojavanje: za razliku od prirodnih zuba ili kompozitnih materijala, porcelan je neporozan. To znači da viniri ne menjaju boju pod uticajem kafe, čaja, crnog vina ili duvanskog dima.',
+          'Maksimalno očuvanje zuba: procedura zahteva minimalno brušenje gleđi (svega 0,3 do 0,7 milimetara), a u nekim slučajevima (No-Prep viniri) brušenje uopšte nije potrebno.',
+        ],
+      },
+      {
+        id: 'bezmetalne-krunice',
+        eyebrow: 'Bezmetalne krunice',
+        title: 'Bezmetalne krunice',
+        text: [
+          'Bezmetalne krunice (često nazivane i bezmetalne navlake) predstavljaju vrhunac moderne stomatološke protetike. Za razliku od tradicionalnih metalokeramičkih krunica koje imaju tamnu metalnu osnovu, bezmetalne krunice su u potpunosti izrađene od visokokvalitetnih keramičkih materijala, najčešće cirkonijuma ili litijum-disilikata (E.max keramike).',
+          'One se koriste za rekonstrukciju zuba koji su u velikoj meri oštećeni usled karijesa, trauma ili lečenja, kao i za postizanje vrhunskih estetskih rezultata na prirodnim zubima ili implantatima.',
+          'Prelazak sa metalokeramičkih na bezmetalne sisteme doneo je revoluciju u stomatologiji, a pacijentima obezbedio brojne prednosti.',
+        ],
+        highlightsTitle: 'Zašto izabrati bezmetalne krunice?',
+        highlights: [
+          'Vrhunska, prirodna estetika: bezmetalna keramika ima sposobnost da propušta i prelama svetlost na gotovo identičan način kao i prirodna zubna gleđ.',
+          'Nema „crnog ruba“ uz desni: ivica zuba ostaje savršeno bela i prirodna.',
+          'Biokompatibilnost i zdravlje desni.',
+          'Izuzetna čvrstina i dugotrajnost: bezmetalne krunice bez problema podnose visoke pritiske žvakanja, zbog čega su idealne kako za prednje, tako i za bočne zube.',
+          'Maksimalna preciznost izrade: zahvaljujući naprednoj kompjuterskoj CAD/CAM tehnologiji, bezmetalne krunice se kompjuterski dizajniraju i mašinski režu iz jednog bloka materijala. To garantuje mikronsku preciznost i savršeno nalaženje krunice na pripremljen zub.',
+        ],
+      },
     ],
     processTitle: 'Koraci protetskog rada',
     process: [
@@ -158,20 +302,10 @@ export const servicePages: ServicePageContent[] = [
         text: 'Cementiranje i kontrola udobnosti, estetike i funkcije.',
       },
     ],
-    gallery: [
-      {
-        src: 'https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format&fit=crop&w=800&q=70',
-        alt: 'Protetski rad',
-      },
-      {
-        src: 'https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?auto=format&fit=crop&w=800&q=70',
-        alt: 'Detalj krunice',
-      },
-      {
-        src: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&q=70',
-        alt: 'Konsultacija sa pacijentom',
-      },
-    ],
+    gallery: Array.from({ length: 15 }, (_, i) => ({
+      src: `/assets/protetika/d${i + 1}.jpg`,
+      alt: `Protetika — rad ${i + 1}`,
+    })),
     ctaTitle: 'Vratimo funkciju i estetiku',
     ctaText: 'Zakažite pregled i dobijte predlog protetskog rešenja prilagođen vama.',
   },
@@ -180,15 +314,27 @@ export const servicePages: ServicePageContent[] = [
     eyebrow: 'Ortodoncija',
     headline: 'Pravilno poređani zubi — vidljivo i nevidljivo',
     lead: 'Invisalign i fiksni aparati za ispravku zagriza, razmaka i gustih zuba.',
-    heroImage:
-      'https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?auto=format&fit=crop&w=1600&q=70',
+    heroImage: '/assets/ortodoncija/f2.jpg',
     introTitle: 'Terapija koja prati vaš ritam života',
     introText: [
       'Bilo da želite diskretne folije ili klasičan aparat, planiramo terapiju prema uzrastu, zagrizu i estetskim očekivanjima.',
       'Kontrole su jasno zakazane, a napredak pratimo kroz digitalne snimke i fotografije.',
     ],
-    introImage:
-      'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=1000&q=70',
+    introImage: '/assets/ortodoncija/f2.jpg',
+    introMethods: [
+      {
+        id: 'invisalign',
+        title: 'Invisalign',
+        text: 'Diskretne providne folije — skoro neprimetne tokom nošenja, skidaju se pri jelu i higijeni.',
+        image: '/assets/ortodoncija/invisalgin.jpg',
+      },
+      {
+        id: 'fiksni-aparat',
+        title: 'Fiksni aparat',
+        text: 'Metalni ili estetski breketi za preciznu korekciju zagriza, razmaka i položaja zuba.',
+        image: '/assets/ortodoncija/f1.jpg',
+      },
+    ],
     benefitsTitle: 'Indikacije za ortodontsku terapiju',
     benefits: [
       'Krivi ili rotirani zubi',
@@ -217,18 +363,11 @@ export const servicePages: ServicePageContent[] = [
       },
     ],
     gallery: [
-      {
-        src: 'https://images.unsplash.com/photo-1600170311833-c2cf5280ce49?auto=format&fit=crop&w=800&q=70',
-        alt: 'Ortodontski osmeh',
-      },
-      {
-        src: 'https://images.unsplash.com/photo-1588776814546-daab30f310ce?auto=format&fit=crop&w=800&q=70',
-        alt: 'Kontrola aparata',
-      },
-      {
-        src: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=70',
-        alt: 'Ordinacija',
-      },
+      { src: '/assets/ortodoncija/f1.jpg', alt: 'Ortodontska terapija — fiksni aparat' },
+      { src: '/assets/ortodoncija/f2.jpg', alt: 'Fiksni aparat sa estetskim ligaturama' },
+      { src: '/assets/ortodoncija/f3.jpg', alt: 'Ortodontska terapija — pre i posle' },
+      { src: '/assets/ortodoncija/f4.jpg', alt: 'Fiksni aparat — klinički rad' },
+      { src: '/assets/ortodoncija/invisalgin.jpg', alt: 'Invisalign providne folije' },
     ],
     ctaTitle: 'Ispravite zagriz na vreme',
     ctaText: 'Besplatan pregled — saznajte koji ortodontski pristup vam najbolje odgovara.',
@@ -238,15 +377,14 @@ export const servicePages: ServicePageContent[] = [
     eyebrow: 'Opšta stomatologija',
     headline: 'Prevencija, lečenje i briga o zdravlju zuba',
     lead: 'Bele plombe, endodoncija, čišćenje kamenca i redovne kontrole savremenim protokolima.',
-    heroImage:
-      'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1600&q=70',
-    introTitle: 'Temelj zdrave usne duplje',
+    heroImage: '/assets/opsta/d4.jpg',
+    introTitle: 'Zdrav osmeh počinje pažljivim pristupom.',
     introText: [
-      'Opšta stomatologija je osnova svake uspešne terapije — od blagovremenog otkrivanja karijesa do lečenja kanala.',
-      'Radimo pažljivo, sa fokusom na očuvanje zuba i komfort pacijenta.',
+      'Pružamo kompletnu stomatološku negu — od preventivnih pregleda i očuvanja zdravlja zuba, do lečenja karijesa, bolesti desni i sprovođenja kompleksnih oralno-hirurških i protetskih zahvata.',
+      'Naš pristup zasniva se na individualnom planu terapije, savremenim metodama i očuvanju prirodnih zuba kad god je to moguće. Svakom pacijentu posvećujemo vreme da razumemo njegove potrebe i zajedno pronađemo najbolje rešenje.',
     ],
-    introImage:
-      'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1000&q=70',
+    introImage: '/assets/opsta/d4.jpg',
+    introTagline: 'Stručnost, poverenje i pažnja — u svakom koraku terapije.',
     benefitsTitle: 'Najčešće usluge',
     benefits: [
       'Pregled i savetovanje',
@@ -275,18 +413,9 @@ export const servicePages: ServicePageContent[] = [
       },
     ],
     gallery: [
-      {
-        src: 'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=800&q=70',
-        alt: 'Stomatološki pregled',
-      },
-      {
-        src: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=70',
-        alt: 'Terapija',
-      },
-      {
-        src: 'https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format&fit=crop&w=800&q=70',
-        alt: 'Ordinacija',
-      },
+      { src: '/assets/opsta/d3.jpg', alt: 'Opšta stomatologija — rad 1' },
+      { src: '/assets/opsta/d4.jpg', alt: 'Opšta stomatologija — rad 2' },
+      { src: '/assets/opsta/d5.jpg', alt: 'Opšta stomatologija — rad 3' },
     ],
     ctaTitle: 'Zakažite redovnu kontrolu',
     ctaText: 'Prvi pregled je besplatan — na vreme rešavamo probleme dok su mali.',
@@ -295,16 +424,14 @@ export const servicePages: ServicePageContent[] = [
     slug: 'parodontologija',
     eyebrow: 'Parodontologija',
     headline: 'Zdrave desni — temelj dugovečnih zuba',
-    lead: 'Lečenje krvarenja, povlačenja gingive i parodontopatije laserskim i konzervativnim protokolima.',
-    heroImage:
-      'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=1600&q=70',
+    lead: 'Lečenje krvarenja, povlačenja gingive i parodontopatije konzervativnim protokolima.',
+    heroImage: '/assets/parodontologija/naslovna.jpg',
     introTitle: 'Ne ignorišite znakove upale desni',
     introText: [
       'Krvarenje pri pranju, neprijatan zadah i povlačenje desni često ukazuju na parodontalni problem koji se može uspešno tretirati.',
       'Cilj terapije je zaustaviti napredovanje bolesti, sačuvati zube i vratiti zdravlje mekih tkiva.',
     ],
-    introImage:
-      'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1000&q=70',
+    introImage: '/assets/parodontologija/naslovna.jpg',
     benefitsTitle: 'Kada da se javite',
     benefits: [
       'Krvarenje desni pri pranju ili flossingu',
@@ -317,33 +444,15 @@ export const servicePages: ServicePageContent[] = [
     process: [
       {
         title: 'Parodontalni status',
-        text: 'Merimo džepove, procenjujemo upalu i stepen oštećenja.',
+        text: 'Merimo dubinu džepova, procenjujemo stanje desni i stepen oštećenja.',
       },
       {
-        title: 'Inicijalna terapija',
-        text: 'Dubinsko čišćenje, kiretaža i instrukcije higijene.',
+        title: 'Kauzalna faza terapije',
+        text: 'Ultrazvučno čišćenje, kiretaža parodontalnih džepova i uputstvo za pravilno održavanje oralne higijene.',
       },
       {
-        title: 'Laserska podrška',
-        text: 'Po indikaciji — laserska terapija za brži oporavak tkiva.',
-      },
-      {
-        title: 'Održavanje',
-        text: 'Kontrolni protokol kako bi rezultat ostao stabilan.',
-      },
-    ],
-    gallery: [
-      {
-        src: 'https://images.unsplash.com/photo-1588776814546-daab30f310ce?auto=format&fit=crop&w=800&q=70',
-        alt: 'Negovanje desni',
-      },
-      {
-        src: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=800&q=70',
-        alt: 'Terapija',
-      },
-      {
-        src: 'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=800&q=70',
-        alt: 'Kontrola',
+        title: 'Održavanje postignutih rezultata',
+        text: 'Redovni kontrolni pregledi kako bi rezultati terapije ostali uspešni.',
       },
     ],
     ctaTitle: 'Sačuvajte zube i desni',
@@ -354,15 +463,13 @@ export const servicePages: ServicePageContent[] = [
     eyebrow: 'Oralna hirurgija',
     headline: 'Precizne hirurške intervencije uz maksimalan komfor',
     lead: 'Vađenje umnjaka, apikotomija, augmentacija kosti i priprema za implantate.',
-    heroImage:
-      'https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format&fit=crop&w=1600&q=70',
+    heroImage: '/assets/hirurgija/naslovna.jpg',
     introTitle: 'Hirurški pristup bez nepotrebnog stresa',
     introText: [
       'Svaku intervenciju planiramo na osnovu snimaka i kliničkog nalaza, uz jasno objašnjenje toka i oporavka.',
       'Po dogovoru radimo u sedaciji — posebno kod anksioznih pacijenata i složenijih zahvata.',
     ],
-    introImage:
-      'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1000&q=70',
+    introImage: '/assets/hirurgija/naslovna.jpg',
     benefitsTitle: 'Najčešće intervencije',
     benefits: [
       'Hirurško i jednostavno vađenje zuba',
@@ -391,18 +498,9 @@ export const servicePages: ServicePageContent[] = [
       },
     ],
     gallery: [
-      {
-        src: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=70',
-        alt: 'Hirurška ordinacija',
-      },
-      {
-        src: 'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=800&q=70',
-        alt: 'Planiranje zahvata',
-      },
-      {
-        src: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=70',
-        alt: 'Oprema',
-      },
+      { src: '/assets/hirurgija/d2.jpg', alt: 'Oralna hirurgija — rad 1' },
+      { src: '/assets/hirurgija/d3.jpg', alt: 'Oralna hirurgija — rad 2' },
+      { src: '/assets/hirurgija/d4.jpg', alt: 'Oralna hirurgija — rad 3' },
     ],
     ctaTitle: 'Dogovorite hirurški pregled',
     ctaText: 'Prvi pregled je besplatan — dobijate jasan plan i očekivani tok oporavka.',
@@ -412,15 +510,16 @@ export const servicePages: ServicePageContent[] = [
     eyebrow: 'Dečja stomatologija',
     headline: 'Nežno i bezbedno — prvo iskustvo koje gradi poverenje',
     lead: 'Pregledi, preventiva i terapija prilagođeni deci, uz strpljiv pristup i mirnu atmosferu.',
-    heroImage:
-      'https://images.unsplash.com/photo-1588776814546-daab30f310ce?auto=format&fit=crop&w=1600&q=70',
+    heroImage: '/assets/decija/naslovna.jpg',
+    // Portrait hero: on desktop shift focus up so heads aren't cropped (mobile/tablet stay centered)
+    heroImagePosition: 'object-center lg:object-[center_20%]',
     introTitle: 'Zdrave navike od malih nogu',
     introText: [
       'Dečja stomatologija nije samo lečenje — već i prevencija, edukacija i pozitivno iskustvo koje smanjuje strah od stomatologa.',
       'Radimo polako, uz objašnjenja prilagođena uzrastu i podršku roditeljima.',
     ],
-    introImage:
-      'https://images.unsplash.com/photo-1600170311833-c2cf5280ce49?auto=format&fit=crop&w=1000&q=70',
+    introImage: '/assets/decija/naslovna.jpg',
+    introImagePosition: 'object-[10%_center]',
     benefitsTitle: 'Šta nudimo najmlađima',
     benefits: [
       'Prvi pregled bez stresa',
@@ -446,20 +545,6 @@ export const servicePages: ServicePageContent[] = [
       {
         title: 'Kontrolni ritam',
         text: 'Predlažemo redovne kontrole za zdrav rast i miran osmeh.',
-      },
-    ],
-    gallery: [
-      {
-        src: 'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=800&q=70',
-        alt: 'Dečji pregled',
-      },
-      {
-        src: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&q=70',
-        alt: 'Razgovor sa roditeljem',
-      },
-      {
-        src: 'https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?auto=format&fit=crop&w=800&q=70',
-        alt: 'Osmeh deteta',
       },
     ],
     ctaTitle: 'Zakažite prvi dečji pregled',

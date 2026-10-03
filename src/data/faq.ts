@@ -15,11 +15,11 @@ export const faq: FaqItem[] = [
   },
   {
     question: 'Kolika je garancija?',
-    answer: 'Na implantate i protetske radove dajemo pisanu garanciju do 5 godina, uz redovne kontrole koje su uključene u cenu terapije.',
+    answer: 'Na protetske radove dajemo pisanu garanciju od godinu dana, uz redovne kontrole koje su uključene u praćenje terapije.',
   },
   {
     question: 'Da li je moguće plaćanje na rate?',
-    answer: 'Da, za veće terapije nudimo plaćanje na rate bez kamate, u dogovoru sa administracijom ordinacije.',
+    answer: 'Da, moguće je plaćanje na rate kreditnim karticama i čekovima građana, u dogovoru sa administracijom ordinacije.',
   },
   {
     question: 'Koliko dana treba da ostanem u Beogradu?',
@@ -27,7 +27,7 @@ export const faq: FaqItem[] = [
   },
   {
     question: 'Da li radite subotom?',
-    answer: 'Da, ordinacija radi subotom od 09:00 do 14:00 časova, dok je nedeljom zatvorena.',
+    answer: 'Subotom radimo po pozivu, za hitne slučajeve.',
   },
   {
     question: 'Šta ako imam veliki strah od stomatologa?',

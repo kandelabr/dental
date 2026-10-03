@@ -8,8 +8,10 @@ export interface Service {
 export interface TeamMember {
   name: string
   role: string
-  bio: string
+  bio: string[]
   image: string
+  /** Tailwind object-position class when the crop needs a custom focus point */
+  imagePosition?: string
 }
 
 export interface ServicePageContent {
@@ -18,14 +20,41 @@ export interface ServicePageContent {
   headline: string
   lead: string
   heroImage: string
+  /** Tailwind object-position class when the hero crop needs a custom focus point */
+  heroImagePosition?: string
   introTitle: string
   introText: string[]
   introImage: string
+  /** Tailwind object-position class when the intro image crop needs a custom focus point */
+  introImagePosition?: string
+  /** Optional italic line under intro paragraphs */
+  introTagline?: string
+  /** Optional anchor id on the intro section (for quick-link hashes) */
+  introId?: string
+  /** Method cards under the intro (e.g. fasete, krunice) */
+  introMethods?: { id?: string; title: string; text: string; image?: string }[]
   benefitsTitle: string
   benefits: string[]
+  /** When set, renders titled situation cards instead of a simple checklist */
+  situations?: { title: string; text: string }[]
   processTitle: string
+  processEyebrow?: string
   process: { title: string; text: string }[]
-  gallery: { src: string; alt: string }[]
+  /** Extra in-page sections (e.g. All-on-4, proteze) with anchor ids for menu links */
+  featureSections?: {
+    id: string
+    eyebrow: string
+    title: string
+    text: string[]
+    tagline?: string
+    stepsTitle?: string
+    steps?: { title: string; text: string }[]
+    highlightsTitle?: string
+    highlights?: string[]
+  }[]
+  gallery?: { src: string; alt: string }[]
+  /** When true, feature sections render before the process block */
+  featuresBeforeProcess?: boolean
   ctaTitle: string
   ctaText: string
 }
@@ -51,11 +80,8 @@ export interface Advantage {
 
 export interface Testimonial {
   name: string
-  city: string
-  service: string
   quote: string
   rating: number
-  avatar: string
 }
 
 export interface GalleryImage {
@@ -72,7 +98,8 @@ export interface BeforeAfterCase {
 
 export interface PriceRow {
   name: string
-  price: number
+  /** Formatted display price, e.g. "500 €", "4.000 din", "500–1.000 €" */
+  price: string
 }
 
 export interface PriceCategory {
@@ -84,14 +111,6 @@ export interface PriceCategory {
 export interface FaqItem {
   question: string
   answer: string
-}
-
-export interface BlogPost {
-  title: string
-  excerpt: string
-  date: string
-  category: string
-  image: string
 }
 
 export interface WorkingHours {

@@ -1,14 +1,10 @@
 export const about = {
+  badge: '10 godina iskustva',
   paragraphs: [
-    'Više od dve decenije verujemo u jedno: stomatologija ne treba da boli, ne treba da se odlaže i ne treba da bude nejasna. Zato svakom pacijentu pristupamo sa punom pažnjom, jasnim planom i tehnologijom koja skraćuje terapiju.',
-    'Naš tim se kontinuirano edukuje u zemlji i inostranstvu, koristimo isključivo sertifikovane materijale premium klase i na svoje radove dajemo garanciju u pisanoj formi.',
+    'Dobro došli u modernu stomatološku ordinaciju u kojoj su vaše zdravlje, osmeh i osećaj sigurnosti na prvom mestu. Trudimo se da svakom pacijentu pružimo prijatno iskustvo, pažljivo saslušamo njegove potrebe i zajedno pronađemo najbolje rešenje.',
+    'Pratimo savremene standarde u stomatologiji i koristimo digitalne tehnologije koje nam omogućavaju da preciznije planiramo i izvodimo terapiju. Na taj način, naši pacijenti dobijaju jasniji uvid u svoj tretman, a mi možemo da postignemo što preciznije i prirodnije rezultate.',
+    'U svom radu koristimo isključivo premium materijale i proverena rešenja renomiranih proizvođača, jer verujemo da kvalitet ne treba da bude kompromis. Svakom detalju pristupamo pažljivo, sa ciljem da rezultati budu dugotrajni, funkcionalni i estetski.',
   ],
-  checklist: [
-    'Digitalna 3D dijagnostika za svaki plan terapije',
-    'Sertifikovani materijali premium klase',
-    'Pisana garancija na sve protetske radove',
-  ],
-  doctorName: 'dr Marko Marković',
-  doctorTitle: 'spec. stomatološke protetike',
-  badge: '20 godina iskustva',
+  image: '/assets/o-nama/o_nama.jpg',
+  imageAlt: 'Tim stomatološke ordinacije',
 } as const
