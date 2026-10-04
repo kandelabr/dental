@@ -10,7 +10,7 @@ export const beforeAfterCases: BeforeAfterCase[] = Array.from({ length: 10 }, (_
   }
 })
 
-const aboutGallery: Omit<GalleryImage, 'tall'>[] = Array.from({ length: 24 }, (_, i) => {
+const aboutGallery: Omit<GalleryImage, 'tall'>[] = Array.from({ length: 25 }, (_, i) => {
   const n = i + 1
   return {
     src: `/assets/o-nama/d${n}.jpg`,

@@ -490,7 +490,7 @@ export const servicePages: ServicePageContent[] = [
       },
       {
         title: 'Uputstva za oporavak',
-        text: 'Jasne smernice za higijenu, ishranu i lekove.',
+        text: 'Jasne smernice za što brži i bezbolniji postoperativni opravak.',
       },
       {
         title: 'Kontrola',
