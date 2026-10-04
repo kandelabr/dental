@@ -1,0 +1,1820 @@
+{
+  "meta": {
+    "home": {
+      "title": "House of Smile — A Smile That Speaks"
+    },
+    "team": {
+      "title": "Our Team — House of Smile"
+    },
+    "services": {
+      "implantologija": "Implantology — House of Smile",
+      "estetska-stomatologija": "Aesthetic Dentistry & Medicine — House of Smile",
+      "protetika": "Prosthodontics — House of Smile",
+      "ortodoncija": "Orthodontics — House of Smile",
+      "opsta-stomatologija": "General Dentistry — House of Smile",
+      "parodontologija": "Periodontology — House of Smile",
+      "oralna-hirurgija": "Oral Surgery — House of Smile",
+      "decja-stomatologija": "Pediatric Dentistry — House of Smile"
+    }
+  },
+  "ui": {
+    "brand": {
+      "tagline": "Dental Clinic"
+    },
+    "skipLink": "Skip to content",
+    "topbar": {
+      "hours": "Mon–Fri 12:00–20:00 · Sat by appointment"
+    },
+    "nav": {
+      "ariaMain": "Main navigation",
+      "ariaQuickLinks": "Quick links",
+      "ariaMobile": "Mobile navigation",
+      "openMenu": "Open menu",
+      "closeMenu": "Close menu",
+      "items": {
+        "home": "Home",
+        "services": "Services",
+        "work": "Our Work",
+        "prices": "Prices",
+        "about": "About Us",
+        "testimonials": "Reviews",
+        "contact": "Contact"
+      },
+      "bookAppointment": "Book an Appointment"
+    },
+    "common": {
+      "bookFreeExam": "Book a Free Exam",
+      "bookConsultation": "Book a Consultation",
+      "freeFirstExam": "Your first exam is free.",
+      "viewPrices": "View prices",
+      "allServices": "All services",
+      "backToServices": "Back to services",
+      "learnMore": "Learn more →",
+      "meetTeam": "Meet our team",
+      "viewOurWork": "See our work",
+      "aboutService": "About the service",
+      "indications": "Indications",
+      "process": "Process",
+      "gallery": "Gallery",
+      "moreServices": "More services",
+      "moreServicesTitle": "Explore our other specialties",
+      "clearAnswerTitle": "A clear answer for your situation",
+      "serviceNotFound": "Service not found",
+      "backToAbout": "← About Us",
+      "allServicesLink": "← All services"
+    },
+    "sections": {
+      "steps": {
+        "eyebrow": "How we start",
+        "title": "Three steps to your new smile"
+      },
+      "about": {
+        "eyebrow": "About Us"
+      },
+      "services": {
+        "eyebrow": "Our Services",
+        "title": "Complete dentistry under one roof",
+        "lead": "From prevention to complex reconstructions - all services united in one clinic"
+      },
+      "spotlight": {
+        "eyebrow": "Insurance",
+        "titlePrefix": "Reimbursement with",
+        "titleSuffix": "lower prices",
+        "percent": "10%",
+        "lead": "We have contracts with leading insurance companies for reimbursement — policyholders receive treatment at prices 10% lower.",
+        "cardLead": "lower prices for insured patients",
+        "cardNote": "Dunav osiguranje, Triglav, Globos and Delta Generali — reimbursement through signed contracts.",
+        "insurers": [
+          "Dunav osiguranje",
+          "Triglav",
+          "Globos",
+          "Delta Generali"
+        ]
+      },
+      "work": {
+        "eyebrow": "Our Work",
+        "title": "Results speak for us",
+        "beforeAfterAria": "Before and after treatment comparison",
+        "beforeAlt": "Before treatment",
+        "afterAlt": "After treatment",
+        "beforeLabel": "BEFORE",
+        "afterLabel": "AFTER"
+      },
+      "advantages": {
+        "eyebrow": "Advantages",
+        "title": "Why patients choose us"
+      },
+      "testimonials": {
+        "eyebrow": "Reviews",
+        "title": "What our patients say",
+        "ratingDisplay": "4.8 / 5"
+      },
+      "prices": {
+        "eyebrow": "Prices",
+        "title": "Transparent prices, no hidden costs",
+        "note": "Prices are for information only; you receive the final treatment plan after the exam.",
+        "tabsAria": "Price list categories"
+      },
+      "faq": {
+        "eyebrow": "FAQ",
+        "title": "Everything you want to know before treatment"
+      },
+      "cta": {
+        "title": "Your new smile starts with one call",
+        "text": "Book a free exam today and find out the exact plan and cost of your treatment."
+      },
+      "contact": {
+        "eyebrow": "Contact",
+        "title": "Book your appointment",
+        "freeExamNote": "Your first exam is free.",
+        "labels": {
+          "address": "Address",
+          "phone": "Phone",
+          "email": "Email",
+          "hours": "Working hours"
+        },
+        "mapTitle": "Clinic location on the map"
+      }
+    },
+    "form": {
+      "labels": {
+        "name": "Full name*",
+        "phone": "Phone*",
+        "email": "Email",
+        "service": "Service",
+        "message": "Message",
+        "consent": "I agree to the processing of my data*"
+      },
+      "unsureOption": "I'm not sure",
+      "submit": "Send request",
+      "submitting": "Sending...",
+      "successTitle": "Thank you!",
+      "successText": "We will contact you within 24h.",
+      "reset": "Send a new request",
+      "errors": {
+        "name": "Enter your full name (min. 3 characters).",
+        "phone": "Enter a valid phone number.",
+        "email": "Enter a valid email address.",
+        "consent": "You must agree to the processing of your data."
+      }
+    },
+    "footer": {
+      "blurb": "A premium dental clinic dedicated to painless treatment, digital diagnostics and long-lasting results.",
+      "navigation": "Navigation",
+      "services": "Services",
+      "contact": "Contact",
+      "hours": "Mon–Fri 12:00–20:00 · Sat by appointment",
+      "copyright": "© 2026 House of Smile. All rights reserved.",
+      "terms": "Terms of use",
+      "privacy": "Privacy policy"
+    },
+    "floating": {
+      "backToTop": "Back to top",
+      "contactOptions": "Contact options"
+    },
+    "lightbox": {
+      "close": "Close",
+      "prev": "Previous image",
+      "next": "Next image"
+    },
+    "carousel": {
+      "prev": "Previous",
+      "next": "Next",
+      "slideAria": "Slide {n}"
+    },
+    "teamPage": {
+      "eyebrow": "Our Team",
+      "title": "The people behind your new smile",
+      "ctaTitle": "Ready to start your treatment?",
+      "ctaText": "Book a free exam and meet the team that will guide your treatment from day one."
+    },
+    "aria": {
+      "homeSection": "Home",
+      "stats": "Statistics",
+      "steps": "Three steps to a smile",
+      "about": "About the clinic",
+      "services": "Services",
+      "spotlight": "Insurance and reimbursement",
+      "work": "Our Work",
+      "advantages": "Why patients choose us",
+      "testimonials": "Patient reviews",
+      "prices": "Prices",
+      "faq": "FAQ",
+      "cta": "Book an exam",
+      "contact": "Contact"
+    }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Dental care in Belgrade",
+      "title": "When others say \"it can't be done\",",
+      "titleAccent": "we find a way.",
+      "lead": "All types of implants. Fixed prosthetic solutions. One team.",
+      "highlights": [
+        "10+ years of experience",
+        "1-year warranty",
+        "Painless treatment under sedation"
+      ]
+    }
+  },
+  "site": {
+    "name": "House of Smile",
+    "phone": "062 / 765-101",
+    "mobile": "+381 62 765 101",
+    "email": "smilehouseofsmile@gmail.com",
+    "address": "Prizrenska 7, Stari grad, Belgrade",
+    "hours": [
+      {
+        "day": "Monday – Friday",
+        "time": "12:00 – 20:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "By appointment"
+      },
+      {
+        "day": "Sunday",
+        "time": "Closed"
+      }
+    ],
+    "hoursShort": "Mon–Fri 12:00–20:00 · Sat by appointment"
+  },
+  "about": {
+    "badge": "10 years of experience",
+    "paragraphs": [
+      "Welcome to a modern dental clinic where your health, your smile and your sense of security come first. We strive to give every patient a pleasant experience, listen carefully to their needs and find the best solution together.",
+      "We follow contemporary standards in dentistry and use digital technologies that allow us to plan and perform treatment more precisely. This way, our patients gain a clearer insight into their treatment, and we can achieve the most precise and natural results possible.",
+      "In our work we use only premium materials and proven solutions from renowned manufacturers, because we believe quality should never be compromised. We approach every detail with care, aiming for results that are long-lasting, functional and aesthetic."
+    ],
+    "imageAlt": "Dental clinic team"
+  },
+  "services": [
+    {
+      "slug": "implantologija",
+      "name": "Implantology",
+      "description": "A permanent solution for missing teeth with 3D planning and painless placement."
+    },
+    {
+      "slug": "estetska-stomatologija",
+      "name": "Aesthetic Medicine & Dentistry",
+      "description": "Hollywood smile and laser whitening for a flawless smile. Hyaluronic fillers and Botox."
+    },
+    {
+      "slug": "protetika",
+      "name": "Prosthodontics",
+      "description": "Metal-free and zirconia prosthetics that restore function and the natural look of your teeth."
+    },
+    {
+      "slug": "ortodoncija",
+      "name": "Orthodontics",
+      "description": "Invisalign and fixed braces for perfectly aligned teeth."
+    },
+    {
+      "slug": "opsta-stomatologija",
+      "name": "General Dentistry",
+      "description": "White fillings, endodontics and prevention using modern protocols."
+    },
+    {
+      "slug": "parodontologija",
+      "name": "Periodontology",
+      "description": "Treatment of bleeding and receding gums with conservative protocols."
+    },
+    {
+      "slug": "oralna-hirurgija",
+      "name": "Oral Surgery",
+      "description": "Wisdom tooth extraction, apicoectomy and bone augmentation."
+    },
+    {
+      "slug": "decja-stomatologija",
+      "name": "Pediatric Dentistry",
+      "description": "A gentle approach and a positive first experience for the little ones."
+    }
+  ],
+  "servicePages": {
+    "implantologija": {
+      "slug": "implantologija",
+      "eyebrow": "Implantology",
+      "headline": "Dental implants that restore function and your smile",
+      "lead": "A permanent solution for missing teeth with 3D planning and painless placement.",
+      "introTitle": "Modern implants instead of temporary solutions",
+      "introText": [
+        "Tooth loss affects chewing, speech and self-confidence. Dental implants restore a natural feel and prevent jawbone loss.",
+        "We work with certified titanium systems from the Straumann Group, Neodent Neoporos and a digital placement plan, so the result is precise, stable and long-lasting."
+      ],
+      "benefitsTitle": "When implants are the clear answer for your situation",
+      "benefits": [],
+      "situations": [
+        {
+          "title": "A single missing tooth",
+          "text": "The implant replaces the tooth root and a crown is placed on top, avoiding the need to grind down healthy neighbouring teeth for a bridge."
+        },
+        {
+          "title": "Several missing teeth",
+          "text": "Implants serve as stable supports for dental bridges."
+        },
+        {
+          "title": "Complete toothlessness",
+          "text": "Placing 4 to 6 implants per jaw (methods such as All-on-4 or All-on-6) makes it possible to fit fixed dental bridges or stable dentures that don't slip and provide maximum comfort."
+        }
+      ],
+      "processTitle": "What the treatment looks like",
+      "process": [
+        {
+          "title": "Exam and 3D planning",
+          "text": "We analyse the condition of your bone, gums and bite. You receive a clear treatment plan and price in advance."
+        },
+        {
+          "title": "Implant placement",
+          "text": "A minimally invasive procedure under local anaesthesia or sedation, as agreed."
+        },
+        {
+          "title": "Osseointegration",
+          "text": "The implant fuses with the bone and becomes a solid foundation for the future crown."
+        },
+        {
+          "title": "Prosthetic work",
+          "text": "We place a crown, bridge or fixed denture that matches your smile."
+        }
+      ],
+      "featureSections": [
+        {
+          "id": "all-on-4",
+          "eyebrow": "All-on-4 & All-on-6",
+          "title": "All-on-4 and All-on-6",
+          "text": [
+            "Losing all the teeth in a jaw no longer has to mean wearing unstable and uncomfortable acrylic dentures. Thanks to advances in implantology, the All-on-4 and All-on-6 methods make it possible to fix a complete dental arch (bridge) on just four or six implants.",
+            "These methods are a permanent, stable and aesthetically perfect solution that fully mimics natural teeth."
+          ],
+          "stepsTitle": "Workflow",
+          "steps": [
+            {
+              "title": "Exam and 3D diagnostics (CT scan)",
+              "text": "Detailed analysis of bone structure and planning of the precise position of each implant."
+            },
+            {
+              "title": "Implant placement",
+              "text": "A painless procedure under local anaesthesia (or analgosedation). The next day a temporary bridge is made and fitted."
+            },
+            {
+              "title": "Healing period (osseointegration)",
+              "text": "It takes 3 to 6 months for the implants to fully fuse with the bone."
+            },
+            {
+              "title": "Making the final restoration",
+              "text": "After healing, a permanent, high-quality ceramic or zirconia bridge is made and permanently fixed to the implants."
+            }
+          ]
+        },
+        {
+          "id": "proteze-na-implantatima",
+          "eyebrow": "Implant-supported dentures",
+          "title": "Implant-supported dentures",
+          "text": [
+            "An economical solution: stabilising a denture on implants often requires fewer implants (usually 2 to 4 per jaw) compared to fixed bridges on implants, which makes this procedure more financially accessible.",
+            "Losing teeth no longer has to mean discomfort, instability and the constant fear of a conventional denture shifting. An implant-supported denture is a modern, long-lasting solution that combines the simplicity of a full denture with the unmatched stability of dental implants."
+          ],
+          "highlightsTitle": "Why choose an implant-supported denture?",
+          "highlights": [
+            "Maximum stability: no falling out, shifting or sliding of the denture when laughing or talking.",
+            "Natural feel and greater comfort: the denture is considerably smaller than a conventional one, especially in the upper jaw, as it doesn't have to cover the entire palate.",
+            "Chewing power is restored."
+          ]
+        }
+      ],
+      "gallery": [
+        {
+          "src": "/assets/impantologija/d1.jpg",
+          "alt": "Implantology — case 1"
+        },
+        {
+          "src": "/assets/impantologija/d2.jpg",
+          "alt": "Implantology — case 2"
+        },
+        {
+          "src": "/assets/impantologija/d3.jpg",
+          "alt": "Implantology — case 3"
+        },
+        {
+          "src": "/assets/impantologija/d4.jpg",
+          "alt": "Implantology — case 4"
+        },
+        {
+          "src": "/assets/impantologija/d5.jpg",
+          "alt": "Implantology — case 5"
+        },
+        {
+          "src": "/assets/impantologija/d6.jpg",
+          "alt": "Implantology — case 6"
+        },
+        {
+          "src": "/assets/impantologija/d7.jpg",
+          "alt": "Implantology — case 7"
+        },
+        {
+          "src": "/assets/impantologija/d8.jpg",
+          "alt": "Implantology — case 8"
+        },
+        {
+          "src": "/assets/impantologija/d9.jpg",
+          "alt": "Implantology — case 9"
+        },
+        {
+          "src": "/assets/impantologija/d10.jpg",
+          "alt": "Implantology — case 10"
+        },
+        {
+          "src": "/assets/impantologija/d11.jpg",
+          "alt": "Implantology — case 11"
+        },
+        {
+          "src": "/assets/impantologija/d12.jpg",
+          "alt": "Implantology — case 12"
+        },
+        {
+          "src": "/assets/impantologija/d13.jpg",
+          "alt": "Implantology — case 13"
+        },
+        {
+          "src": "/assets/impantologija/d14.jpg",
+          "alt": "Implantology — case 14"
+        },
+        {
+          "src": "/assets/impantologija/d15.jpg",
+          "alt": "Implantology — case 15"
+        },
+        {
+          "src": "/assets/impantologija/d16.jpg",
+          "alt": "Implantology — case 16"
+        },
+        {
+          "src": "/assets/impantologija/d17.jpg",
+          "alt": "Implantology — case 17"
+        },
+        {
+          "src": "/assets/impantologija/d18.jpg",
+          "alt": "Implantology — case 18"
+        }
+      ],
+      "ctaTitle": "Ready for a permanent solution?",
+      "ctaText": "Book a free exam and find out whether implants are the right choice for you."
+    },
+    "estetska-stomatologija": {
+      "slug": "estetska-stomatologija",
+      "eyebrow": "Aesthetic Medicine & Dentistry",
+      "headline": "A smile that looks natural and confident",
+      "lead": "Hollywood smile and laser whitening for a flawless smile. Hyaluronic fillers and Botox.",
+      "introTitle": "What exactly is a Hollywood Smile?",
+      "introText": [
+        "The Hollywood Smile is one of the most striking aesthetic transformations in modern dentistry. Using the most advanced dental materials, we correct every imperfection: from colour and shape, to tooth position, all the way to closing unwanted gaps.",
+        "Depending on the condition of your natural teeth, we achieve this effect with a combination of top-tier methods:"
+      ],
+      "introMethods": [
+        {
+          "id": "fasete-viniri",
+          "title": "Ceramic veneers",
+          "text": "Ultra-thin shells bonded to the front surface of the teeth with minimal preparation, ideal for correcting colour and minor irregularities."
+        },
+        {
+          "title": "Metal-free crowns",
+          "text": "The pinnacle of modern aesthetic dentistry. They provide maximum strength and perfectly mimic the natural refraction of light."
+        }
+      ],
+      "benefitsTitle": "What we can correct",
+      "benefits": [
+        "Uneven colour and shading on teeth",
+        "Damaged or worn enamel",
+        "Gaps and asymmetry",
+        "A wish for a subtle or more pronounced Hollywood smile",
+        "The need for a quick aesthetic upgrade"
+      ],
+      "processEyebrow": "Process",
+      "processTitle": "Course of treatment",
+      "process": [
+        {
+          "title": "Consultation and digital design (Digital Smile Design)",
+          "text": "We listen to your wishes, analyse your face and create a digital model. Before we even begin, you can see what your new smile will look like!"
+        },
+        {
+          "title": "Tooth preparation",
+          "text": "Minimal and painless shaping of the teeth (under local anaesthesia) to make room for veneers or crowns."
+        },
+        {
+          "title": "Fabrication and try-in",
+          "text": "While our dental laboratory precisely crafts your restoration, you wear temporary teeth so you are never without a smile."
+        },
+        {
+          "title": "Cementation",
+          "text": "Fitting your new Hollywood Smile — the moment you see the smile you've always wanted in the mirror."
+        }
+      ],
+      "featureSections": [
+        {
+          "id": "lasersko-izbeljivanje",
+          "eyebrow": "Laser whitening",
+          "title": "FLASH teeth whitening system",
+          "text": [
+            "A more modern approach to professional whitening.",
+            "Unlike conventional systems, FLASH enables faster, non-invasive whitening with a gentle approach to the teeth. A single treatment can lighten your teeth by several shades while preserving their natural structure."
+          ],
+          "tagline": "One treatment. A smile several shades brighter.",
+          "steps": [
+            {
+              "title": "Consultation",
+              "text": "The doctor will assess the colour of your teeth and recommend the best whitening treatment."
+            },
+            {
+              "title": "Whitening treatment",
+              "text": "The gel is activated on the teeth according to the FLASH system protocol, under carefully controlled conditions and the dentist's supervision."
+            },
+            {
+              "title": "Maintenance",
+              "text": "Tips for maintaining your whitening results and recommendations for further care."
+            }
+          ]
+        },
+        {
+          "id": "hijaluronski-fileri",
+          "eyebrow": "Fillers and Botox",
+          "title": "Hyaluronic fillers",
+          "text": [
+            "Hyaluronic fillers are modern products based on hyaluronic acid, used to restore volume, define contours and soften certain wrinkles, with the possibility of achieving a very natural result.",
+            "In our work, every treatment is planned individually, taking into account the patient's anatomy, proportions and wishes. The goal is not to change the face, but to subtly refresh it and enhance its natural beauty.",
+            "We believe the best aesthetic result should look natural, harmonious and understated — a fresher face that is still you."
+          ],
+          "tagline": "Subtle correction. Natural beauty. Individual approach."
+        },
+        {
+          "id": "mezoterapija",
+          "eyebrow": "Fillers and Botox",
+          "title": "Mesotherapy",
+          "text": [
+            "Mesotherapy is a modern treatment that involves applying carefully selected active ingredients into the superficial layers of the skin, aiming for intense hydration, refreshment and improved skin quality.",
+            "The treatment can contribute to a more even complexion and improved skin texture, tone and elasticity, leaving the skin looking fresher, smoother and more radiant, with less of a tired, dull appearance.",
+            "In our work, every treatment is planned individually according to the needs and condition of the skin, as well as the patient's wishes. The goal is subtle refreshment, a more even complexion and restored natural glow, without changing your appearance."
+          ],
+          "tagline": "Skin hydration. Even complexion. Improved texture. Individual approach."
+        },
+        {
+          "id": "botoks",
+          "eyebrow": "Fillers and Botox",
+          "title": "Botox",
+          "text": [
+            "Botox is a modern aesthetic treatment that acts on the muscles responsible for dynamic wrinkles, softening their appearance and giving the face a more rested and fresher look.",
+            "In our work, the treatment is planned individually, with careful dosing and respect for the face's natural expressions. The goal is not a \"frozen\" look, but subtle softening of wrinkles while preserving the natural appearance and character of the face."
+          ],
+          "tagline": "Subtle correction. Preserved expressions. A naturally fresher look."
+        },
+        {
+          "id": "lipoliza",
+          "eyebrow": "Fillers and Botox",
+          "title": "Lipolysis",
+          "text": [
+            "Lipolysis is a non-surgical treatment designed to reduce localised fat deposits in areas resistant to diet and exercise, improving the appearance of the skin, microcirculation and tone, with the goal of smoother, firmer skin.",
+            "We plan the treatment very carefully, according to the degree of cellulite, the condition of the skin and the desired result."
+          ],
+          "tagline": "Smoother skin. Better tone. A more polished look."
+        }
+      ],
+      "gallery": [
+        {
+          "src": "/assets/estetska/d2.jpg",
+          "alt": "Aesthetic dentistry — case 2"
+        },
+        {
+          "src": "/assets/estetska/d3.jpg",
+          "alt": "Aesthetic dentistry — case 3"
+        },
+        {
+          "src": "/assets/estetska/d4.jpg",
+          "alt": "Aesthetic dentistry — case 4"
+        },
+        {
+          "src": "/assets/estetska/d5.jpg",
+          "alt": "Aesthetic dentistry — case 5"
+        },
+        {
+          "src": "/assets/estetska/d6.jpg",
+          "alt": "Aesthetic dentistry — case 6"
+        },
+        {
+          "src": "/assets/estetska/d7.jpg",
+          "alt": "Aesthetic dentistry — case 7"
+        },
+        {
+          "src": "/assets/estetska/d8.jpg",
+          "alt": "Aesthetic dentistry — case 8"
+        },
+        {
+          "src": "/assets/estetska/d9.jpg",
+          "alt": "Aesthetic dentistry — case 9"
+        },
+        {
+          "src": "/assets/estetska/d10.jpg",
+          "alt": "Aesthetic dentistry — case 10"
+        },
+        {
+          "src": "/assets/estetska/d11.jpg",
+          "alt": "Aesthetic dentistry — case 11"
+        },
+        {
+          "src": "/assets/estetska/d12.jpg",
+          "alt": "Aesthetic dentistry — case 12"
+        }
+      ],
+      "ctaTitle": "Want a new smile?",
+      "ctaText": "Your first exam is free — let's agree on an aesthetic plan that suits you."
+    },
+    "protetika": {
+      "slug": "protetika",
+      "eyebrow": "Prosthodontics",
+      "headline": "Premium-quality crowns, bridges and dentures",
+      "lead": "Metal-free and zirconia prosthetics that restore function and the natural look of your teeth.",
+      "introTitle": "Custom fixed and removable solutions",
+      "introText": [
+        "From single crowns to complex bridges, we plan every prosthetic solution individually, in line with your bite, function and aesthetics.",
+        "Together with our dental laboratory we choose the right material and precisely match the shape and colour, so the restoration is as natural, comfortable and long-lasting as possible."
+      ],
+      "benefitsTitle": "Why patients choose our prosthodontics",
+      "benefits": [
+        "Zirconia and metal-free ceramics",
+        "Natural translucency and colour",
+        "Stability when chewing",
+        "Solutions for partial or complete tooth loss",
+        "A clear price and a written treatment plan"
+      ],
+      "processTitle": "Steps of prosthetic treatment",
+      "process": [
+        {
+          "title": "Analysis and proposal",
+          "text": "We examine your existing teeth, bone and bite, then propose the optimal solution."
+        },
+        {
+          "title": "Preparation and impression",
+          "text": "Digital or conventional impression — depending on the indication."
+        },
+        {
+          "title": "Temporary restoration",
+          "text": "If needed, you receive a temporary crown while the final one is being made."
+        },
+        {
+          "title": "Final placement",
+          "text": "Cementation and a check of comfort, aesthetics and function."
+        }
+      ],
+      "featureSections": [
+        {
+          "id": "keramicki-viniri",
+          "eyebrow": "Ceramic veneers",
+          "title": "Ceramic veneers",
+          "text": [
+            "Ceramic veneers (also known as dental laminates) are ultra-thin, custom-made shells of high-quality dental ceramic that are permanently bonded to the front surface of the teeth. Their main role is to correct aesthetic flaws and give the teeth a perfect shape, colour, size and alignment.",
+            "Unlike conventional crowns, veneers cover only the front, visible part of the tooth, making them an extremely minimally invasive solution that is gentle on natural tooth structure."
+          ],
+          "highlightsTitle": "Why choose ceramic veneers?",
+          "highlights": [
+            "Natural look and translucency: high-end ceramic perfectly imitates the optical properties of natural tooth enamel, including the way it reflects light. The result is a completely natural smile — no one will notice it's an aesthetic restoration.",
+            "Stain resistance: unlike natural teeth or composite materials, porcelain is non-porous. This means veneers don't discolour from coffee, tea, red wine or tobacco smoke.",
+            "Maximum tooth preservation: the procedure requires minimal enamel reduction (only 0.3 to 0.7 millimetres), and in some cases (No-Prep veneers) no preparation is needed at all."
+          ]
+        },
+        {
+          "id": "bezmetalne-krunice",
+          "eyebrow": "Metal-free crowns",
+          "title": "Metal-free crowns",
+          "text": [
+            "Metal-free crowns (often also called metal-free caps) represent the pinnacle of modern dental prosthetics. Unlike traditional porcelain-fused-to-metal crowns, which have a dark metal base, metal-free crowns are made entirely of high-quality ceramic materials, most often zirconia or lithium disilicate (E.max ceramic).",
+            "They are used to restore teeth that are severely damaged by decay, trauma or previous treatment, as well as to achieve outstanding aesthetic results on natural teeth or implants.",
+            "The shift from porcelain-fused-to-metal to metal-free systems has revolutionised dentistry and brought patients numerous benefits."
+          ],
+          "highlightsTitle": "Why choose metal-free crowns?",
+          "highlights": [
+            "Superb, natural aesthetics: metal-free ceramic transmits and refracts light in almost exactly the same way as natural tooth enamel.",
+            "No \"black line\" at the gums: the edge of the tooth stays perfectly white and natural.",
+            "Biocompatibility and healthy gums.",
+            "Exceptional strength and durability: metal-free crowns easily withstand high chewing forces, making them ideal for both front and back teeth.",
+            "Maximum precision: thanks to advanced CAD/CAM technology, metal-free crowns are computer-designed and machine-milled from a single block of material. This guarantees micron-level precision and a perfect fit of the crown on the prepared tooth."
+          ]
+        }
+      ],
+      "gallery": [
+        {
+          "src": "/assets/protetika/d1.jpg",
+          "alt": "Prosthodontics — case 1"
+        },
+        {
+          "src": "/assets/protetika/d2.jpg",
+          "alt": "Prosthodontics — case 2"
+        },
+        {
+          "src": "/assets/protetika/d3.jpg",
+          "alt": "Prosthodontics — case 3"
+        },
+        {
+          "src": "/assets/protetika/d4.jpg",
+          "alt": "Prosthodontics — case 4"
+        },
+        {
+          "src": "/assets/protetika/d5.jpg",
+          "alt": "Prosthodontics — case 5"
+        },
+        {
+          "src": "/assets/protetika/d6.jpg",
+          "alt": "Prosthodontics — case 6"
+        },
+        {
+          "src": "/assets/protetika/d7.jpg",
+          "alt": "Prosthodontics — case 7"
+        },
+        {
+          "src": "/assets/protetika/d8.jpg",
+          "alt": "Prosthodontics — case 8"
+        },
+        {
+          "src": "/assets/protetika/d9.jpg",
+          "alt": "Prosthodontics — case 9"
+        },
+        {
+          "src": "/assets/protetika/d10.jpg",
+          "alt": "Prosthodontics — case 10"
+        },
+        {
+          "src": "/assets/protetika/d11.jpg",
+          "alt": "Prosthodontics — case 11"
+        },
+        {
+          "src": "/assets/protetika/d12.jpg",
+          "alt": "Prosthodontics — case 12"
+        },
+        {
+          "src": "/assets/protetika/d13.jpg",
+          "alt": "Prosthodontics — case 13"
+        },
+        {
+          "src": "/assets/protetika/d14.jpg",
+          "alt": "Prosthodontics — case 14"
+        },
+        {
+          "src": "/assets/protetika/d15.jpg",
+          "alt": "Prosthodontics — case 15"
+        }
+      ],
+      "ctaTitle": "Let's restore function and aesthetics",
+      "ctaText": "Book an exam and get a prosthetic solution proposal tailored to you."
+    },
+    "ortodoncija": {
+      "slug": "ortodoncija",
+      "eyebrow": "Orthodontics",
+      "headline": "Properly aligned teeth — visible and invisible",
+      "lead": "Invisalign and fixed braces to correct your bite, gaps and crowded teeth.",
+      "introTitle": "Treatment that fits your lifestyle",
+      "introText": [
+        "Whether you want discreet aligners or classic braces, we plan treatment according to age, bite and aesthetic expectations.",
+        "Check-ups are clearly scheduled, and we track progress through digital scans and photographs."
+      ],
+      "introMethods": [
+        {
+          "id": "invisalign",
+          "title": "Invisalign",
+          "text": "Discreet clear aligners — almost invisible while worn, removed for eating and oral hygiene."
+        },
+        {
+          "id": "fiksni-aparat",
+          "title": "Fixed braces",
+          "text": "Metal or aesthetic brackets for precise correction of bite, gaps and tooth position."
+        }
+      ],
+      "benefitsTitle": "Indications for orthodontic treatment",
+      "benefits": [
+        "Crooked or rotated teeth",
+        "Open, deep or crossbite",
+        "Gaps and crowding",
+        "Preparation for prosthetics or implants",
+        "Aesthetic smile correction for adults"
+      ],
+      "processTitle": "How orthodontic treatment works",
+      "process": [
+        {
+          "title": "Diagnostics",
+          "text": "Analysis of X-rays, photos and models for an accurate movement plan."
+        },
+        {
+          "title": "Choosing the system",
+          "text": "Invisalign, metal or aesthetic fixed braces — we choose together."
+        },
+        {
+          "title": "Active treatment",
+          "text": "Regular check-ups and adjustments until the teeth reach the desired position."
+        },
+        {
+          "title": "Retention",
+          "text": "A fixed or removable retainer preserves the result achieved."
+        }
+      ],
+      "gallery": [
+        {
+          "src": "/assets/ortodoncija/f1.jpg",
+          "alt": "Orthodontic treatment — fixed braces"
+        },
+        {
+          "src": "/assets/ortodoncija/f2.jpg",
+          "alt": "Fixed braces with aesthetic ligatures"
+        },
+        {
+          "src": "/assets/ortodoncija/f3.jpg",
+          "alt": "Orthodontic treatment — before and after"
+        },
+        {
+          "src": "/assets/ortodoncija/f4.jpg",
+          "alt": "Fixed braces — clinical case"
+        },
+        {
+          "src": "/assets/ortodoncija/invisalgin.jpg",
+          "alt": "Invisalign clear aligners"
+        }
+      ],
+      "ctaTitle": "Correct your bite in time",
+      "ctaText": "Free exam — find out which orthodontic approach suits you best."
+    },
+    "opsta-stomatologija": {
+      "slug": "opsta-stomatologija",
+      "eyebrow": "General Dentistry",
+      "headline": "Prevention, treatment and care for healthy teeth",
+      "lead": "White fillings, endodontics, scaling and regular check-ups using modern protocols.",
+      "introTitle": "A healthy smile starts with a careful approach.",
+      "introText": [
+        "We provide complete dental care — from preventive exams and maintaining healthy teeth to treating decay and gum disease, and performing complex oral surgery and prosthetic procedures.",
+        "Our approach is based on an individual treatment plan, modern methods and preserving natural teeth whenever possible. We take time with every patient to understand their needs and find the best solution together."
+      ],
+      "introTagline": "Expertise, trust and care — at every step of treatment.",
+      "benefitsTitle": "Most common services",
+      "benefits": [
+        "Exam and consultation",
+        "Composite (white) fillings",
+        "Root canal treatment",
+        "Ultrasonic scaling",
+        "Fissure sealing and prevention"
+      ],
+      "processTitle": "What a visit looks like",
+      "process": [
+        {
+          "title": "Exam",
+          "text": "A detailed look at the condition of your teeth and gums, with suggested priorities."
+        },
+        {
+          "title": "Diagnostics",
+          "text": "X-ray if needed and a clear explanation of the findings."
+        },
+        {
+          "title": "Treatment",
+          "text": "Treatment in one or more visits, depending on the scope."
+        },
+        {
+          "title": "Check-up",
+          "text": "Monitoring the results and home-care advice."
+        }
+      ],
+      "gallery": [
+        {
+          "src": "/assets/opsta/d3.jpg",
+          "alt": "General dentistry — case 1"
+        },
+        {
+          "src": "/assets/opsta/d4.jpg",
+          "alt": "General dentistry — case 2"
+        },
+        {
+          "src": "/assets/opsta/d5.jpg",
+          "alt": "General dentistry — case 3"
+        }
+      ],
+      "ctaTitle": "Book a regular check-up",
+      "ctaText": "Your first exam is free — we solve problems early while they're still small."
+    },
+    "parodontologija": {
+      "slug": "parodontologija",
+      "eyebrow": "Periodontology",
+      "headline": "Healthy gums — the foundation of long-lasting teeth",
+      "lead": "Treatment of bleeding gums, gum recession and periodontitis with conservative protocols.",
+      "introTitle": "Don't ignore the signs of gum inflammation",
+      "introText": [
+        "Bleeding when brushing, bad breath and receding gums often indicate a periodontal problem that can be treated successfully.",
+        "The goal of treatment is to stop the progression of the disease, save the teeth and restore the health of the soft tissues."
+      ],
+      "benefitsTitle": "When to see us",
+      "benefits": [
+        "Bleeding gums when brushing or flossing",
+        "Swollen and sensitive gums",
+        "Receding gums and exposed tooth necks",
+        "Loose teeth",
+        "Chronic bad breath"
+      ],
+      "processTitle": "Periodontal therapy",
+      "process": [
+        {
+          "title": "Periodontal assessment",
+          "text": "We measure pocket depth and assess the condition of the gums and the degree of damage."
+        },
+        {
+          "title": "Causal phase of therapy",
+          "text": "Ultrasonic cleaning, curettage of periodontal pockets and instructions for proper oral hygiene."
+        },
+        {
+          "title": "Maintaining the results",
+          "text": "Regular check-ups to keep the treatment results successful."
+        }
+      ],
+      "ctaTitle": "Save your teeth and gums",
+      "ctaText": "Book an exam — early intervention often prevents tooth loss."
+    },
+    "oralna-hirurgija": {
+      "slug": "oralna-hirurgija",
+      "eyebrow": "Oral Surgery",
+      "headline": "Precise surgical procedures with maximum comfort",
+      "lead": "Wisdom tooth extraction, apicoectomy, bone augmentation and preparation for implants.",
+      "introTitle": "A surgical approach without unnecessary stress",
+      "introText": [
+        "We plan every procedure based on X-rays and clinical findings, with a clear explanation of the course and recovery.",
+        "Sedation is available on request — especially for anxious patients and more complex procedures."
+      ],
+      "benefitsTitle": "Most common procedures",
+      "benefits": [
+        "Surgical and simple tooth extraction",
+        "Impacted and problematic wisdom teeth",
+        "Apicoectomy and root resection",
+        "Bone augmentation and sinus lift",
+        "Preparing the jaw for implants"
+      ],
+      "processTitle": "Course of surgical treatment",
+      "process": [
+        {
+          "title": "Exam and X-ray",
+          "text": "Assessment of risks, plan and required preparation."
+        },
+        {
+          "title": "Procedure",
+          "text": "A painless procedure under anaesthesia, with careful technique."
+        },
+        {
+          "title": "Recovery instructions",
+          "text": "Clear guidelines on hygiene, diet and medication."
+        },
+        {
+          "title": "Check-up",
+          "text": "Monitoring healing and the next steps of treatment."
+        }
+      ],
+      "gallery": [
+        {
+          "src": "/assets/hirurgija/d2.jpg",
+          "alt": "Oral surgery — case 1"
+        },
+        {
+          "src": "/assets/hirurgija/d3.jpg",
+          "alt": "Oral surgery — case 2"
+        },
+        {
+          "src": "/assets/hirurgija/d4.jpg",
+          "alt": "Oral surgery — case 3"
+        }
+      ],
+      "ctaTitle": "Arrange a surgical consultation",
+      "ctaText": "Your first exam is free — you get a clear plan and the expected course of recovery."
+    },
+    "decja-stomatologija": {
+      "slug": "decja-stomatologija",
+      "eyebrow": "Pediatric Dentistry",
+      "headline": "Gentle and safe — a first experience that builds trust",
+      "lead": "Exams, prevention and treatment adapted to children, with a patient approach and a calm atmosphere.",
+      "introTitle": "Healthy habits from an early age",
+      "introText": [
+        "Pediatric dentistry isn't just treatment — it's also prevention, education and a positive experience that reduces fear of the dentist.",
+        "We work slowly, with age-appropriate explanations and support for parents."
+      ],
+      "benefitsTitle": "What we offer the little ones",
+      "benefits": [
+        "A stress-free first exam",
+        "Fissure sealing",
+        "Fluoride treatment",
+        "Fillings on baby and permanent teeth",
+        "Hygiene and nutrition advice"
+      ],
+      "processTitle": "What a visit looks like",
+      "process": [
+        {
+          "title": "Getting to know us",
+          "text": "Your child gets to know the clinic and the team at a relaxed pace."
+        },
+        {
+          "title": "Exam",
+          "text": "Check of teeth, gums and development, with a clear report for parents."
+        },
+        {
+          "title": "Prevention or treatment",
+          "text": "Sealing, fluoride or gentle treatment as needed."
+        },
+        {
+          "title": "Check-up routine",
+          "text": "We recommend regular check-ups for healthy growth and a happy smile."
+        }
+      ],
+      "ctaTitle": "Book your child's first exam",
+      "ctaText": "Your first exam is free — we build trust from the very first visit."
+    }
+  },
+  "prices": [
+    {
+      "key": "implantologija",
+      "label": "Implantology",
+      "rows": [
+        {
+          "name": "Implant (Neodent)",
+          "price": "450 €"
+        },
+        {
+          "name": "Superstructure (Neodent)",
+          "price": "100 €"
+        },
+        {
+          "name": "All-on-4 (temporary + porcelain-fused-to-metal crowns) per jaw",
+          "price": "3,600 €"
+        },
+        {
+          "name": "All-on-4 (temporary + metal-free crowns) per jaw",
+          "price": "4,750 €"
+        },
+        {
+          "name": "All-on-6 (temporary + porcelain-fused-to-metal crowns) per jaw",
+          "price": "4,600 €"
+        },
+        {
+          "name": "All-on-6 (temporary + metal-free crowns) per jaw",
+          "price": "5,600 €"
+        },
+        {
+          "name": "Implant-supported denture",
+          "price": "2,350 €"
+        },
+        {
+          "name": "Bone levelling",
+          "price": "200 €"
+        },
+        {
+          "name": "Transcrestal sinus lift",
+          "price": "100 €"
+        },
+        {
+          "name": "Sinus lift",
+          "price": "500–1,000 €"
+        }
+      ]
+    },
+    {
+      "key": "estetska-stomatologija",
+      "label": "Aesthetic Dentistry & Medicine",
+      "rows": [
+        {
+          "name": "Hollywood smile (per jaw)",
+          "price": "2,050 €"
+        },
+        {
+          "name": "Laser teeth whitening — both jaws (Flash lamp)",
+          "price": "200 €"
+        },
+        {
+          "name": "Laser whitening — one jaw",
+          "price": "150 €"
+        },
+        {
+          "name": "Home whitening — both jaws",
+          "price": "140 €"
+        },
+        {
+          "name": "Whitening of a single non-vital tooth",
+          "price": "5,000 RSD"
+        },
+        {
+          "name": "Bruxism splint",
+          "price": "6,000 RSD"
+        },
+        {
+          "name": "Home whitening tray (per jaw)",
+          "price": "6,000 RSD"
+        },
+        {
+          "name": "Ceramic veneer",
+          "price": "250 €"
+        },
+        {
+          "name": "Botox — three areas",
+          "price": "250 €"
+        },
+        {
+          "name": "Botox — two areas",
+          "price": "200 €"
+        },
+        {
+          "name": "Botox — one area",
+          "price": "150 €"
+        },
+        {
+          "name": "Botox — full face treatment",
+          "price": "300 €"
+        },
+        {
+          "name": "Masseter Botox",
+          "price": "200 €"
+        },
+        {
+          "name": "Underarm Botox (hyperhidrosis treatment)",
+          "price": "300 €"
+        },
+        {
+          "name": "Ejal 40 — 2 ml",
+          "price": "160 €"
+        },
+        {
+          "name": "Aesthetic cheekbone correction",
+          "price": "160 €"
+        },
+        {
+          "name": "Hyaluronic filler — nasolabial folds",
+          "price": "150 €"
+        },
+        {
+          "name": "Hyaluronic fillers Classic (Infini, Revolax)",
+          "price": "160 €/ml"
+        },
+        {
+          "name": "Hyaluronic fillers Lux (Aliaxin, Belotero, Mali)",
+          "price": "200 €/ml"
+        },
+        {
+          "name": "Hyaluronic fillers Premium (Stylage, Restylane, Revanesse, Teosyal)",
+          "price": "250 €/ml"
+        },
+        {
+          "name": "Skin boosters (Ejal 40, Produktil, Aquashine, Stylage, Hidromax, Jalupro Young Eye)",
+          "price": "160 €/2 ml"
+        },
+        {
+          "name": "Skin boosters (Profhilo)",
+          "price": "250 €/3 ml"
+        },
+        {
+          "name": "Skin boosters — Skinbuilder / RRS Long Lasting (LOLA)",
+          "price": "200 €/3 ml"
+        },
+        {
+          "name": "Mesotherapy for face, neck and décolleté (1 treatment)",
+          "price": "8,000 RSD"
+        },
+        {
+          "name": "Mesotherapy for face, neck and décolleté (3+1 free)",
+          "price": "24,000 RSD"
+        },
+        {
+          "name": "Mesotherapy for eyes, lips, hair, hands (1 treatment)",
+          "price": "6,000 RSD"
+        },
+        {
+          "name": "Mesotherapy for eyes, lips, hair, hands (3+1 free)",
+          "price": "18,000 RSD"
+        },
+        {
+          "name": "Lipolysis (1 treatment)",
+          "price": "10,000 RSD"
+        },
+        {
+          "name": "Lipolysis (3 treatments)",
+          "price": "24,000 RSD"
+        },
+        {
+          "name": "Lemon Bottle (1 treatment)",
+          "price": "12,000 RSD"
+        },
+        {
+          "name": "Lemon Bottle (3 treatments)",
+          "price": "30,000 RSD"
+        }
+      ]
+    },
+    {
+      "key": "protetika",
+      "label": "Prosthodontics",
+      "rows": [
+        {
+          "name": "Porcelain-fused-to-metal crown",
+          "price": "100 €"
+        },
+        {
+          "name": "Metal-free zirconia crown",
+          "price": "180 €"
+        },
+        {
+          "name": "Visil denture",
+          "price": "400 €"
+        },
+        {
+          "name": "Visil denture with attachments",
+          "price": "500 €"
+        },
+        {
+          "name": "Milled crown",
+          "price": "130 €"
+        },
+        {
+          "name": "Partial denture (acrylic)",
+          "price": "300 €"
+        },
+        {
+          "name": "Full denture (acrylic)",
+          "price": "300 €"
+        },
+        {
+          "name": "Titanium-reinforced full denture",
+          "price": "350 €"
+        },
+        {
+          "name": "Mini denture (single missing tooth)",
+          "price": "50 €"
+        },
+        {
+          "name": "Temporary crown",
+          "price": "25 €"
+        },
+        {
+          "name": "Cast post and core",
+          "price": "50 €"
+        },
+        {
+          "name": "Fiberglass post",
+          "price": "50 €"
+        },
+        {
+          "name": "Denture repair",
+          "price": "4,000 RSD"
+        },
+        {
+          "name": "Denture relining",
+          "price": "5,000 RSD"
+        },
+        {
+          "name": "Bridge removal (per crown)",
+          "price": "1,000 RSD"
+        },
+        {
+          "name": "Ceramic veneers",
+          "price": "250 €"
+        },
+        {
+          "name": "Porcelain-fused-to-metal crown on implant",
+          "price": "200 €"
+        },
+        {
+          "name": "Metal-free crown on implant",
+          "price": "280 €"
+        },
+        {
+          "name": "Final cementation of prosthetic work",
+          "price": "2,000 RSD"
+        }
+      ]
+    },
+    {
+      "key": "opsta-stomatologija",
+      "label": "General Dentistry",
+      "rows": [
+        {
+          "name": "Composite filling class I",
+          "price": "3,000 RSD"
+        },
+        {
+          "name": "Composite filling class II",
+          "price": "4,000 RSD"
+        },
+        {
+          "name": "Composite filling class III",
+          "price": "4,000 RSD"
+        },
+        {
+          "name": "Composite filling class IV",
+          "price": "4,000 RSD"
+        },
+        {
+          "name": "Composite filling class V",
+          "price": "4,000 RSD"
+        },
+        {
+          "name": "Composite filling MOD",
+          "price": "4,500 RSD"
+        },
+        {
+          "name": "Composite veneer",
+          "price": "6,000 RSD"
+        },
+        {
+          "name": "Deep caries treatment",
+          "price": "3,000 RSD"
+        },
+        {
+          "name": "Root canal treatment — single-canal tooth",
+          "price": "5,000 RSD"
+        },
+        {
+          "name": "Root canal treatment — two-canal tooth",
+          "price": "6,000 RSD"
+        },
+        {
+          "name": "Root canal treatment — three-canal tooth",
+          "price": "7,000 RSD"
+        },
+        {
+          "name": "Root canal treatment — four-canal tooth",
+          "price": "8,000 RSD"
+        },
+        {
+          "name": "Tooth devitalisation — medication",
+          "price": "3,000 RSD"
+        },
+        {
+          "name": "Root canal filling (per canal)",
+          "price": "2,000 RSD"
+        },
+        {
+          "name": "Tooth drainage (per canal)",
+          "price": "2,000 RSD"
+        },
+        {
+          "name": "Canal medication (per canal)",
+          "price": "2,000 RSD"
+        },
+        {
+          "name": "Root canal retreatment with medication (per canal)",
+          "price": "3,000 RSD"
+        }
+      ]
+    },
+    {
+      "key": "oralna-hirurgija",
+      "label": "Oral Surgery",
+      "rows": [
+        {
+          "name": "Tooth extraction (routine)",
+          "price": "4,000 RSD"
+        },
+        {
+          "name": "Tooth extraction (complicated)",
+          "price": "6,000 RSD"
+        },
+        {
+          "name": "Surgical tooth extraction",
+          "price": "15,000 RSD"
+        },
+        {
+          "name": "Surgical exposure of an impacted tooth",
+          "price": "18,000 RSD"
+        },
+        {
+          "name": "Baby tooth extraction",
+          "price": "2,500 RSD"
+        },
+        {
+          "name": "Apicoectomy",
+          "price": "15,000 RSD"
+        },
+        {
+          "name": "Sinus lift — open method",
+          "price": "60,000–120,000 RSD"
+        },
+        {
+          "name": "Transcrestal sinus lift",
+          "price": "12,000 RSD"
+        },
+        {
+          "name": "Alveoloplasty (per quadrant)",
+          "price": "12,000 RSD"
+        },
+        {
+          "name": "Closure of oroantral communication",
+          "price": "12,000 RSD"
+        },
+        {
+          "name": "Sinus revision",
+          "price": "60,000 RSD"
+        }
+      ]
+    },
+    {
+      "key": "parodontologija",
+      "label": "Periodontology",
+      "rows": [
+        {
+          "name": "Tartar removal and polishing",
+          "price": "4,000 RSD"
+        },
+        {
+          "name": "Soft plaque removal and polishing",
+          "price": "2,000 RSD"
+        },
+        {
+          "name": "Periodontal pocket treatment (per jaw)",
+          "price": "10,000 RSD"
+        },
+        {
+          "name": "Selective grinding",
+          "price": "1,000 RSD"
+        },
+        {
+          "name": "Gingivectomy (per tooth)",
+          "price": "5,000 RSD"
+        },
+        {
+          "name": "Frenectomy",
+          "price": "12,000 RSD"
+        },
+        {
+          "name": "Periodontal abscess — drainage",
+          "price": "3,000 RSD"
+        },
+        {
+          "name": "Periodontal pocket treatment (per pocket)",
+          "price": "2,000 RSD"
+        },
+        {
+          "name": "Flap surgery (per tooth, plus bone cost)",
+          "price": "10,000 RSD"
+        },
+        {
+          "name": "Flap surgery — full jaw (plus bone cost)",
+          "price": "60,000 RSD"
+        },
+        {
+          "name": "Crown lengthening (per tooth)",
+          "price": "10,000 RSD"
+        },
+        {
+          "name": "SMAT",
+          "price": "36,000 RSD"
+        },
+        {
+          "name": "TVT and coronally advanced flap",
+          "price": "45,000 RSD"
+        },
+        {
+          "name": "Gummy smile treatment",
+          "price": "45,000 RSD"
+        },
+        {
+          "name": "Swab collection",
+          "price": "2,000 RSD"
+        }
+      ]
+    },
+    {
+      "key": "decja-stomatologija",
+      "label": "Pediatric Dentistry",
+      "rows": [
+        {
+          "name": "Fissure sealing",
+          "price": "2,000 RSD"
+        },
+        {
+          "name": "Filling on a baby tooth",
+          "price": "2,500 RSD"
+        },
+        {
+          "name": "Baby tooth extraction",
+          "price": "2,000 RSD"
+        }
+      ]
+    },
+    {
+      "key": "ortodoncija",
+      "label": "Orthodontics",
+      "rows": [
+        {
+          "name": "Conventional fixed braces (per jaw)",
+          "price": "700 €"
+        },
+        {
+          "name": "Damon fixed braces (per jaw)",
+          "price": "800 €"
+        },
+        {
+          "name": "Aesthetic fixed braces (per jaw)",
+          "price": "800 €"
+        },
+        {
+          "name": "Removable orthodontic appliance (per jaw)",
+          "price": "250 €"
+        },
+        {
+          "name": "Set-up aligners for teeth straightening (per aligner)",
+          "price": "100 €"
+        },
+        {
+          "name": "Retention aligner",
+          "price": "60 €"
+        }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Does the treatment hurt?",
+      "answer": "No. All procedures are performed under modern local anaesthesia, and for anxious patients we also offer treatment under sedation, so the process is completely painless."
+    },
+    {
+      "question": "How long does implant placement take?",
+      "answer": "The placement itself takes 30–45 minutes per implant. The healing period before the crown is fitted usually lasts 6 to 12 weeks, depending on the condition of the bone."
+    },
+    {
+      "question": "Do you offer treatment under sedation?",
+      "answer": "Yes, analgosedation is available for all major procedures and for patients with a strong fear of the dentist."
+    },
+    {
+      "question": "What is the warranty?",
+      "answer": "We give a one-year written warranty on prosthetic work, with regular check-ups included as part of treatment follow-up."
+    },
+    {
+      "question": "Is payment in instalments possible?",
+      "answer": "Yes, payment in instalments is possible with credit cards and personal cheques, by arrangement with the clinic's administration."
+    },
+    {
+      "question": "How many days do I need to stay in Belgrade?",
+      "answer": "It depends on the treatment — simpler procedures are completed in one visit, while more complex cases (e.g. All-on-6) require 2 visits a few months apart."
+    },
+    {
+      "question": "Are you open on Saturdays?",
+      "answer": "On Saturdays we work by appointment, for emergencies."
+    },
+    {
+      "question": "What if I'm very afraid of the dentist?",
+      "answer": "We completely understand — that's why we offer no-obligation consultations, treatment under sedation and a patient approach from a team specialised in working with anxious patients."
+    }
+  ],
+  "team": {
+    "intro": "Specialists in prosthodontics, oral surgery, periodontology and orthodontics working as one team — with a clear plan, attention to detail and a premium standard of care.",
+    "members": [
+      {
+        "name": "Dr. Emilija Filipović",
+        "role": "Oral Surgery Specialist",
+        "bio": [
+          "Dr. Emilija Filipović is an oral surgery specialist, dedicated to a modern approach, precision and an individual relationship with every patient.",
+          "She completed her undergraduate dental studies at the Faculty of Medicine, University of Novi Sad, in 2017, and her specialist studies in oral surgery in 2024.",
+          "In her work she applies modern methods and technologies, with a particular focus on precise treatment planning and the patient's sense of comfort and safety. She continuously develops her skills through professional training and courses, following the latest advances in oral surgery.",
+          "Expertise, precision and dedication to every patient are the foundation of her approach."
+        ]
+      },
+      {
+        "name": "Dr. Natalija Filipović",
+        "role": "Prosthodontics Specialist",
+        "bio": [
+          "Dr. Natalija Filipović is a prosthodontics specialist, dedicated to creating smiles that naturally combine aesthetics, function and durability.",
+          "She completed her undergraduate dental studies at the Faculty of Medicine, University of Novi Sad, in 2017, and her specialist studies in prosthodontics in 2025.",
+          "She pays special attention to detail, the individual needs of each patient and the careful planning of every prosthetic restoration. Her approach combines modern methods, precision and a sense for aesthetics, so that every result is natural, harmonious and suited to the person it belongs to.",
+          "She continuously advances her knowledge through professional training and by following the latest developments in prosthodontics and aesthetic dentistry, believing that outstanding results are built on a combination of knowledge, experience and dedication to every detail."
+        ]
+      },
+      {
+        "name": "Dr. Jana Gugl",
+        "role": "Prosthodontics Specialist",
+        "bio": [
+          "Dr. Jana Gugl is a prosthodontics specialist, dedicated to providing precise, functional and aesthetically harmonious prosthetic solutions.",
+          "She completed her undergraduate dental studies at the School of Dental Medicine, University of Belgrade, in 2015, and her specialist studies in prosthodontics in 2026.",
+          "In her work she pays special attention to detailed analysis, careful planning and choosing the solution that meets each patient's needs and expectations. Her philosophy is based on combining expertise, modern methods and an individual approach, so that every prosthetic restoration is comfortable, natural and long-lasting.",
+          "She continuously follows developments in modern dentistry and invests in her professional growth, with the aim of providing patients with high-quality, reliable and up-to-date prosthetic treatment."
+        ]
+      },
+      {
+        "name": "Dr. Olivera Vujić",
+        "role": "Doctor of Dental Medicine",
+        "bio": [
+          "Dr. Olivera Vujić is a doctor of dental medicine with many years of experience and a special dedication to aesthetic dentistry and modern aesthetic procedures.",
+          "She graduated from the School of Dental Medicine, University of Belgrade, in 2003. Over her years of practice she has continuously improved her knowledge and skills, following current trends and techniques in aesthetics and anti-ageing medicine.",
+          "She has specialised further in the use of botulinum toxin (Botox), hyaluronic fillers, mesotherapy and lipolysis, with a focus on natural, harmonious and subtle results that highlight each patient's individual beauty.",
+          "Caring, dedicated and meticulous in her work, Dr. Olivera believes the best aesthetic results come when expertise, experience and a good sense of proportion come together as one."
+        ]
+      },
+      {
+        "name": "Dr. Vidosava Marinković Zeljković",
+        "role": "Orthodontics Specialist",
+        "bio": [
+          "Dr. Vidosava is an orthodontics specialist with a particular interest in modern methods of straightening teeth and correcting the bite, as well as in creating a healthy and harmonious smile.",
+          "She completed her undergraduate dental studies in Belgrade in 2015, and in 2024 she completed her specialisation in orthodontics.",
+          "Throughout her professional development she has continuously expanded her knowledge and skills through professional training in modern orthodontics. In her work she applies various modern approaches to orthodontic treatment, including clear aligner therapy and fixed orthodontic appliances, including the Damon system.",
+          "She pays special attention to an individual approach to each patient, detailed analysis of the problem and treatment planning in line with the patient's specific needs and expectations. The goal of her work is to achieve a result that is not only aesthetically pleasing, but also functional and stable in the long term.",
+          "She believes modern orthodontic treatment should combine expertise, precision, modern technology and trust between doctor and patient. Continuously following new methods and techniques allows her to offer her patients modern and individualised treatment options."
+        ]
+      }
+    ]
+  },
+  "testimonials": [
+    {
+      "name": "Simonida Stojanović",
+      "quote": "Great service, Dr. Gugl is always professional and pleasant, the space is modern and beautiful, with the latest equipment. Highly commendable!"
+    },
+    {
+      "name": "Milica Ristić",
+      "quote": "I recommend House of Smile and Dr. Jana. Exceptional professionalism and dedication to the patient, the cleanest clinic I've ever been to, a lovely atmosphere and a great location!"
+    },
+    {
+      "name": "Dusan Dusan",
+      "quote": "My whole family has been going to House of Smile for quite a while now, especially to Dr. Jana Gugl, and we have nothing but praise. I have my teeth treated and maintained there, my wife goes there too, we take our kids, and our daughter had her braces done there. Professional, kind and dedicated to the patient. We have great trust in them and recommend them wholeheartedly!"
+    },
+    {
+      "name": "Dragana Stijepić",
+      "quote": "All my recommendations for the wonderful Dr. Natalija ❤️"
+    },
+    {
+      "name": "Bojana Bukvić",
+      "quote": "For many years I have been maintaining my oral health with Dr. Natalija and Dr. Emilija, and I have nothing but praise. I also had a surgical wisdom tooth extraction with them, and the whole experience was extremely positive. The team's expertise, their professional and attentive approach, and the pleasant atmosphere make every visit feel safe and stress-free. I'm planning further procedures and services the clinic offers, which says enough about the trust I have in their work. Warmly recommended."
+    },
+    {
+      "name": "Jovan Tomić",
+      "quote": "Dr. Olivera Vujić is an absolute superstar. As someone who is really afraid of dentists, I warmly recommend having all your dental work done with her."
+    },
+    {
+      "name": "Jovana M",
+      "quote": "Dr. Natalija, a wonderful woman! I'm more than satisfied!"
+    },
+    {
+      "name": "Igor Gajović",
+      "quote": "Beyond the service, quality and professionalism."
+    },
+    {
+      "name": "Čedomir Simetić",
+      "quote": "Dr. Natalija is phenomenal!"
+    },
+    {
+      "name": "Miljan Sekić",
+      "quote": "Dr. Natalija, an excellent dentist, meticulous, punctual, and also great with children. Recommended. 😊"
+    }
+  ],
+  "advantages": [
+    {
+      "number": "01",
+      "title": "10+ years of practice",
+      "description": "Thousands of successfully completed treatments and complex cases."
+    },
+    {
+      "number": "02",
+      "title": "Pain-free, under sedation",
+      "description": "For anxious patients, treatment under analgosedation."
+    },
+    {
+      "number": "03",
+      "title": "Premium materials",
+      "description": "German and Swiss certified implants and ceramics."
+    },
+    {
+      "number": "04",
+      "title": "Clear price up front",
+      "description": "A written treatment plan with exact prices, no extra costs later."
+    },
+    {
+      "number": "05",
+      "title": "Written warranty",
+      "description": "Up to one year of warranty on prosthetics."
+    },
+    {
+      "number": "06",
+      "title": "One address for everything",
+      "description": "A whole team of specialists and a laboratory in the same clinic."
+    }
+  ],
+  "stats": [
+    {
+      "label": "Years of experience",
+      "suffix": "+"
+    },
+    {
+      "label": "Satisfied patients",
+      "suffix": "+"
+    },
+    {
+      "label": "Implants placed",
+      "suffix": "+"
+    },
+    {
+      "label": "Patient rating",
+      "suffix": "/5"
+    }
+  ],
+  "steps": {
+    "items": [
+      {
+        "number": "01",
+        "title": "Free consultation",
+        "description": "Come for a no-obligation exam. We assess your condition, take a 3D scan and listen to what you want."
+      },
+      {
+        "number": "02",
+        "title": "Individual treatment plan",
+        "description": "You get a clear plan, the order of procedures, a timeline and the exact price — no hidden costs."
+      },
+      {
+        "number": "03",
+        "title": "Your new smile",
+        "description": "We carry out treatment at agreed appointments, painlessly, with check-ups and a warranty once it's completed."
+      }
+    ]
+  },
+  "quickLinks": [
+    {
+      "label": "All on 4 / All on 6",
+      "slug": "implantologija",
+      "hash": "all-on-4"
+    },
+    {
+      "label": "Implant-supported dentures",
+      "slug": "implantologija",
+      "hash": "proteze-na-implantatima"
+    },
+    {
+      "label": "Hollywood smile",
+      "slug": "estetska-stomatologija",
+      "hash": "hollywood-smile"
+    },
+    {
+      "label": "Veneers",
+      "slug": "estetska-stomatologija",
+      "hash": "fasete-viniri"
+    },
+    {
+      "label": "Laser whitening",
+      "slug": "estetska-stomatologija",
+      "hash": "lasersko-izbeljivanje"
+    },
+    {
+      "label": "Metal-free crowns",
+      "slug": "protetika",
+      "hash": "bezmetalne-krunice"
+    },
+    {
+      "label": "Ceramic veneers",
+      "slug": "protetika",
+      "hash": "keramicki-viniri"
+    }
+  ],
+  "gallery": {
+    "aboutAlts": [
+      "Clinic — detail 1",
+      "Clinic — detail 2",
+      "Clinic — detail 3",
+      "Clinic — detail 4",
+      "Clinic — detail 5",
+      "Clinic — detail 6",
+      "Clinic — detail 7",
+      "Clinic — detail 8",
+      "Clinic — detail 9",
+      "Clinic — detail 10",
+      "Clinic — detail 11",
+      "Clinic — detail 12",
+      "Clinic — detail 13",
+      "Clinic — detail 14",
+      "Clinic — detail 15",
+      "Clinic — detail 16",
+      "Clinic — detail 17",
+      "Clinic — detail 18",
+      "Clinic — detail 19",
+      "Clinic — detail 20",
+      "Clinic — detail 21",
+      "Clinic — detail 22",
+      "Clinic — detail 23",
+      "Clinic — detail 24"
+    ],
+    "beforeAfterCases": [
+      {
+        "label": "Case 1"
+      },
+      {
+        "label": "Case 2"
+      },
+      {
+        "label": "Case 3"
+      },
+      {
+        "label": "Case 4"
+      },
+      {
+        "label": "Case 5"
+      },
+      {
+        "label": "Case 6"
+      },
+      {
+        "label": "Case 7"
+      },
+      {
+        "label": "Case 8"
+      },
+      {
+        "label": "Case 9"
+      },
+      {
+        "label": "Case 10"
+      }
+    ]
+  }
+}

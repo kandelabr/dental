@@ -13,6 +13,42 @@ export function initHeader(): void {
   initDrawer()
   initDrawerAccordion()
   initActiveLink()
+  initFitNav()
+}
+
+/** Shrink main nav / quick-links scale until labels fit (longer DE/RU strings). */
+function initFitNav(): void {
+  const nav = $<HTMLElement>('[data-fit-nav]')
+  const quick = $<HTMLElement>('[data-fit-quicklinks]')
+  const bar = $<HTMLElement>('#header-bar')
+  const header = $<HTMLElement>('#site-header')
+
+  const fitFlexRow = (el: HTMLElement | null, varName: '--nav-scale' | '--ql-scale', min = 0.78) => {
+    if (!el || getComputedStyle(el).display === 'none') return
+    let scale = 1
+    el.style.setProperty(varName, '1')
+    for (let i = 0; i < 10; i += 1) {
+      if (el.scrollWidth <= el.clientWidth + 1) break
+      scale = Math.max(min, scale - 0.04)
+      el.style.setProperty(varName, String(scale))
+    }
+  }
+
+  const run = () => {
+    fitFlexRow(nav, '--nav-scale', 0.7)
+    fitFlexRow(quick, '--ql-scale', 0.75)
+  }
+
+  const schedule = () => requestAnimationFrame(run)
+  schedule()
+  void document.fonts?.ready.then(schedule)
+  window.addEventListener('resize', schedule)
+  if (bar && typeof ResizeObserver !== 'undefined') {
+    new ResizeObserver(schedule).observe(bar)
+  }
+  if (header && typeof ResizeObserver !== 'undefined') {
+    new ResizeObserver(schedule).observe(header)
+  }
 }
 
 function initScrollState(header: HTMLElement, headerInner: HTMLElement, topbar: HTMLElement | null): void {
@@ -83,6 +119,7 @@ function initDropdown(): void {
 
 function initDrawer(): void {
   const drawer = $<HTMLElement>('[data-drawer]')
+  const shell = drawer?.parentElement
   const backdrop = $<HTMLElement>('[data-drawer-backdrop]')
   const openBtn = $<HTMLButtonElement>('[data-drawer-open]')
   const closeBtn = $<HTMLButtonElement>('[data-drawer-close]')
@@ -90,12 +127,14 @@ function initDrawer(): void {
 
   const open = () => {
     drawer.classList.remove('translate-x-full')
+    shell?.setAttribute('aria-hidden', 'false')
     backdrop?.classList.remove('opacity-0', 'pointer-events-none')
     document.body.classList.add('overflow-hidden')
     openBtn.setAttribute('aria-expanded', 'true')
   }
   const close = () => {
     drawer.classList.add('translate-x-full')
+    shell?.setAttribute('aria-hidden', 'true')
     backdrop?.classList.add('opacity-0', 'pointer-events-none')
     document.body.classList.remove('overflow-hidden')
     openBtn.setAttribute('aria-expanded', 'false')

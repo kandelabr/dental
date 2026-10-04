@@ -1,4 +1,5 @@
 import { $, on } from '../lib/dom'
+import { ui } from '../i18n/content'
 
 const PHONE_RE = /^[+0-9\s()-]{6,20}$/
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
@@ -17,6 +18,7 @@ export function initForm(): void {
   const submitLabel = $<HTMLElement>('[data-submit-label]', form)
   const success = $<HTMLElement>('[data-success]', form)
   const resetBtn = $<HTMLButtonElement>('[data-reset-form]', form)
+  const formUi = () => ui().form
 
   on(form, 'submit', (e) => {
     e.preventDefault()
@@ -32,7 +34,7 @@ export function initForm(): void {
 
     if (!submitBtn || !submitLabel || !fieldsWrap || !success) return
     submitBtn.disabled = true
-    submitLabel.textContent = 'Šaljem...'
+    submitLabel.textContent = formUi().submitting
     submitBtn.classList.add('opacity-70')
 
     const data = Object.fromEntries(new FormData(form).entries())
@@ -56,21 +58,22 @@ export function initForm(): void {
       submitBtn.disabled = false
       submitBtn.classList.remove('opacity-70')
     }
-    if (submitLabel) submitLabel.textContent = 'Pošalji zahtev'
+    if (submitLabel) submitLabel.textContent = formUi().submit
   })
 }
 
 function validate(form: HTMLFormElement): FieldError[] {
   const errors: FieldError[] = []
+  const err = ui().form.errors
   const name = (form.querySelector<HTMLInputElement>('[data-field="name"]')?.value ?? '').trim()
   const phone = (form.querySelector<HTMLInputElement>('[data-field="phone"]')?.value ?? '').trim()
   const email = (form.querySelector<HTMLInputElement>('[data-field="email"]')?.value ?? '').trim()
   const consent = form.querySelector<HTMLInputElement>('[data-field="consent"]')?.checked ?? false
 
-  if (name.length < 3) errors.push({ field: 'name', message: 'Unesite ime i prezime (min. 3 znaka).' })
-  if (!PHONE_RE.test(phone)) errors.push({ field: 'phone', message: 'Unesite ispravan broj telefona.' })
-  if (email && !EMAIL_RE.test(email)) errors.push({ field: 'email', message: 'Unesite ispravnu email adresu.' })
-  if (!consent) errors.push({ field: 'consent', message: 'Morate se složiti sa obradom podataka.' })
+  if (name.length < 3) errors.push({ field: 'name', message: err.name })
+  if (!PHONE_RE.test(phone)) errors.push({ field: 'phone', message: err.phone })
+  if (email && !EMAIL_RE.test(email)) errors.push({ field: 'email', message: err.email })
+  if (!consent) errors.push({ field: 'consent', message: err.consent })
 
   return errors
 }

@@ -1,4 +1,5 @@
 import { $$, on } from '../lib/dom'
+import { ui } from '../i18n/content'
 
 let overlay: HTMLElement | null = null
 let currentIndex = 0
@@ -28,15 +29,16 @@ export function initLightbox(): void {
 }
 
 function buildOverlay(): HTMLElement {
+  const labels = ui().lightbox
   const el = document.createElement('div')
   el.className =
     'fixed inset-0 z-[80] bg-ink-950/95 backdrop-blur flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300'
   el.innerHTML = `
-    <button type="button" data-lightbox-close aria-label="Zatvori" class="absolute top-5 right-5 flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-ivory-50">
+    <button type="button" data-lightbox-close aria-label="${labels.close}" class="absolute top-5 right-5 flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-ivory-50">
       <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 6l12 12M18 6L6 18"/></svg>
     </button>
-    <button type="button" data-lightbox-prev aria-label="Prethodna slika" class="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-ivory-50">←</button>
-    <button type="button" data-lightbox-next aria-label="Sledeća slika" class="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-ivory-50">→</button>
+    <button type="button" data-lightbox-prev aria-label="${labels.prev}" class="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-ivory-50">←</button>
+    <button type="button" data-lightbox-next aria-label="${labels.next}" class="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-ivory-50">→</button>
     <img data-lightbox-image src="" alt="" class="max-h-[80vh] max-w-[90vw] rounded-2xl object-contain" />
     <p data-lightbox-counter class="absolute bottom-6 left-1/2 -translate-x-1/2 text-ivory-50/80 text-sm tracking-wide"></p>
   `

@@ -9,23 +9,23 @@
 </head>
 
 <body data-service="ortodoncija">
-  <a href="#main"
+  <a href="#main" id="skip-link"
     class="skip-link fixed left-4 top-4 z-[100] -translate-y-24 rounded-full bg-gold-500 px-6 py-3 text-[13px] font-medium uppercase tracking-[0.16em] text-ink-900 transition-transform duration-300 focus:translate-y-0">
     Preskoči na sadržaj
   </a>
 
-  <div id="topbar" class="hidden lg:flex h-11 items-center bg-petrol-700 text-ivory-50/85 text-[13px] relative z-50">
-    <div class="container-lux flex items-center justify-between">
-      <span>Pon–Pet 12:00–20:00 · Sub po pozivu</span>
-      <div class="flex items-center gap-6">
-        <a href="tel:+38162765101" class="hover:text-gold-500 transition-colors">☎ 062 / 765-101</a>
-        <a href="mailto:smilehouseofsmile@gmail.com" class="hover:text-gold-500 transition-colors">✉ smilehouseofsmile@gmail.com</a>
+  <div id="topbar" class="hidden lg:flex h-11 items-center overflow-x-hidden bg-petrol-700 text-ivory-50/85 text-[13px] relative z-50">
+    <div class="container-lux flex min-w-0 max-w-full items-center justify-between gap-3">
+      <span data-render="topbar-hours" class="min-w-0 truncate">Pon–Pet 12:00–20:00 · Sub po pozivu</span>
+      <div class="flex min-w-0 shrink items-center gap-4 xl:gap-6">
+        <a href="tel:+38162765101" class="shrink-0 hover:text-gold-500 transition-colors">☎ 062 / 765-101</a>
+        <a href="mailto:smilehouseofsmile@gmail.com" class="hidden xl:inline hover:text-gold-500 transition-colors">✉ smilehouseofsmile@gmail.com</a>
       </div>
-      <div class="flex items-center gap-4" data-render="topbar-social"></div>
+      <div class="flex shrink-0 items-center gap-4" data-render="topbar-social"></div>
     </div>
   </div>
 
-  <header id="site-header" class="fixed top-11 left-0 right-0 z-50 transition-all duration-500" data-render="header">
+  <header id="site-header" class="fixed top-11 left-0 right-0 z-50 max-w-full transition-all duration-500" data-render="header">
   </header>
 
   <main id="main" data-service-content></main>

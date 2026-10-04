@@ -1,6 +1,7 @@
 import { resolve, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { defineConfig } from 'vite'
+import { i18nPlugin, localeBuildInputs } from './vite-plugin-i18n'
 
 const rootDir = dirname(fileURLToPath(import.meta.url))
 
@@ -16,6 +17,7 @@ const serviceSlugs = [
 ] as const
 
 export default defineConfig({
+  plugins: [i18nPlugin(rootDir)],
   build: {
     rollupOptions: {
       input: {
@@ -24,6 +26,7 @@ export default defineConfig({
         ...Object.fromEntries(
           serviceSlugs.map((slug) => [slug, resolve(rootDir, `usluge/${slug}.html`)]),
         ),
+        ...localeBuildInputs(rootDir),
       },
     },
   },

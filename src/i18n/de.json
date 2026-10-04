@@ -1,0 +1,1820 @@
+{
+  "meta": {
+    "home": {
+      "title": "House of Smile — Ein Lächeln, das spricht"
+    },
+    "team": {
+      "title": "Unser Team — House of Smile"
+    },
+    "services": {
+      "implantologija": "Implantologie — House of Smile",
+      "estetska-stomatologija": "Ästhetische Zahnmedizin & Medizin — House of Smile",
+      "protetika": "Prothetik — House of Smile",
+      "ortodoncija": "Kieferorthopädie — House of Smile",
+      "opsta-stomatologija": "Allgemeine Zahnmedizin — House of Smile",
+      "parodontologija": "Parodontologie — House of Smile",
+      "oralna-hirurgija": "Oralchirurgie — House of Smile",
+      "decja-stomatologija": "Kinderzahnheilkunde — House of Smile"
+    }
+  },
+  "ui": {
+    "brand": {
+      "tagline": "Zahnarztpraxis"
+    },
+    "skipLink": "Zum Inhalt springen",
+    "topbar": {
+      "hours": "Mo–Fr 12:00–20:00 · Sa nach Vereinbarung"
+    },
+    "nav": {
+      "ariaMain": "Hauptnavigation",
+      "ariaQuickLinks": "Schnellzugriff",
+      "ariaMobile": "Mobile Navigation",
+      "openMenu": "Menü öffnen",
+      "closeMenu": "Menü schließen",
+      "items": {
+        "home": "Startseite",
+        "services": "Leistungen",
+        "work": "Unsere Arbeit",
+        "prices": "Preise",
+        "about": "Über uns",
+        "testimonials": "Erfahrungen",
+        "contact": "Kontakt"
+      },
+      "bookAppointment": "Termin vereinbaren"
+    },
+    "common": {
+      "bookFreeExam": "Kostenlose Untersuchung vereinbaren",
+      "bookConsultation": "Beratung vereinbaren",
+      "freeFirstExam": "Die erste Untersuchung ist kostenlos.",
+      "viewPrices": "Preisliste ansehen",
+      "allServices": "Alle Leistungen",
+      "backToServices": "Zurück zu den Leistungen",
+      "learnMore": "Mehr erfahren →",
+      "meetTeam": "Lernen Sie unser Team kennen",
+      "viewOurWork": "Unsere Arbeit ansehen",
+      "aboutService": "Über die Leistung",
+      "indications": "Indikationen",
+      "process": "Ablauf",
+      "gallery": "Galerie",
+      "moreServices": "Weitere Leistungen",
+      "moreServicesTitle": "Entdecken Sie auch unsere anderen Fachbereiche",
+      "clearAnswerTitle": "Eine klare Antwort auf Ihre Situation",
+      "serviceNotFound": "Leistung nicht gefunden",
+      "backToAbout": "← Über uns",
+      "allServicesLink": "← Alle Leistungen"
+    },
+    "sections": {
+      "steps": {
+        "eyebrow": "So fangen wir an",
+        "title": "Drei Schritte zu Ihrem neuen Lächeln"
+      },
+      "about": {
+        "eyebrow": "Über uns"
+      },
+      "services": {
+        "eyebrow": "Unsere Leistungen",
+        "title": "Komplette Zahnmedizin unter einem Dach",
+        "lead": "Von Prävention bis zu komplexen Rekonstruktionen - alle Leistungen vereint in einer Praxis"
+      },
+      "spotlight": {
+        "eyebrow": "Versicherung",
+        "titlePrefix": "Erstattung mit",
+        "titleSuffix": "niedrigeren Preisen",
+        "percent": "10%",
+        "lead": "Wir haben Verträge mit führenden Versicherungsgesellschaften zur Kostenerstattung abgeschlossen — Versicherte erhalten ihre Behandlung zu um 10% niedrigeren Preisen.",
+        "cardLead": "niedrigere Preise für Versicherte",
+        "cardNote": "Dunav osiguranje, Triglav, Globos und Delta Generali — Erstattung über abgeschlossene Verträge.",
+        "insurers": [
+          "Dunav osiguranje",
+          "Triglav",
+          "Globos",
+          "Delta Generali"
+        ]
+      },
+      "work": {
+        "eyebrow": "Unsere Arbeit",
+        "title": "Ergebnisse sprechen für uns",
+        "beforeAfterAria": "Vorher-Nachher-Vergleich der Behandlung",
+        "beforeAlt": "Vor der Behandlung",
+        "afterAlt": "Nach der Behandlung",
+        "beforeLabel": "VORHER",
+        "afterLabel": "NACHHER"
+      },
+      "advantages": {
+        "eyebrow": "Vorteile",
+        "title": "Warum Patienten uns wählen"
+      },
+      "testimonials": {
+        "eyebrow": "Erfahrungen",
+        "title": "Was unsere Patienten sagen",
+        "ratingDisplay": "4,8 / 5"
+      },
+      "prices": {
+        "eyebrow": "Preise",
+        "title": "Transparente Preise, keine versteckten Kosten",
+        "note": "Die Preise dienen nur zur Information; den endgültigen Behandlungsplan erhalten Sie nach der Untersuchung.",
+        "tabsAria": "Preiskategorien"
+      },
+      "faq": {
+        "eyebrow": "Häufige Fragen",
+        "title": "Alles, was Sie vor der Behandlung wissen möchten"
+      },
+      "cta": {
+        "title": "Ihr neues Lächeln beginnt mit einem Anruf",
+        "text": "Vereinbaren Sie noch heute eine kostenlose Untersuchung und erfahren Sie den genauen Plan und Preis Ihrer Behandlung."
+      },
+      "contact": {
+        "eyebrow": "Kontakt",
+        "title": "Vereinbaren Sie Ihren Termin",
+        "freeExamNote": "Die erste Untersuchung ist kostenlos.",
+        "labels": {
+          "address": "Adresse",
+          "phone": "Telefon",
+          "email": "E-Mail",
+          "hours": "Öffnungszeiten"
+        },
+        "mapTitle": "Standort der Praxis auf der Karte"
+      }
+    },
+    "form": {
+      "labels": {
+        "name": "Vor- und Nachname*",
+        "phone": "Telefon*",
+        "email": "E-Mail",
+        "service": "Leistung",
+        "message": "Nachricht",
+        "consent": "Ich stimme der Verarbeitung meiner Daten zu*"
+      },
+      "unsureOption": "Ich bin mir nicht sicher",
+      "submit": "Anfrage senden",
+      "submitting": "Wird gesendet...",
+      "successTitle": "Vielen Dank!",
+      "successText": "Wir melden uns innerhalb von 24 Stunden bei Ihnen.",
+      "reset": "Neue Anfrage senden",
+      "errors": {
+        "name": "Bitte geben Sie Vor- und Nachnamen ein (mind. 3 Zeichen).",
+        "phone": "Bitte geben Sie eine gültige Telefonnummer ein.",
+        "email": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+        "consent": "Sie müssen der Datenverarbeitung zustimmen."
+      }
+    },
+    "footer": {
+      "blurb": "Premium-Zahnarztpraxis, spezialisiert auf schmerzfreie Behandlung, digitale Diagnostik und langlebige Ergebnisse.",
+      "navigation": "Navigation",
+      "services": "Leistungen",
+      "contact": "Kontakt",
+      "hours": "Mo–Fr 12:00–20:00 · Sa nach Vereinbarung",
+      "copyright": "© 2026 House of Smile. Alle Rechte vorbehalten.",
+      "terms": "Nutzungsbedingungen",
+      "privacy": "Datenschutzerklärung"
+    },
+    "floating": {
+      "backToTop": "Nach oben",
+      "contactOptions": "Kontaktoptionen"
+    },
+    "lightbox": {
+      "close": "Schließen",
+      "prev": "Vorheriges Bild",
+      "next": "Nächstes Bild"
+    },
+    "carousel": {
+      "prev": "Zurück",
+      "next": "Weiter",
+      "slideAria": "Ansicht {n}"
+    },
+    "teamPage": {
+      "eyebrow": "Unser Team",
+      "title": "Die Menschen hinter Ihrem neuen Lächeln",
+      "ctaTitle": "Bereit, mit der Behandlung zu beginnen?",
+      "ctaText": "Vereinbaren Sie eine kostenlose Untersuchung und lernen Sie das Team kennen, das Ihre Behandlung vom ersten Tag an begleitet."
+    },
+    "aria": {
+      "homeSection": "Startseite",
+      "stats": "Statistik",
+      "steps": "Drei Schritte zum Lächeln",
+      "about": "Über die Praxis",
+      "services": "Leistungen",
+      "spotlight": "Versicherung und Erstattung",
+      "work": "Unsere Arbeit",
+      "advantages": "Warum Patienten uns wählen",
+      "testimonials": "Patientenerfahrungen",
+      "prices": "Preise",
+      "faq": "Häufige Fragen",
+      "cta": "Untersuchung vereinbaren",
+      "contact": "Kontakt"
+    }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Zahnmedizinische Versorgung in Belgrad",
+      "title": "Wenn andere sagen „das geht nicht“,",
+      "titleAccent": "finden wir einen Weg.",
+      "lead": "Alle Arten von Implantaten. Festsitzende prothetische Lösung. Ein Team.",
+      "highlights": [
+        "10+ Jahre Erfahrung",
+        "1 Jahr Garantie",
+        "Schmerzfreie Behandlung unter Sedierung"
+      ]
+    }
+  },
+  "site": {
+    "name": "House of Smile",
+    "phone": "062 / 765-101",
+    "mobile": "+381 62 765 101",
+    "email": "smilehouseofsmile@gmail.com",
+    "address": "Prizrenska 7, Stari grad, Belgrad",
+    "hours": [
+      {
+        "day": "Montag – Freitag",
+        "time": "12:00 – 20:00"
+      },
+      {
+        "day": "Samstag",
+        "time": "Nach Vereinbarung"
+      },
+      {
+        "day": "Sonntag",
+        "time": "Geschlossen"
+      }
+    ],
+    "hoursShort": "Mo–Fr 12:00–20:00 · Sa nach Vereinbarung"
+  },
+  "about": {
+    "badge": "10 Jahre Erfahrung",
+    "paragraphs": [
+      "Willkommen in einer modernen Zahnarztpraxis, in der Ihre Gesundheit, Ihr Lächeln und Ihr Sicherheitsgefühl an erster Stelle stehen. Wir bemühen uns, jedem Patienten eine angenehme Erfahrung zu bieten, seine Bedürfnisse aufmerksam anzuhören und gemeinsam die beste Lösung zu finden.",
+      "Wir folgen modernen Standards der Zahnmedizin und nutzen digitale Technologien, mit denen wir Behandlungen präziser planen und durchführen können. So erhalten unsere Patienten einen klareren Einblick in ihre Behandlung, und wir erzielen möglichst präzise und natürliche Ergebnisse.",
+      "In unserer Arbeit verwenden wir ausschließlich Premium-Materialien und bewährte Lösungen renommierter Hersteller, denn wir sind überzeugt, dass Qualität kein Kompromiss sein darf. Jedem Detail widmen wir uns sorgfältig, mit dem Ziel langlebiger, funktionaler und ästhetischer Ergebnisse."
+    ],
+    "imageAlt": "Team der Zahnarztpraxis"
+  },
+  "services": [
+    {
+      "slug": "implantologija",
+      "name": "Implantologie",
+      "description": "Dauerhafte Lösung für verlorene Zähne mit 3D-Planung und schmerzfreiem Einsetzen."
+    },
+    {
+      "slug": "estetska-stomatologija",
+      "name": "Ästhetische Medizin & Zahnmedizin",
+      "description": "Hollywood Smile und Laser-Bleaching für ein makelloses Lächeln. Hyaluronfiller und Botox."
+    },
+    {
+      "slug": "protetika",
+      "name": "Prothetik",
+      "description": "Metallfreie und Zirkon-Prothetik, die Funktion und natürliches Aussehen der Zähne wiederherstellt."
+    },
+    {
+      "slug": "ortodoncija",
+      "name": "Kieferorthopädie",
+      "description": "Invisalign und feste Zahnspangen für perfekt ausgerichtete Zähne."
+    },
+    {
+      "slug": "opsta-stomatologija",
+      "name": "Allgemeine Zahnmedizin",
+      "description": "Weiße Füllungen, Endodontie und Prävention nach modernen Protokollen."
+    },
+    {
+      "slug": "parodontologija",
+      "name": "Parodontologie",
+      "description": "Behandlung von Zahnfleischbluten und Zahnfleischrückgang mit konservativen Protokollen."
+    },
+    {
+      "slug": "oralna-hirurgija",
+      "name": "Oralchirurgie",
+      "description": "Weisheitszahnentfernung, Wurzelspitzenresektion und Knochenaufbau."
+    },
+    {
+      "slug": "decja-stomatologija",
+      "name": "Kinderzahnheilkunde",
+      "description": "Ein sanfter Umgang und eine positive erste Erfahrung für die Kleinsten."
+    }
+  ],
+  "servicePages": {
+    "implantologija": {
+      "slug": "implantologija",
+      "eyebrow": "Implantologie",
+      "headline": "Zahnimplantate, die Funktion und Lächeln zurückgeben",
+      "lead": "Dauerhafte Lösung für verlorene Zähne mit 3D-Planung und schmerzfreiem Einsetzen.",
+      "introTitle": "Moderne Implantate statt provisorischer Lösungen",
+      "introText": [
+        "Zahnverlust beeinträchtigt Kauen, Sprechen und Selbstvertrauen. Zahnimplantate stellen ein natürliches Gefühl wieder her und verhindern den Abbau des Kieferknochens.",
+        "Wir arbeiten mit zertifizierten Titansystemen der Straumann Group, Neodent Neoporos und einem digitalen Implantationsplan, damit das Ergebnis präzise, stabil und langlebig ist."
+      ],
+      "benefitsTitle": "Wann Implantate die klare Antwort auf Ihre Situation sind",
+      "benefits": [],
+      "situations": [
+        {
+          "title": "Ein fehlender Zahn",
+          "text": "Das Implantat ersetzt die Zahnwurzel und trägt eine Krone – so müssen die gesunden Nachbarzähne nicht für eine Brücke beschliffen werden."
+        },
+        {
+          "title": "Mehrere fehlende Zähne",
+          "text": "Implantate dienen als stabile Pfeiler für Zahnbrücken."
+        },
+        {
+          "title": "Völlige Zahnlosigkeit",
+          "text": "Mit 4 bis 6 Implantaten pro Kiefer (Methoden wie All-on-4 oder All-on-6) lassen sich festsitzende Zahnbrücken oder stabile Prothesen anfertigen, die nicht herausfallen und maximalen Komfort bieten."
+        }
+      ],
+      "processTitle": "So verläuft die Behandlung",
+      "process": [
+        {
+          "title": "Untersuchung und 3D-Planung",
+          "text": "Wir analysieren den Zustand von Knochen, Zahnfleisch und Biss. Sie erhalten vorab einen klaren Behandlungsplan und Preis."
+        },
+        {
+          "title": "Einsetzen des Implantats",
+          "text": "Ein minimalinvasiver Eingriff unter örtlicher Betäubung oder Sedierung, nach Absprache."
+        },
+        {
+          "title": "Osseointegration",
+          "text": "Das Implantat verwächst mit dem Knochen und wird zum festen Fundament für die spätere Krone."
+        },
+        {
+          "title": "Prothetische Versorgung",
+          "text": "Wir setzen eine Krone, Brücke oder festsitzende Prothese ein, abgestimmt auf Ihr Lächeln."
+        }
+      ],
+      "featureSections": [
+        {
+          "id": "all-on-4",
+          "eyebrow": "All-on-4 & All-on-6",
+          "title": "All-on-4 und All-on-6",
+          "text": [
+            "Der Verlust aller Zähne in einem Kiefer muss nicht mehr das Tragen instabiler und unangenehmer Kunststoffprothesen bedeuten. Dank der Fortschritte in der Implantologie ermöglichen die Methoden All-on-4 und All-on-6 die Befestigung einer kompletten Zahnreihe (Brücke) auf nur vier oder sechs Implantaten.",
+            "Diese Methoden sind eine dauerhafte, stabile und ästhetisch perfekte Lösung, die natürliche Zähne vollständig nachahmt."
+          ],
+          "stepsTitle": "Behandlungsablauf",
+          "steps": [
+            {
+              "title": "Untersuchung und 3D-Diagnostik (CT-Aufnahme)",
+              "text": "Detaillierte Analyse der Knochenstruktur und Planung der genauen Position jedes Implantats."
+            },
+            {
+              "title": "Einsetzen des Implantats",
+              "text": "Schmerzfreier Eingriff unter örtlicher Betäubung (oder Analgosedierung). Am nächsten Tag wird eine provisorische Brücke angefertigt und eingesetzt."
+            },
+            {
+              "title": "Einheilphase (Osseointegration)",
+              "text": "Es dauert 3 bis 6 Monate, bis die Implantate vollständig mit dem Knochen verwachsen sind."
+            },
+            {
+              "title": "Anfertigung des definitiven Zahnersatzes",
+              "text": "Nach der Einheilung wird eine dauerhafte, hochwertige Keramik- oder Zirkonbrücke angefertigt und fest auf den Implantaten verankert."
+            }
+          ]
+        },
+        {
+          "id": "proteze-na-implantatima",
+          "eyebrow": "Implantatgetragene Prothesen",
+          "title": "Implantatgetragene Prothesen",
+          "text": [
+            "Eine wirtschaftliche Lösung: Zur Stabilisierung einer Prothese auf Implantaten sind oft weniger Implantate nötig (meist 2 bis 4 pro Kiefer) als bei festsitzenden Brücken auf Implantaten, was diesen Eingriff finanziell erschwinglicher macht.",
+            "Zahnverlust muss nicht mehr Unbehagen, Instabilität und die ständige Angst vor dem Verrutschen einer herkömmlichen Prothese bedeuten. Die implantatgetragene Prothese ist eine moderne und langlebige Lösung, die die Einfachheit einer Vollprothese mit der unvergleichlichen Stabilität von Zahnimplantaten verbindet."
+          ],
+          "highlightsTitle": "Warum eine implantatgetragene Prothese?",
+          "highlights": [
+            "Maximale Stabilität: kein Herausfallen, Verrutschen oder Wackeln der Prothese beim Lachen oder Sprechen.",
+            "Natürliches Gefühl und mehr Komfort: Die Prothese ist deutlich kleiner als eine herkömmliche, besonders im Oberkiefer, da sie den Gaumen nicht vollständig bedecken muss.",
+            "Die Kaukraft ist wiederhergestellt."
+          ]
+        }
+      ],
+      "gallery": [
+        {
+          "src": "/assets/impantologija/d1.jpg",
+          "alt": "Implantologie — Fall 1"
+        },
+        {
+          "src": "/assets/impantologija/d2.jpg",
+          "alt": "Implantologie — Fall 2"
+        },
+        {
+          "src": "/assets/impantologija/d3.jpg",
+          "alt": "Implantologie — Fall 3"
+        },
+        {
+          "src": "/assets/impantologija/d4.jpg",
+          "alt": "Implantologie — Fall 4"
+        },
+        {
+          "src": "/assets/impantologija/d5.jpg",
+          "alt": "Implantologie — Fall 5"
+        },
+        {
+          "src": "/assets/impantologija/d6.jpg",
+          "alt": "Implantologie — Fall 6"
+        },
+        {
+          "src": "/assets/impantologija/d7.jpg",
+          "alt": "Implantologie — Fall 7"
+        },
+        {
+          "src": "/assets/impantologija/d8.jpg",
+          "alt": "Implantologie — Fall 8"
+        },
+        {
+          "src": "/assets/impantologija/d9.jpg",
+          "alt": "Implantologie — Fall 9"
+        },
+        {
+          "src": "/assets/impantologija/d10.jpg",
+          "alt": "Implantologie — Fall 10"
+        },
+        {
+          "src": "/assets/impantologija/d11.jpg",
+          "alt": "Implantologie — Fall 11"
+        },
+        {
+          "src": "/assets/impantologija/d12.jpg",
+          "alt": "Implantologie — Fall 12"
+        },
+        {
+          "src": "/assets/impantologija/d13.jpg",
+          "alt": "Implantologie — Fall 13"
+        },
+        {
+          "src": "/assets/impantologija/d14.jpg",
+          "alt": "Implantologie — Fall 14"
+        },
+        {
+          "src": "/assets/impantologija/d15.jpg",
+          "alt": "Implantologie — Fall 15"
+        },
+        {
+          "src": "/assets/impantologija/d16.jpg",
+          "alt": "Implantologie — Fall 16"
+        },
+        {
+          "src": "/assets/impantologija/d17.jpg",
+          "alt": "Implantologie — Fall 17"
+        },
+        {
+          "src": "/assets/impantologija/d18.jpg",
+          "alt": "Implantologie — Fall 18"
+        }
+      ],
+      "ctaTitle": "Bereit für eine dauerhafte Lösung?",
+      "ctaText": "Vereinbaren Sie eine kostenlose Untersuchung und finden Sie heraus, ob Implantate die richtige Wahl für Sie sind."
+    },
+    "estetska-stomatologija": {
+      "slug": "estetska-stomatologija",
+      "eyebrow": "Ästhetische Medizin & Zahnmedizin",
+      "headline": "Ein Lächeln, das natürlich und selbstbewusst wirkt",
+      "lead": "Hollywood Smile und Laser-Bleaching für ein makelloses Lächeln. Hyaluronfiller und Botox.",
+      "introTitle": "Was ist eigentlich ein Hollywood Smile?",
+      "introText": [
+        "Der Hollywood Smile ist eine der eindrucksvollsten ästhetischen Verwandlungen der modernen Zahnmedizin. Mit modernsten zahnmedizinischen Materialien korrigieren wir alle Mängel: von Farbe und Form über die Zahnstellung bis hin zum Schließen unerwünschter Lücken.",
+        "Je nach Zustand Ihrer natürlichen Zähne erreichen wir diesen Effekt durch eine Kombination erstklassiger Methoden:"
+      ],
+      "introMethods": [
+        {
+          "id": "fasete-viniri",
+          "title": "Keramikveneers",
+          "text": "Ultradünne Schalen, die mit minimalem Beschleifen auf die Vorderseite der Zähne geklebt werden – ideal zur Korrektur von Farbe und kleinen Unregelmäßigkeiten."
+        },
+        {
+          "title": "Metallfreie Kronen",
+          "text": "Die Krönung der modernen ästhetischen Zahnmedizin. Sie bieten maximale Festigkeit und ahmen die natürliche Lichtbrechung perfekt nach."
+        }
+      ],
+      "benefitsTitle": "Was wir korrigieren können",
+      "benefits": [
+        "Ungleichmäßige Zahnfarbe und Verfärbungen",
+        "Beschädigten oder abgenutzten Zahnschmelz",
+        "Lücken und Asymmetrie",
+        "Den Wunsch nach einem dezenten oder ausgeprägteren Hollywood Smile",
+        "Den Bedarf an einer schnellen ästhetischen Verbesserung"
+      ],
+      "processEyebrow": "Ablauf",
+      "processTitle": "Behandlungsablauf",
+      "process": [
+        {
+          "title": "Beratung und digitales Design (Digital Smile Design)",
+          "text": "Wir hören uns Ihre Wünsche an, analysieren Ihr Gesicht und erstellen ein digitales Modell. Noch bevor wir mit der Arbeit beginnen, können Sie sehen, wie Ihr neues Lächeln aussehen wird!"
+        },
+        {
+          "title": "Vorbereitung der Zähne",
+          "text": "Minimale und schmerzfreie Formgebung der Zähne (unter örtlicher Betäubung), um Platz für Veneers oder Kronen zu schaffen."
+        },
+        {
+          "title": "Anfertigung und Einprobe",
+          "text": "Während unser Dentallabor Ihre Arbeit präzise anfertigt, tragen Sie provisorische Zähne – so sind Sie zu keinem Zeitpunkt ohne Lächeln."
+        },
+        {
+          "title": "Zementierung",
+          "text": "Das Einsetzen Ihres neuen Hollywood Smile – der Moment, in dem Sie im Spiegel das Lächeln sehen, das Sie sich immer gewünscht haben."
+        }
+      ],
+      "featureSections": [
+        {
+          "id": "lasersko-izbeljivanje",
+          "eyebrow": "Laser-Bleaching",
+          "title": "FLASH-Zahnaufhellungssystem",
+          "text": [
+            "Ein modernerer Ansatz für professionelles Bleaching.",
+            "Im Gegensatz zu herkömmlichen Systemen ermöglicht FLASH ein schnelleres und nicht-invasives Bleaching bei schonendem Umgang mit den Zähnen. In einer Behandlung lässt sich eine Aufhellung um mehrere Farbstufen erzielen, wobei die natürliche Zahnstruktur erhalten bleibt."
+          ],
+          "tagline": "Eine Behandlung. Ein um mehrere Stufen helleres Lächeln.",
+          "steps": [
+            {
+              "title": "Beratung",
+              "text": "Der Zahnarzt beurteilt die Farbe Ihrer Zähne und empfiehlt die beste Bleaching-Behandlung."
+            },
+            {
+              "title": "Bleaching-Behandlung",
+              "text": "Das Präparat wird auf den Zähnen nach dem Protokoll des FLASH-Systems aktiviert, unter sorgfältig kontrollierten Bedingungen und zahnärztlicher Aufsicht."
+            },
+            {
+              "title": "Pflege",
+              "text": "Tipps zum Erhalt des Bleaching-Ergebnisses und Empfehlungen zur weiteren Pflege."
+            }
+          ]
+        },
+        {
+          "id": "hijaluronski-fileri",
+          "eyebrow": "Filler und Botox",
+          "title": "Hyaluronfiller",
+          "text": [
+            "Hyaluronfiller sind moderne Präparate auf Basis von Hyaluronsäure, die zum Volumenaufbau, zur Konturierung und zur Milderung bestimmter Falten eingesetzt werden und sehr natürliche Ergebnisse ermöglichen.",
+            "In unserer Arbeit planen wir jede Behandlung individuell und berücksichtigen Anatomie, Proportionen und Wünsche des Patienten. Ziel ist nicht, das Gesicht zu verändern, sondern es dezent aufzufrischen und seine natürliche Schönheit zu betonen.",
+            "Wir sind überzeugt, dass das beste ästhetische Ergebnis natürlich, harmonisch und unaufdringlich aussehen sollte — ein frischeres Gesicht, und trotzdem immer noch Sie."
+          ],
+          "tagline": "Dezente Korrektur. Natürliche Schönheit. Individueller Ansatz."
+        },
+        {
+          "id": "mezoterapija",
+          "eyebrow": "Filler und Botox",
+          "title": "Mesotherapie",
+          "text": [
+            "Mesotherapie ist eine moderne Behandlung, bei der sorgfältig ausgewählte Wirkstoffe in die oberflächlichen Hautschichten eingebracht werden – mit dem Ziel intensiver Feuchtigkeitsversorgung, Auffrischung und Verbesserung der Hautqualität.",
+            "Die Behandlung kann zu einem ebenmäßigeren Teint sowie verbesserter Textur, Spannkraft und Elastizität der Haut beitragen, die dadurch frischer, glatter und strahlender wirkt und weniger müde und fahl aussieht.",
+            "In unserer Arbeit planen wir jede Behandlung individuell, abgestimmt auf Bedürfnisse und Zustand der Haut sowie die Wünsche des Patienten. Ziel ist eine dezente Auffrischung, ein ebenmäßiger Teint und die Rückkehr des natürlichen Glanzes, ohne das Aussehen zu verändern."
+          ],
+          "tagline": "Feuchtigkeit für die Haut. Ebenmäßiger Teint. Verbesserte Textur. Individueller Ansatz."
+        },
+        {
+          "id": "botoks",
+          "eyebrow": "Filler und Botox",
+          "title": "Botox",
+          "text": [
+            "Botox ist eine moderne ästhetische Behandlung, die auf die für mimische Falten verantwortlichen Muskeln wirkt, wodurch diese gemildert werden und das Gesicht erholter und frischer aussieht.",
+            "In unserer Arbeit planen wir die Behandlung individuell, mit sorgfältiger Dosierung und unter Wahrung der natürlichen Mimik. Ziel ist kein „eingefrorener“ Ausdruck, sondern eine dezente Glättung der Falten bei Erhalt des natürlichen Aussehens und Charakters des Gesichts."
+          ],
+          "tagline": "Dezente Korrektur. Erhaltene Mimik. Natürlich frischeres Aussehen."
+        },
+        {
+          "id": "lipoliza",
+          "eyebrow": "Filler und Botox",
+          "title": "Lipolyse",
+          "text": [
+            "Lipolyse ist eine nicht-chirurgische Behandlung zur Reduktion lokaler Fettdepots in Regionen, die resistent gegen Ernährung und Sport sind. Sie verbessert das Hautbild, die Mikrozirkulation und die Spannkraft – mit dem Ziel einer glatteren und strafferen Haut.",
+            "Wir planen die Behandlung sehr sorgfältig, abhängig vom Grad der Cellulite, dem Hautzustand und dem gewünschten Ergebnis."
+          ],
+          "tagline": "Glattere Haut. Bessere Spannkraft. Gepflegteres Aussehen."
+        }
+      ],
+      "gallery": [
+        {
+          "src": "/assets/estetska/d2.jpg",
+          "alt": "Ästhetische Zahnmedizin — Fall 2"
+        },
+        {
+          "src": "/assets/estetska/d3.jpg",
+          "alt": "Ästhetische Zahnmedizin — Fall 3"
+        },
+        {
+          "src": "/assets/estetska/d4.jpg",
+          "alt": "Ästhetische Zahnmedizin — Fall 4"
+        },
+        {
+          "src": "/assets/estetska/d5.jpg",
+          "alt": "Ästhetische Zahnmedizin — Fall 5"
+        },
+        {
+          "src": "/assets/estetska/d6.jpg",
+          "alt": "Ästhetische Zahnmedizin — Fall 6"
+        },
+        {
+          "src": "/assets/estetska/d7.jpg",
+          "alt": "Ästhetische Zahnmedizin — Fall 7"
+        },
+        {
+          "src": "/assets/estetska/d8.jpg",
+          "alt": "Ästhetische Zahnmedizin — Fall 8"
+        },
+        {
+          "src": "/assets/estetska/d9.jpg",
+          "alt": "Ästhetische Zahnmedizin — Fall 9"
+        },
+        {
+          "src": "/assets/estetska/d10.jpg",
+          "alt": "Ästhetische Zahnmedizin — Fall 10"
+        },
+        {
+          "src": "/assets/estetska/d11.jpg",
+          "alt": "Ästhetische Zahnmedizin — Fall 11"
+        },
+        {
+          "src": "/assets/estetska/d12.jpg",
+          "alt": "Ästhetische Zahnmedizin — Fall 12"
+        }
+      ],
+      "ctaTitle": "Wünschen Sie sich ein neues Lächeln?",
+      "ctaText": "Die erste Untersuchung ist kostenlos — gemeinsam erstellen wir einen ästhetischen Plan, der zu Ihnen passt."
+    },
+    "protetika": {
+      "slug": "protetika",
+      "eyebrow": "Prothetik",
+      "headline": "Kronen, Brücken und Prothesen in Spitzenqualität",
+      "lead": "Metallfreie und Zirkon-Prothetik, die Funktion und natürliches Aussehen der Zähne wiederherstellt.",
+      "introTitle": "Festsitzende und herausnehmbare Lösungen nach Maß",
+      "introText": [
+        "Von Einzelkronen bis zu komplexen Brücken planen wir jede prothetische Lösung individuell, abgestimmt auf Biss, Funktion und Ästhetik.",
+        "In Zusammenarbeit mit dem Dentallabor wählen wir das passende Material und stimmen Form und Farbe präzise ab, damit die Arbeit so natürlich, komfortabel und langlebig wie möglich ist."
+      ],
+      "benefitsTitle": "Warum Patienten unsere Prothetik wählen",
+      "benefits": [
+        "Zirkon und metallfreie Keramik",
+        "Natürliche Transluzenz und Farbe",
+        "Stabilität beim Kauen",
+        "Lösungen bei teilweisem oder vollständigem Zahnverlust",
+        "Klarer Preis und schriftlicher Behandlungsplan"
+      ],
+      "processTitle": "Schritte der prothetischen Behandlung",
+      "process": [
+        {
+          "title": "Analyse und Vorschlag",
+          "text": "Wir untersuchen vorhandene Zähne, Knochen und Biss und schlagen die optimale Lösung vor."
+        },
+        {
+          "title": "Vorbereitung und Abdruck",
+          "text": "Digitaler oder klassischer Abdruck — je nach Indikation."
+        },
+        {
+          "title": "Provisorium",
+          "text": "Bei Bedarf erhalten Sie eine provisorische Krone, solange die Anfertigung dauert."
+        },
+        {
+          "title": "Endgültiges Einsetzen",
+          "text": "Zementierung und Kontrolle von Komfort, Ästhetik und Funktion."
+        }
+      ],
+      "featureSections": [
+        {
+          "id": "keramicki-viniri",
+          "eyebrow": "Keramikveneers",
+          "title": "Keramikveneers",
+          "text": [
+            "Keramikveneers (auch Zahnverblendschalen genannt) sind ultradünne, individuell angefertigte Schalen aus hochwertiger Dentalkeramik, die dauerhaft auf die Vorderseite der Zähne zementiert werden. Ihre Hauptaufgabe ist es, ästhetische Mängel zu korrigieren und den Zähnen perfekte Form, Farbe, Größe und Ausrichtung zu verleihen.",
+            "Im Gegensatz zu klassischen Kronen bedecken Veneers nur den vorderen, sichtbaren Teil des Zahns – damit sind sie eine besonders minimalinvasive und schonende Lösung für die natürliche Zahnsubstanz."
+          ],
+          "highlightsTitle": "Warum Keramikveneers?",
+          "highlights": [
+            "Natürliches Aussehen und Transparenz: Hochwertige Keramik imitiert die optischen Eigenschaften des natürlichen Zahnschmelzes perfekt, einschließlich der Art, wie er Licht reflektiert. Das Ergebnis ist ein völlig natürliches Lächeln, bei dem niemand bemerkt, dass es sich um eine ästhetische Versorgung handelt.",
+            "Verfärbungsresistenz: Im Gegensatz zu natürlichen Zähnen oder Kompositmaterialien ist Porzellan nicht porös. Das bedeutet, dass Veneers sich durch Kaffee, Tee, Rotwein oder Tabakrauch nicht verfärben.",
+            "Maximale Zahnerhaltung: Der Eingriff erfordert nur minimales Beschleifen des Zahnschmelzes (lediglich 0,3 bis 0,7 Millimeter), und in manchen Fällen (No-Prep-Veneers) ist überhaupt kein Beschleifen nötig."
+          ]
+        },
+        {
+          "id": "bezmetalne-krunice",
+          "eyebrow": "Metallfreie Kronen",
+          "title": "Metallfreie Kronen",
+          "text": [
+            "Metallfreie Kronen (oft auch vollkeramische Kronen genannt) sind die Krönung der modernen zahnärztlichen Prothetik. Im Gegensatz zu traditionellen Metallkeramikkronen mit dunklem Metallgerüst bestehen metallfreie Kronen vollständig aus hochwertigen Keramikmaterialien, meist Zirkon oder Lithiumdisilikat (E.max-Keramik).",
+            "Sie werden zur Rekonstruktion von Zähnen eingesetzt, die durch Karies, Traumata oder Behandlungen stark geschädigt sind, sowie zur Erzielung erstklassiger ästhetischer Ergebnisse auf natürlichen Zähnen oder Implantaten.",
+            "Der Wechsel von Metallkeramik zu metallfreien Systemen hat die Zahnmedizin revolutioniert und Patienten zahlreiche Vorteile gebracht."
+          ],
+          "highlightsTitle": "Warum metallfreie Kronen?",
+          "highlights": [
+            "Erstklassige, natürliche Ästhetik: Metallfreie Keramik lässt Licht nahezu genauso durch und bricht es wie natürlicher Zahnschmelz.",
+            "Kein „schwarzer Rand“ am Zahnfleisch: Der Zahnrand bleibt perfekt weiß und natürlich.",
+            "Biokompatibilität und gesundes Zahnfleisch.",
+            "Außergewöhnliche Festigkeit und Langlebigkeit: Metallfreie Kronen halten hohen Kaukräften problemlos stand und sind daher ideal für Front- wie Seitenzähne.",
+            "Maximale Fertigungspräzision: Dank fortschrittlicher CAD/CAM-Technologie werden metallfreie Kronen am Computer konstruiert und maschinell aus einem einzigen Materialblock gefräst. Das garantiert Präzision im Mikrometerbereich und einen perfekten Sitz der Krone auf dem präparierten Zahn."
+          ]
+        }
+      ],
+      "gallery": [
+        {
+          "src": "/assets/protetika/d1.jpg",
+          "alt": "Prothetik — Fall 1"
+        },
+        {
+          "src": "/assets/protetika/d2.jpg",
+          "alt": "Prothetik — Fall 2"
+        },
+        {
+          "src": "/assets/protetika/d3.jpg",
+          "alt": "Prothetik — Fall 3"
+        },
+        {
+          "src": "/assets/protetika/d4.jpg",
+          "alt": "Prothetik — Fall 4"
+        },
+        {
+          "src": "/assets/protetika/d5.jpg",
+          "alt": "Prothetik — Fall 5"
+        },
+        {
+          "src": "/assets/protetika/d6.jpg",
+          "alt": "Prothetik — Fall 6"
+        },
+        {
+          "src": "/assets/protetika/d7.jpg",
+          "alt": "Prothetik — Fall 7"
+        },
+        {
+          "src": "/assets/protetika/d8.jpg",
+          "alt": "Prothetik — Fall 8"
+        },
+        {
+          "src": "/assets/protetika/d9.jpg",
+          "alt": "Prothetik — Fall 9"
+        },
+        {
+          "src": "/assets/protetika/d10.jpg",
+          "alt": "Prothetik — Fall 10"
+        },
+        {
+          "src": "/assets/protetika/d11.jpg",
+          "alt": "Prothetik — Fall 11"
+        },
+        {
+          "src": "/assets/protetika/d12.jpg",
+          "alt": "Prothetik — Fall 12"
+        },
+        {
+          "src": "/assets/protetika/d13.jpg",
+          "alt": "Prothetik — Fall 13"
+        },
+        {
+          "src": "/assets/protetika/d14.jpg",
+          "alt": "Prothetik — Fall 14"
+        },
+        {
+          "src": "/assets/protetika/d15.jpg",
+          "alt": "Prothetik — Fall 15"
+        }
+      ],
+      "ctaTitle": "Wir stellen Funktion und Ästhetik wieder her",
+      "ctaText": "Vereinbaren Sie eine Untersuchung und erhalten Sie einen auf Sie abgestimmten prothetischen Lösungsvorschlag."
+    },
+    "ortodoncija": {
+      "slug": "ortodoncija",
+      "eyebrow": "Kieferorthopädie",
+      "headline": "Gerade Zähne — sichtbar und unsichtbar",
+      "lead": "Invisalign und feste Zahnspangen zur Korrektur von Biss, Lücken und Engständen.",
+      "introTitle": "Eine Behandlung, die sich Ihrem Lebensrhythmus anpasst",
+      "introText": [
+        "Ob Sie diskrete Aligner oder eine klassische Zahnspange wünschen – wir planen die Behandlung nach Alter, Biss und ästhetischen Erwartungen.",
+        "Kontrolltermine sind klar geplant, und den Fortschritt verfolgen wir anhand digitaler Aufnahmen und Fotos."
+      ],
+      "introMethods": [
+        {
+          "id": "invisalign",
+          "title": "Invisalign",
+          "text": "Diskrete transparente Aligner — beim Tragen fast unsichtbar, zum Essen und zur Zahnpflege herausnehmbar."
+        },
+        {
+          "id": "fiksni-aparat",
+          "title": "Feste Zahnspange",
+          "text": "Metall- oder ästhetische Brackets zur präzisen Korrektur von Biss, Lücken und Zahnstellung."
+        }
+      ],
+      "benefitsTitle": "Indikationen für eine kieferorthopädische Behandlung",
+      "benefits": [
+        "Schiefe oder verdrehte Zähne",
+        "Offener, tiefer oder Kreuzbiss",
+        "Lücken und Engstand",
+        "Vorbereitung auf Prothetik oder Implantate",
+        "Ästhetische Korrektur des Lächelns bei Erwachsenen"
+      ],
+      "processTitle": "So verläuft die kieferorthopädische Behandlung",
+      "process": [
+        {
+          "title": "Diagnostik",
+          "text": "Analyse von Röntgenbildern, Fotos und Modellen für einen genauen Bewegungsplan."
+        },
+        {
+          "title": "Wahl des Systems",
+          "text": "Invisalign, Metall- oder ästhetische feste Zahnspange — wir entscheiden gemeinsam."
+        },
+        {
+          "title": "Aktive Behandlung",
+          "text": "Regelmäßige Kontrollen und Anpassungen, bis die Zähne die gewünschte Position erreichen."
+        },
+        {
+          "title": "Retention",
+          "text": "Ein fester oder herausnehmbarer Retainer sichert das erzielte Ergebnis."
+        }
+      ],
+      "gallery": [
+        {
+          "src": "/assets/ortodoncija/f1.jpg",
+          "alt": "Kieferorthopädische Behandlung — feste Zahnspange"
+        },
+        {
+          "src": "/assets/ortodoncija/f2.jpg",
+          "alt": "Feste Zahnspange mit ästhetischen Ligaturen"
+        },
+        {
+          "src": "/assets/ortodoncija/f3.jpg",
+          "alt": "Kieferorthopädische Behandlung — vorher und nachher"
+        },
+        {
+          "src": "/assets/ortodoncija/f4.jpg",
+          "alt": "Feste Zahnspange — klinischer Fall"
+        },
+        {
+          "src": "/assets/ortodoncija/invisalgin.jpg",
+          "alt": "Invisalign transparente Aligner"
+        }
+      ],
+      "ctaTitle": "Korrigieren Sie Ihren Biss rechtzeitig",
+      "ctaText": "Kostenlose Untersuchung — finden Sie heraus, welcher kieferorthopädische Ansatz am besten zu Ihnen passt."
+    },
+    "opsta-stomatologija": {
+      "slug": "opsta-stomatologija",
+      "eyebrow": "Allgemeine Zahnmedizin",
+      "headline": "Prävention, Behandlung und Pflege der Zahngesundheit",
+      "lead": "Weiße Füllungen, Endodontie, Zahnsteinentfernung und regelmäßige Kontrollen nach modernen Protokollen.",
+      "introTitle": "Ein gesundes Lächeln beginnt mit einem sorgfältigen Ansatz.",
+      "introText": [
+        "Wir bieten eine umfassende zahnärztliche Versorgung — von Vorsorgeuntersuchungen und dem Erhalt gesunder Zähne bis zur Behandlung von Karies und Zahnfleischerkrankungen sowie komplexen oralchirurgischen und prothetischen Eingriffen.",
+        "Unser Ansatz basiert auf einem individuellen Behandlungsplan, modernen Methoden und dem Erhalt natürlicher Zähne, wann immer möglich. Wir nehmen uns für jeden Patienten Zeit, um seine Bedürfnisse zu verstehen und gemeinsam die beste Lösung zu finden."
+      ],
+      "introTagline": "Fachwissen, Vertrauen und Sorgfalt — in jedem Behandlungsschritt.",
+      "benefitsTitle": "Häufigste Leistungen",
+      "benefits": [
+        "Untersuchung und Beratung",
+        "Komposit-(weiße) Füllungen",
+        "Wurzelkanalbehandlung",
+        "Zahnsteinentfernung mit Ultraschall",
+        "Fissurenversiegelung und Prävention"
+      ],
+      "processTitle": "So läuft ein Besuch ab",
+      "process": [
+        {
+          "title": "Untersuchung",
+          "text": "Detaillierter Einblick in den Zustand von Zähnen und Zahnfleisch, mit Vorschlag der Prioritäten."
+        },
+        {
+          "title": "Diagnostik",
+          "text": "Bei Bedarf Röntgenaufnahme und klare Erklärung des Befunds."
+        },
+        {
+          "title": "Behandlung",
+          "text": "Behandlung in einem oder mehreren Terminen, je nach Umfang."
+        },
+        {
+          "title": "Kontrolle",
+          "text": "Überwachung der Ergebnisse und Tipps für die häusliche Pflege."
+        }
+      ],
+      "gallery": [
+        {
+          "src": "/assets/opsta/d3.jpg",
+          "alt": "Allgemeine Zahnmedizin — Fall 1"
+        },
+        {
+          "src": "/assets/opsta/d4.jpg",
+          "alt": "Allgemeine Zahnmedizin — Fall 2"
+        },
+        {
+          "src": "/assets/opsta/d5.jpg",
+          "alt": "Allgemeine Zahnmedizin — Fall 3"
+        }
+      ],
+      "ctaTitle": "Regelmäßige Kontrolle vereinbaren",
+      "ctaText": "Die erste Untersuchung ist kostenlos — wir lösen Probleme rechtzeitig, solange sie klein sind."
+    },
+    "parodontologija": {
+      "slug": "parodontologija",
+      "eyebrow": "Parodontologie",
+      "headline": "Gesundes Zahnfleisch — die Grundlage für langlebige Zähne",
+      "lead": "Behandlung von Zahnfleischbluten, Zahnfleischrückgang und Parodontitis mit konservativen Protokollen.",
+      "introTitle": "Ignorieren Sie keine Anzeichen einer Zahnfleischentzündung",
+      "introText": [
+        "Bluten beim Zähneputzen, Mundgeruch und Zahnfleischrückgang deuten oft auf ein parodontales Problem hin, das erfolgreich behandelt werden kann.",
+        "Ziel der Behandlung ist es, das Fortschreiten der Erkrankung zu stoppen, die Zähne zu erhalten und die Gesundheit des Weichgewebes wiederherzustellen."
+      ],
+      "benefitsTitle": "Wann Sie zu uns kommen sollten",
+      "benefits": [
+        "Zahnfleischbluten beim Putzen oder bei der Verwendung von Zahnseide",
+        "Geschwollenes und empfindliches Zahnfleisch",
+        "Zahnfleischrückgang und freiliegende Zahnhälse",
+        "Lockere Zähne",
+        "Chronischer Mundgeruch"
+      ],
+      "processTitle": "Parodontaltherapie",
+      "process": [
+        {
+          "title": "Parodontalstatus",
+          "text": "Wir messen die Taschentiefe und beurteilen den Zustand des Zahnfleisches sowie den Grad der Schädigung."
+        },
+        {
+          "title": "Kausale Therapiephase",
+          "text": "Ultraschallreinigung, Kürettage der Zahnfleischtaschen und Anleitung zur richtigen Mundhygiene."
+        },
+        {
+          "title": "Erhalt der erzielten Ergebnisse",
+          "text": "Regelmäßige Kontrolluntersuchungen, damit die Behandlungsergebnisse dauerhaft erfolgreich bleiben."
+        }
+      ],
+      "ctaTitle": "Erhalten Sie Ihre Zähne und Ihr Zahnfleisch",
+      "ctaText": "Vereinbaren Sie eine Untersuchung — ein frühes Eingreifen verhindert oft Zahnverlust."
+    },
+    "oralna-hirurgija": {
+      "slug": "oralna-hirurgija",
+      "eyebrow": "Oralchirurgie",
+      "headline": "Präzise chirurgische Eingriffe mit maximalem Komfort",
+      "lead": "Weisheitszahnentfernung, Wurzelspitzenresektion, Knochenaufbau und Vorbereitung auf Implantate.",
+      "introTitle": "Chirurgie ohne unnötigen Stress",
+      "introText": [
+        "Jeden Eingriff planen wir auf Basis von Röntgenaufnahmen und klinischem Befund, mit einer klaren Erklärung von Ablauf und Heilung.",
+        "Nach Absprache arbeiten wir unter Sedierung — besonders bei ängstlichen Patienten und komplexeren Eingriffen."
+      ],
+      "benefitsTitle": "Häufigste Eingriffe",
+      "benefits": [
+        "Chirurgische und einfache Zahnextraktion",
+        "Retinierte und problematische Weisheitszähne",
+        "Wurzelspitzenresektion",
+        "Knochenaufbau und Sinuslift",
+        "Vorbereitung des Kiefers auf Implantate"
+      ],
+      "processTitle": "Ablauf der chirurgischen Behandlung",
+      "process": [
+        {
+          "title": "Untersuchung und Röntgenaufnahme",
+          "text": "Beurteilung von Risiken, Plan und notwendiger Vorbereitung."
+        },
+        {
+          "title": "Eingriff",
+          "text": "Schmerzfreier Eingriff unter Betäubung, mit sorgfältiger Technik."
+        },
+        {
+          "title": "Hinweise zur Heilung",
+          "text": "Klare Richtlinien zu Hygiene, Ernährung und Medikamenten."
+        },
+        {
+          "title": "Kontrolle",
+          "text": "Kontrolle der Heilung und nächste Behandlungsschritte."
+        }
+      ],
+      "gallery": [
+        {
+          "src": "/assets/hirurgija/d2.jpg",
+          "alt": "Oralchirurgie — Fall 1"
+        },
+        {
+          "src": "/assets/hirurgija/d3.jpg",
+          "alt": "Oralchirurgie — Fall 2"
+        },
+        {
+          "src": "/assets/hirurgija/d4.jpg",
+          "alt": "Oralchirurgie — Fall 3"
+        }
+      ],
+      "ctaTitle": "Chirurgische Untersuchung vereinbaren",
+      "ctaText": "Die erste Untersuchung ist kostenlos — Sie erhalten einen klaren Plan und den erwarteten Heilungsverlauf."
+    },
+    "decja-stomatologija": {
+      "slug": "decja-stomatologija",
+      "eyebrow": "Kinderzahnheilkunde",
+      "headline": "Sanft und sicher — eine erste Erfahrung, die Vertrauen schafft",
+      "lead": "Untersuchungen, Prävention und Behandlung speziell für Kinder, mit geduldigem Umgang und ruhiger Atmosphäre.",
+      "introTitle": "Gesunde Gewohnheiten von klein auf",
+      "introText": [
+        "Kinderzahnheilkunde ist nicht nur Behandlung — sondern auch Prävention, Aufklärung und eine positive Erfahrung, die die Angst vor dem Zahnarzt verringert.",
+        "Wir arbeiten in Ruhe, mit altersgerechten Erklärungen und Unterstützung für die Eltern."
+      ],
+      "benefitsTitle": "Was wir den Kleinsten bieten",
+      "benefits": [
+        "Erste Untersuchung ohne Stress",
+        "Fissurenversiegelung",
+        "Fluoridierung",
+        "Füllungen an Milch- und bleibenden Zähnen",
+        "Tipps zu Hygiene und Ernährung"
+      ],
+      "processTitle": "So läuft ein Besuch ab",
+      "process": [
+        {
+          "title": "Kennenlernen",
+          "text": "Das Kind lernt die Praxis und das Team in entspanntem Tempo kennen."
+        },
+        {
+          "title": "Untersuchung",
+          "text": "Kontrolle von Zähnen, Zahnfleisch und Entwicklung, mit einem klaren Bericht für die Eltern."
+        },
+        {
+          "title": "Prävention oder Behandlung",
+          "text": "Versiegelung, Fluoridierung oder sanfte Behandlung nach Bedarf."
+        },
+        {
+          "title": "Kontrollrhythmus",
+          "text": "Wir empfehlen regelmäßige Kontrollen für gesundes Wachstum und ein entspanntes Lächeln."
+        }
+      ],
+      "ctaTitle": "Erste Kinderuntersuchung vereinbaren",
+      "ctaText": "Die erste Untersuchung ist kostenlos — wir bauen Vertrauen ab dem ersten Besuch auf."
+    }
+  },
+  "prices": [
+    {
+      "key": "implantologija",
+      "label": "Implantologie",
+      "rows": [
+        {
+          "name": "Implantat (Neodent)",
+          "price": "450 €"
+        },
+        {
+          "name": "Suprastruktur (Neodent)",
+          "price": "100 €"
+        },
+        {
+          "name": "All-on-4 (provisorische + Metallkeramikkronen) pro Kiefer",
+          "price": "3.600 €"
+        },
+        {
+          "name": "All-on-4 (provisorische + metallfreie Kronen) pro Kiefer",
+          "price": "4.750 €"
+        },
+        {
+          "name": "All-on-6 (provisorische + Metallkeramikkronen) pro Kiefer",
+          "price": "4.600 €"
+        },
+        {
+          "name": "All-on-6 (provisorische + metallfreie Kronen) pro Kiefer",
+          "price": "5.600 €"
+        },
+        {
+          "name": "Implantatgetragene Prothese",
+          "price": "2.350 €"
+        },
+        {
+          "name": "Knochennivellierung",
+          "price": "200 €"
+        },
+        {
+          "name": "Transkrestaler Sinuslift",
+          "price": "100 €"
+        },
+        {
+          "name": "Sinuslift",
+          "price": "500–1.000 €"
+        }
+      ]
+    },
+    {
+      "key": "estetska-stomatologija",
+      "label": "Ästhetische Zahnmedizin & Medizin",
+      "rows": [
+        {
+          "name": "Hollywood Smile (pro Kiefer)",
+          "price": "2.050 €"
+        },
+        {
+          "name": "Laser-Bleaching — beide Kiefer (Flash-Lampe)",
+          "price": "200 €"
+        },
+        {
+          "name": "Laser-Bleaching — ein Kiefer",
+          "price": "150 €"
+        },
+        {
+          "name": "Home-Bleaching — beide Kiefer",
+          "price": "140 €"
+        },
+        {
+          "name": "Bleaching eines einzelnen devitalen Zahns",
+          "price": "5.000 RSD"
+        },
+        {
+          "name": "Knirscherschiene",
+          "price": "6.000 RSD"
+        },
+        {
+          "name": "Home-Bleaching-Schiene (pro Kiefer)",
+          "price": "6.000 RSD"
+        },
+        {
+          "name": "Keramikveneer",
+          "price": "250 €"
+        },
+        {
+          "name": "Botox — drei Zonen",
+          "price": "250 €"
+        },
+        {
+          "name": "Botox — zwei Zonen",
+          "price": "200 €"
+        },
+        {
+          "name": "Botox — eine Zone",
+          "price": "150 €"
+        },
+        {
+          "name": "Botox — Full-Face-Behandlung",
+          "price": "300 €"
+        },
+        {
+          "name": "Botox Masseter",
+          "price": "200 €"
+        },
+        {
+          "name": "Botox Achseln (Behandlung von Hyperhidrose)",
+          "price": "300 €"
+        },
+        {
+          "name": "Ejal 40 — 2 ml",
+          "price": "160 €"
+        },
+        {
+          "name": "Ästhetische Wangenknochenkorrektur",
+          "price": "160 €"
+        },
+        {
+          "name": "Hyaluronfiller — Nasolabialfalten",
+          "price": "150 €"
+        },
+        {
+          "name": "Hyaluronfiller Classic (Infini, Revolax)",
+          "price": "160 €/ml"
+        },
+        {
+          "name": "Hyaluronfiller Lux (Aliaxin, Belotero, Mali)",
+          "price": "200 €/ml"
+        },
+        {
+          "name": "Hyaluronfiller Premium (Stylage, Restylane, Revanesse, Teosyal)",
+          "price": "250 €/ml"
+        },
+        {
+          "name": "Skinbooster (Ejal 40, Produktil, Aquashine, Stylage, Hidromax, Jalupro Young Eye)",
+          "price": "160 €/2 ml"
+        },
+        {
+          "name": "Skinbooster (Profhilo)",
+          "price": "250 €/3 ml"
+        },
+        {
+          "name": "Skinbooster — Skinbuilder / RRS Long Lasting (LOLA)",
+          "price": "200 €/3 ml"
+        },
+        {
+          "name": "Mesotherapie Gesicht, Hals und Dekolleté (1 Behandlung)",
+          "price": "8.000 RSD"
+        },
+        {
+          "name": "Mesotherapie Gesicht, Hals und Dekolleté (3+1 gratis)",
+          "price": "24.000 RSD"
+        },
+        {
+          "name": "Mesotherapie Augen, Lippen, Haare, Hände (1 Behandlung)",
+          "price": "6.000 RSD"
+        },
+        {
+          "name": "Mesotherapie Augen, Lippen, Haare, Hände (3+1 gratis)",
+          "price": "18.000 RSD"
+        },
+        {
+          "name": "Lipolyse (1 Behandlung)",
+          "price": "10.000 RSD"
+        },
+        {
+          "name": "Lipolyse (3 Behandlungen)",
+          "price": "24.000 RSD"
+        },
+        {
+          "name": "Lemon Bottle (1 Behandlung)",
+          "price": "12.000 RSD"
+        },
+        {
+          "name": "Lemon Bottle (3 Behandlungen)",
+          "price": "30.000 RSD"
+        }
+      ]
+    },
+    {
+      "key": "protetika",
+      "label": "Prothetik",
+      "rows": [
+        {
+          "name": "Metallkeramikkrone",
+          "price": "100 €"
+        },
+        {
+          "name": "Metallfreie Zirkonkrone",
+          "price": "180 €"
+        },
+        {
+          "name": "Visil-Prothese",
+          "price": "400 €"
+        },
+        {
+          "name": "Visil-Prothese mit Attachments",
+          "price": "500 €"
+        },
+        {
+          "name": "Gefräste Krone",
+          "price": "130 €"
+        },
+        {
+          "name": "Teilprothese (Kunststoff)",
+          "price": "300 €"
+        },
+        {
+          "name": "Vollprothese (Kunststoff)",
+          "price": "300 €"
+        },
+        {
+          "name": "Titanverstärkte Vollprothese",
+          "price": "350 €"
+        },
+        {
+          "name": "Mini-Prothese (ein fehlender Zahn)",
+          "price": "50 €"
+        },
+        {
+          "name": "Provisorische Krone",
+          "price": "25 €"
+        },
+        {
+          "name": "Gegossener Stiftaufbau",
+          "price": "50 €"
+        },
+        {
+          "name": "Glasfaserstift-Aufbau",
+          "price": "50 €"
+        },
+        {
+          "name": "Prothesenreparatur",
+          "price": "4.000 RSD"
+        },
+        {
+          "name": "Prothesenunterfütterung",
+          "price": "5.000 RSD"
+        },
+        {
+          "name": "Brückenabnahme (pro Krone)",
+          "price": "1.000 RSD"
+        },
+        {
+          "name": "Keramikveneers",
+          "price": "250 €"
+        },
+        {
+          "name": "Metallkeramikkrone auf Implantat",
+          "price": "200 €"
+        },
+        {
+          "name": "Metallfreie Krone auf Implantat",
+          "price": "280 €"
+        },
+        {
+          "name": "Definitive Zementierung der prothetischen Arbeit",
+          "price": "2.000 RSD"
+        }
+      ]
+    },
+    {
+      "key": "opsta-stomatologija",
+      "label": "Allgemeine Zahnmedizin",
+      "rows": [
+        {
+          "name": "Kompositfüllung Klasse I",
+          "price": "3.000 RSD"
+        },
+        {
+          "name": "Kompositfüllung Klasse II",
+          "price": "4.000 RSD"
+        },
+        {
+          "name": "Kompositfüllung Klasse III",
+          "price": "4.000 RSD"
+        },
+        {
+          "name": "Kompositfüllung Klasse IV",
+          "price": "4.000 RSD"
+        },
+        {
+          "name": "Kompositfüllung Klasse V",
+          "price": "4.000 RSD"
+        },
+        {
+          "name": "Kompositfüllung MOD",
+          "price": "4.500 RSD"
+        },
+        {
+          "name": "Kompositveneer",
+          "price": "6.000 RSD"
+        },
+        {
+          "name": "Behandlung tiefer Karies",
+          "price": "3.000 RSD"
+        },
+        {
+          "name": "Wurzelbehandlung — einkanaliger Zahn",
+          "price": "5.000 RSD"
+        },
+        {
+          "name": "Wurzelbehandlung — zweikanaliger Zahn",
+          "price": "6.000 RSD"
+        },
+        {
+          "name": "Wurzelbehandlung — dreikanaliger Zahn",
+          "price": "7.000 RSD"
+        },
+        {
+          "name": "Wurzelbehandlung — vierkanaliger Zahn",
+          "price": "8.000 RSD"
+        },
+        {
+          "name": "Devitalisierung des Zahns — Medikament",
+          "price": "3.000 RSD"
+        },
+        {
+          "name": "Wurzelkanalfüllung (pro Kanal)",
+          "price": "2.000 RSD"
+        },
+        {
+          "name": "Zahndrainage (pro Kanal)",
+          "price": "2.000 RSD"
+        },
+        {
+          "name": "Medikamentöse Kanaleinlage (pro Kanal)",
+          "price": "2.000 RSD"
+        },
+        {
+          "name": "Revision der Wurzelfüllung mit Medikamenteneinlage (pro Kanal)",
+          "price": "3.000 RSD"
+        }
+      ]
+    },
+    {
+      "key": "oralna-hirurgija",
+      "label": "Oralchirurgie",
+      "rows": [
+        {
+          "name": "Zahnextraktion (routinemäßig)",
+          "price": "4.000 RSD"
+        },
+        {
+          "name": "Zahnextraktion (kompliziert)",
+          "price": "6.000 RSD"
+        },
+        {
+          "name": "Chirurgische Zahnentfernung",
+          "price": "15.000 RSD"
+        },
+        {
+          "name": "Chirurgische Freilegung eines retinierten Zahns",
+          "price": "18.000 RSD"
+        },
+        {
+          "name": "Entfernung eines Milchzahns",
+          "price": "2.500 RSD"
+        },
+        {
+          "name": "Wurzelspitzenresektion",
+          "price": "15.000 RSD"
+        },
+        {
+          "name": "Sinuslift — offene Methode",
+          "price": "60.000–120.000 RSD"
+        },
+        {
+          "name": "Transkrestaler Sinuslift",
+          "price": "12.000 RSD"
+        },
+        {
+          "name": "Alveoloplastik (pro Quadrant)",
+          "price": "12.000 RSD"
+        },
+        {
+          "name": "Verschluss einer Mund-Antrum-Verbindung",
+          "price": "12.000 RSD"
+        },
+        {
+          "name": "Sinusrevision",
+          "price": "60.000 RSD"
+        }
+      ]
+    },
+    {
+      "key": "parodontologija",
+      "label": "Parodontologie",
+      "rows": [
+        {
+          "name": "Zahnsteinentfernung und Politur",
+          "price": "4.000 RSD"
+        },
+        {
+          "name": "Entfernung weicher Beläge und Politur",
+          "price": "2.000 RSD"
+        },
+        {
+          "name": "Behandlung der Zahnfleischtaschen (pro Kiefer)",
+          "price": "10.000 RSD"
+        },
+        {
+          "name": "Selektives Einschleifen",
+          "price": "1.000 RSD"
+        },
+        {
+          "name": "Gingivektomie (pro Zahn)",
+          "price": "5.000 RSD"
+        },
+        {
+          "name": "Frenektomie",
+          "price": "12.000 RSD"
+        },
+        {
+          "name": "Parodontalabszess — Drainage",
+          "price": "3.000 RSD"
+        },
+        {
+          "name": "Behandlung einer Zahnfleischtasche (pro Tasche)",
+          "price": "2.000 RSD"
+        },
+        {
+          "name": "Lappenoperation (pro Zahn, zzgl. Knochenkosten)",
+          "price": "10.000 RSD"
+        },
+        {
+          "name": "Lappenoperation — ganzer Kiefer (zzgl. Knochenkosten)",
+          "price": "60.000 RSD"
+        },
+        {
+          "name": "Klinische Kronenverlängerung (pro Zahn)",
+          "price": "10.000 RSD"
+        },
+        {
+          "name": "SMAT",
+          "price": "36.000 RSD"
+        },
+        {
+          "name": "TVT und koronal verschobener Lappen",
+          "price": "45.000 RSD"
+        },
+        {
+          "name": "Gummy-Smile-Behandlung",
+          "price": "45.000 RSD"
+        },
+        {
+          "name": "Abstrichentnahme",
+          "price": "2.000 RSD"
+        }
+      ]
+    },
+    {
+      "key": "decja-stomatologija",
+      "label": "Kinderzahnheilkunde",
+      "rows": [
+        {
+          "name": "Fissurenversiegelung",
+          "price": "2.000 RSD"
+        },
+        {
+          "name": "Füllung an einem Milchzahn",
+          "price": "2.500 RSD"
+        },
+        {
+          "name": "Entfernung eines Milchzahns",
+          "price": "2.000 RSD"
+        }
+      ]
+    },
+    {
+      "key": "ortodoncija",
+      "label": "Kieferorthopädie",
+      "rows": [
+        {
+          "name": "Konventionelle feste Zahnspange (pro Kiefer)",
+          "price": "700 €"
+        },
+        {
+          "name": "Damon feste Zahnspange (pro Kiefer)",
+          "price": "800 €"
+        },
+        {
+          "name": "Ästhetische feste Zahnspange (pro Kiefer)",
+          "price": "800 €"
+        },
+        {
+          "name": "Herausnehmbare Zahnspange (pro Kiefer)",
+          "price": "250 €"
+        },
+        {
+          "name": "Set-up-Aligner zur Zahnkorrektur (pro Aligner)",
+          "price": "100 €"
+        },
+        {
+          "name": "Retentionsschiene",
+          "price": "60 €"
+        }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Tut die Behandlung weh?",
+      "answer": "Nein. Alle Eingriffe führen wir unter moderner örtlicher Betäubung durch, und für Angstpatienten bieten wir auch eine Behandlung unter Sedierung an, sodass der Ablauf völlig schmerzfrei ist."
+    },
+    {
+      "question": "Wie lange dauert das Einsetzen eines Implantats?",
+      "answer": "Das Einsetzen selbst dauert 30–45 Minuten pro Implantat. Die Einheilphase vor dem Aufsetzen der Krone beträgt in der Regel 6 bis 12 Wochen, je nach Knochenzustand."
+    },
+    {
+      "question": "Behandeln Sie unter Sedierung?",
+      "answer": "Ja, Analgosedierung ist für alle größeren Eingriffe sowie für Patienten mit ausgeprägter Zahnarztangst verfügbar."
+    },
+    {
+      "question": "Wie lange ist die Garantie?",
+      "answer": "Auf prothetische Arbeiten geben wir eine schriftliche Garantie von einem Jahr, inklusive regelmäßiger Kontrollen im Rahmen der Nachsorge."
+    },
+    {
+      "question": "Ist Ratenzahlung möglich?",
+      "answer": "Ja, Ratenzahlung ist mit Kreditkarten und Privatschecks möglich, nach Absprache mit der Praxisverwaltung."
+    },
+    {
+      "question": "Wie viele Tage muss ich in Belgrad bleiben?",
+      "answer": "Das hängt von der Behandlung ab — einfachere Eingriffe sind in einem Besuch erledigt, während komplexere Fälle (z. B. All-on-6) 2 Besuche im Abstand von einigen Monaten erfordern."
+    },
+    {
+      "question": "Haben Sie samstags geöffnet?",
+      "answer": "Samstags arbeiten wir nach Vereinbarung, für Notfälle."
+    },
+    {
+      "question": "Was, wenn ich große Angst vor dem Zahnarzt habe?",
+      "answer": "Das verstehen wir vollkommen — deshalb bieten wir unverbindliche Beratungen, Behandlung unter Sedierung und einen geduldigen Umgang durch ein Team, das auf die Arbeit mit Angstpatienten spezialisiert ist."
+    }
+  ],
+  "team": {
+    "intro": "Fachzahnärzte für Prothetik, Oralchirurgie, Parodontologie und Kieferorthopädie, die als ein Team arbeiten — mit klarem Plan, Sorgfalt und Premium-Behandlungsstandard.",
+    "members": [
+      {
+        "name": "Dr. Emilija Filipović",
+        "role": "Fachzahnärztin für Oralchirurgie",
+        "bio": [
+          "Dr. Emilija Filipović ist Fachzahnärztin für Oralchirurgie und legt großen Wert auf einen modernen Ansatz, Präzision und eine individuelle Beziehung zu jedem Patienten.",
+          "Ihr Zahnmedizinstudium schloss sie 2017 an der Medizinischen Fakultät der Universität Novi Sad ab, die Facharztausbildung in Oralchirurgie im Jahr 2024.",
+          "In ihrer Arbeit setzt sie moderne Methoden und Technologien ein, mit besonderem Fokus auf präzise Behandlungsplanung und ein angenehmes Sicherheitsgefühl der Patienten. Sie bildet sich kontinuierlich durch Fortbildungen und Kurse weiter und verfolgt die neuesten Entwicklungen in der Oralchirurgie.",
+          "Fachwissen, Präzision und Hingabe für jeden Patienten sind die Grundlage ihrer Arbeitsweise."
+        ]
+      },
+      {
+        "name": "Dr. Natalija Filipović",
+        "role": "Fachzahnärztin für Prothetik",
+        "bio": [
+          "Dr. Natalija Filipović ist Fachzahnärztin für Prothetik und widmet sich der Gestaltung von Lächeln, die Ästhetik, Funktionalität und Langlebigkeit auf natürliche Weise verbinden.",
+          "Ihr Zahnmedizinstudium schloss sie 2017 an der Medizinischen Fakultät der Universität Novi Sad ab, die Facharztausbildung in zahnärztlicher Prothetik im Jahr 2025.",
+          "Besondere Aufmerksamkeit schenkt sie Details, den individuellen Bedürfnissen der Patienten und der sorgfältigen Planung jeder prothetischen Arbeit. In ihrem Ansatz verbindet sie moderne Methoden, Präzision und Gespür für Ästhetik, damit jedes Ergebnis natürlich, harmonisch und auf die jeweilige Person abgestimmt ist.",
+          "Ihr Wissen erweitert sie kontinuierlich durch Fortbildungen und die Verfolgung aktueller Entwicklungen in Prothetik und ästhetischer Zahnmedizin – in der Überzeugung, dass herausragende Ergebnisse aus Wissen, Erfahrung und Hingabe zu jedem Detail entstehen."
+        ]
+      },
+      {
+        "name": "Dr. Jana Gugl",
+        "role": "Fachzahnärztin für Prothetik",
+        "bio": [
+          "Dr. Jana Gugl ist Fachzahnärztin für Prothetik und widmet sich präzisen, funktionalen und ästhetisch abgestimmten prothetischen Lösungen.",
+          "Ihr Zahnmedizinstudium schloss sie 2015 an der Zahnmedizinischen Fakultät der Universität Belgrad ab, die Facharztausbildung in zahnärztlicher Prothetik im Jahr 2026.",
+          "Besondere Aufmerksamkeit legt sie auf eine detaillierte Analyse, sorgfältige Planung und die Wahl der Lösung, die den Bedürfnissen und Erwartungen jedes Patienten entspricht. Ihre Philosophie beruht auf der Verbindung von Fachwissen, modernen Methoden und individuellem Ansatz, damit jede prothetische Arbeit komfortabel, natürlich und langlebig ist.",
+          "Sie verfolgt kontinuierlich die Entwicklung der modernen Zahnmedizin und investiert in ihre fachliche Weiterbildung, um ihren Patienten eine hochwertige, zuverlässige und moderne prothetische Behandlung zu bieten."
+        ]
+      },
+      {
+        "name": "Dr. Olivera Vujić",
+        "role": "Zahnärztin",
+        "bio": [
+          "Dr. Olivera Vujić ist Zahnärztin mit langjähriger Erfahrung und besonderer Hingabe zur ästhetischen Zahnmedizin und modernen ästhetischen Verfahren.",
+          "Ihr Studium an der Zahnmedizinischen Fakultät der Universität Belgrad schloss sie 2003 ab. Im Laufe der Jahre hat sie ihr Wissen und ihre Fähigkeiten stetig erweitert und folgt aktuellen Trends und Techniken in Ästhetik und Anti-Aging-Medizin.",
+          "Sie hat sich besonders in der Anwendung von Botulinumtoxin (Botox), Hyaluronfillern, Mesotherapie und Lipolyse weitergebildet, mit Fokus auf natürliche, harmonische und dezente Ergebnisse, die die individuelle Schönheit jedes Patienten betonen.",
+          "Fürsorglich, engagiert und gründlich in ihrer Arbeit ist Dr. Olivera überzeugt, dass die besten ästhetischen Ergebnisse entstehen, wenn Fachwissen, Erfahrung und ein gutes Gespür für das richtige Maß zu einer Einheit verschmelzen."
+        ]
+      },
+      {
+        "name": "Dr. Vidosava Marinković Zeljković",
+        "role": "Fachzahnärztin für Kieferorthopädie",
+        "bio": [
+          "Dr. Vidosava ist Fachzahnärztin für Kieferorthopädie mit besonderem Interesse an modernen Methoden der Zahnbegradigung und Bisskorrektur sowie an der Gestaltung eines gesunden und harmonischen Lächelns.",
+          "Ihr Zahnmedizinstudium schloss sie 2015 in Belgrad ab, und 2024 beendete sie ihre Facharztausbildung in Kieferorthopädie.",
+          "Im Laufe ihrer beruflichen Entwicklung erweitert sie kontinuierlich ihr Wissen und ihre Fähigkeiten durch Fortbildungen im Bereich der modernen Kieferorthopädie. In ihrer Arbeit wendet sie verschiedene moderne Ansätze der kieferorthopädischen Behandlung an, darunter die Therapie mit transparenten Alignern und mit festen Zahnspangen, einschließlich des Damon-Systems.",
+          "Besonderen Wert legt sie auf einen individuellen Ansatz für jeden Patienten, eine detaillierte Problemanalyse und eine Behandlungsplanung, die den spezifischen Bedürfnissen und Erwartungen des Patienten entspricht. Ziel ihrer Arbeit ist ein Ergebnis, das nicht nur ästhetisch schön, sondern auch funktional und langfristig stabil ist.",
+          "Sie ist überzeugt, dass eine moderne kieferorthopädische Behandlung Fachwissen, Präzision, moderne Technologien und Vertrauen zwischen Arzt und Patient verbinden sollte. Die kontinuierliche Verfolgung neuer Methoden und Techniken ermöglicht es ihr, ihren Patienten moderne und individuelle Behandlungsmöglichkeiten anzubieten."
+        ]
+      }
+    ]
+  },
+  "testimonials": [
+    {
+      "name": "Simonida Stojanović",
+      "quote": "Großartiger Service, Dr. Gugl ist immer professionell und freundlich, modernes und schönes Ambiente mit neuester Ausstattung. Absolut lobenswert!"
+    },
+    {
+      "name": "Milica Ristić",
+      "quote": "Ich empfehle House of Smile und Dr. Jana. Außergewöhnliche Professionalität und Hingabe zum Patienten, die sauberste Praxis, in der ich je war, schönes Ambiente und tolle Lage!"
+    },
+    {
+      "name": "Dusan Dusan",
+      "quote": "Schon seit längerer Zeit geht meine ganze Familie ins House of Smile, besonders zu Dr. Jana Gugl, und wir haben nur Lob. Ich lasse dort meine Zähne behandeln und pflegen, meine Frau geht auch hin, wir bringen unsere Kinder mit, und unsere Tochter hat dort auch ihre Zahnspange bekommen. Professionell, freundlich und dem Patienten zugewandt. Wir haben großes Vertrauen in sie und empfehlen sie von Herzen!"
+    },
+    {
+      "name": "Dragana Stijepić",
+      "quote": "Alle Empfehlungen für die wunderbare Dr. Natalija ❤️"
+    },
+    {
+      "name": "Bojana Bukvić",
+      "quote": "Seit vielen Jahren pflege ich meine Mundgesundheit bei Dr. Natalija und Dr. Emilija und habe nur Lob. Bei ihnen habe ich mir auch die Weisheitszähne operativ entfernen lassen, und die gesamte Erfahrung war äußerst positiv. Die Kompetenz des Teams, der professionelle und aufmerksame Umgang sowie die angenehme Atmosphäre sorgen dafür, dass sich jeder Besuch sicher und stressfrei anfühlt. Ich plane auch weitere Eingriffe und Leistungen der Praxis, was genug über mein Vertrauen in ihre Arbeit aussagt. Herzliche Empfehlung."
+    },
+    {
+      "name": "Jovan Tomić",
+      "quote": "Dr. Olivera Vujić ist einfach eine absolute Spitzenfrau. Als jemand, der große Angst vor dem Zahnarzt hat, empfehle ich Ihnen wärmstens, alles rund um die Zähne bei ihr machen zu lassen."
+    },
+    {
+      "name": "Jovana M",
+      "quote": "Dr. Natalija, eine wunderbare Frau! Ich bin überglücklich!"
+    },
+    {
+      "name": "Igor Gajović",
+      "quote": "Neben dem Service auch Qualität und Professionalität."
+    },
+    {
+      "name": "Čedomir Simetić",
+      "quote": "Dr. Natalija ist phänomenal!"
+    },
+    {
+      "name": "Miljan Sekić",
+      "quote": "Dr. Natalija, eine ausgezeichnete Zahnärztin, gewissenhaft, pünktlich und auch toll im Umgang mit Kindern. Empfehlung. 😊"
+    }
+  ],
+  "advantages": [
+    {
+      "number": "01",
+      "title": "10+ Jahre Praxis",
+      "description": "Tausende erfolgreich abgeschlossene Behandlungen und komplexe Fälle."
+    },
+    {
+      "number": "02",
+      "title": "Schmerzfrei, unter Sedierung",
+      "description": "Für Angstpatienten Behandlung unter Analgosedierung."
+    },
+    {
+      "number": "03",
+      "title": "Premium-Materialien",
+      "description": "Zertifizierte Implantate und Keramik aus Deutschland und der Schweiz."
+    },
+    {
+      "number": "04",
+      "title": "Klarer Preis im Voraus",
+      "description": "Schriftlicher Behandlungsplan mit genauen Preisen, ohne nachträgliche Kosten."
+    },
+    {
+      "number": "05",
+      "title": "Schriftliche Garantie",
+      "description": "Bis zu einem Jahr Garantie auf Prothetik."
+    },
+    {
+      "number": "06",
+      "title": "Eine Adresse für alles",
+      "description": "Ein ganzes Team von Fachärzten und ein Labor in derselben Praxis."
+    }
+  ],
+  "stats": [
+    {
+      "label": "Jahre Erfahrung",
+      "suffix": "+"
+    },
+    {
+      "label": "Zufriedene Patienten",
+      "suffix": "+"
+    },
+    {
+      "label": "Gesetzte Implantate",
+      "suffix": "+"
+    },
+    {
+      "label": "Patientenbewertung",
+      "suffix": "/5"
+    }
+  ],
+  "steps": {
+    "items": [
+      {
+        "number": "01",
+        "title": "Kostenlose Beratung",
+        "description": "Kommen Sie unverbindlich zur Untersuchung. Wir analysieren den Zustand, machen eine 3D-Aufnahme und hören uns Ihre Wünsche an."
+      },
+      {
+        "number": "02",
+        "title": "Individueller Behandlungsplan",
+        "description": "Sie erhalten einen klaren Plan, die Reihenfolge der Eingriffe, einen Zeitrahmen und den genauen Preis — ohne versteckte Kosten."
+      },
+      {
+        "number": "03",
+        "title": "Ihr neues Lächeln",
+        "description": "Wir führen die Behandlung zu vereinbarten Terminen durch, schmerzfrei, mit Kontrollen und Garantie nach Abschluss."
+      }
+    ]
+  },
+  "quickLinks": [
+    {
+      "label": "All on 4 / All on 6",
+      "slug": "implantologija",
+      "hash": "all-on-4"
+    },
+    {
+      "label": "Implantat-Prothesen",
+      "slug": "implantologija",
+      "hash": "proteze-na-implantatima"
+    },
+    {
+      "label": "Hollywood Smile",
+      "slug": "estetska-stomatologija",
+      "hash": "hollywood-smile"
+    },
+    {
+      "label": "Veneers",
+      "slug": "estetska-stomatologija",
+      "hash": "fasete-viniri"
+    },
+    {
+      "label": "Laser-Bleaching",
+      "slug": "estetska-stomatologija",
+      "hash": "lasersko-izbeljivanje"
+    },
+    {
+      "label": "Metallfreie Kronen",
+      "slug": "protetika",
+      "hash": "bezmetalne-krunice"
+    },
+    {
+      "label": "Keramikveneers",
+      "slug": "protetika",
+      "hash": "keramicki-viniri"
+    }
+  ],
+  "gallery": {
+    "aboutAlts": [
+      "Praxis — Detail 1",
+      "Praxis — Detail 2",
+      "Praxis — Detail 3",
+      "Praxis — Detail 4",
+      "Praxis — Detail 5",
+      "Praxis — Detail 6",
+      "Praxis — Detail 7",
+      "Praxis — Detail 8",
+      "Praxis — Detail 9",
+      "Praxis — Detail 10",
+      "Praxis — Detail 11",
+      "Praxis — Detail 12",
+      "Praxis — Detail 13",
+      "Praxis — Detail 14",
+      "Praxis — Detail 15",
+      "Praxis — Detail 16",
+      "Praxis — Detail 17",
+      "Praxis — Detail 18",
+      "Praxis — Detail 19",
+      "Praxis — Detail 20",
+      "Praxis — Detail 21",
+      "Praxis — Detail 22",
+      "Praxis — Detail 23",
+      "Praxis — Detail 24"
+    ],
+    "beforeAfterCases": [
+      {
+        "label": "Fall 1"
+      },
+      {
+        "label": "Fall 2"
+      },
+      {
+        "label": "Fall 3"
+      },
+      {
+        "label": "Fall 4"
+      },
+      {
+        "label": "Fall 5"
+      },
+      {
+        "label": "Fall 6"
+      },
+      {
+        "label": "Fall 7"
+      },
+      {
+        "label": "Fall 8"
+      },
+      {
+        "label": "Fall 9"
+      },
+      {
+        "label": "Fall 10"
+      }
+    ]
+  }
+}

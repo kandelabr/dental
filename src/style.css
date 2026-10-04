@@ -5,9 +5,15 @@
 @tailwind utilities;
 
 @layer base {
-  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+    max-width: 100%;
+    width: 100%;
+  }
   body {
-    @apply bg-ivory-50 text-ink-900 font-sans font-light antialiased overflow-x-hidden;
+    @apply bg-ivory-50 text-ink-900 font-sans font-light antialiased overflow-x-hidden max-w-full w-full relative;
   }
   h1, h2, h3, h4 { @apply font-display font-light tracking-[-0.01em]; }
   ::selection { @apply bg-gold-500/30; }
@@ -22,6 +28,21 @@
 
 @layer components {
   .container-lux { @apply mx-auto w-full max-w-container px-5 sm:px-8 lg:px-12; }
+
+  /* Clip horizontal spill only below lg — overflow-x on header clips the services dropdown. */
+  @media (max-width: 1023px) {
+    #site-header,
+    #header-inner {
+      max-width: 100%;
+      overflow-x: clip;
+    }
+  }
+
+  #topbar .container-lux {
+    min-width: 0;
+    max-width: 100%;
+    gap: 0.75rem;
+  }
 
   .btn { @apply inline-flex items-center justify-center gap-2.5 rounded-full min-h-[44px]
          text-[13px] font-medium uppercase tracking-[0.16em] transition-all duration-500 ease-lux; }
@@ -52,8 +73,41 @@
   .dark-section { @apply relative overflow-hidden bg-ink-900 text-ivory-50; }
 
   .nav-link {
-    @apply relative text-[13px] font-medium uppercase tracking-[0.14em] py-2
+    @apply relative text-[11px] xl:text-[12px] 2xl:text-[13px] font-medium uppercase tracking-[0.1em] xl:tracking-[0.12em] 2xl:tracking-[0.14em] py-2 whitespace-nowrap
            text-ivory-50/80 hover:text-gold-300 transition-colors duration-300;
+  }
+
+  [data-fit-nav] {
+    gap: calc(1rem * var(--nav-scale, 1));
+  }
+  [data-fit-nav] .nav-link {
+    font-size: calc(0.6875rem * var(--nav-scale, 1));
+    letter-spacing: calc(0.1em * var(--nav-scale, 1));
+  }
+  @media (min-width: 1280px) {
+    [data-fit-nav] { gap: calc(1.5rem * var(--nav-scale, 1)); }
+    [data-fit-nav] .nav-link { font-size: calc(0.75rem * var(--nav-scale, 1)); }
+  }
+  @media (min-width: 1536px) {
+    [data-fit-nav] { gap: calc(2rem * var(--nav-scale, 1)); }
+    [data-fit-nav] .nav-link { font-size: calc(0.8125rem * var(--nav-scale, 1)); }
+  }
+
+  [data-fit-quicklinks] {
+    column-gap: calc(1rem * var(--ql-scale, 1));
+    font-size: calc(0.6875rem * var(--ql-scale, 1));
+  }
+  @media (min-width: 768px) {
+    [data-fit-quicklinks] {
+      column-gap: calc(1.5rem * var(--ql-scale, 1));
+      font-size: calc(0.75rem * var(--ql-scale, 1));
+    }
+  }
+  @media (min-width: 1280px) {
+    [data-fit-quicklinks] {
+      column-gap: calc(2rem * var(--ql-scale, 1));
+      font-size: calc(0.8125rem * var(--ql-scale, 1));
+    }
   }
   .nav-link::after {
     content: '';

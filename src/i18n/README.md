@@ -1,36 +1,55 @@
-# i18n — Serbian source catalog
+# i18n — multilingual resources
 
-This folder holds the **Serbian source catalog** of user-facing copy for future English (and other) translations.
+Locale catalogs and runtime for **sr** (default), **en**, **de**, **ru**.
 
 ## Files
 
 | File | Role |
 |------|------|
-| `sr.json` | Complete inventory of Serbian strings currently shown in the app |
-| `en.json` | *(not yet)* English translation mirroring the same keys |
+| `sr.json` / `en.json` / `de.json` / `ru.json` | Full string catalogs (same key tree) |
+| `locales.ts` | Locale constants, labels, hreflang tags |
+| `messages.ts` | Load catalog + active locale |
+| `content.ts` | Merge catalogs with structural data (images, slugs, phones) |
+| `cookie.ts` | `hos_locale` preference cookie + bot detection |
+| `bootstrap.ts` | Init locale from URL, optional cookie redirect, document meta |
 
-## Structure overview
+## URL strategy (SEO-friendly)
 
-Top-level keys in `sr.json`:
+| Locale | URL |
+|--------|-----|
+| Serbian (default) | `/`, `/nas-tim.html`, `/usluge/...` |
+| English | `/en/`, `/en/nas-tim.html`, `/en/usluge/...` |
+| German | `/de/...` |
+| Russian | `/ru/...` |
 
-- **`meta`** — HTML `<title>` values (home, team, each service page)
-- **`ui`** — Chrome and shared UI: nav, buttons, forms, aria-labels, footer, header, lightbox, carousel, common CTAs, section eyebrows/titles from `render.ts`
-- **`home`** — Index-only hero copy
-- **`site`** — Contact facts and hours labels from `site.ts`
-- **`about`**, **`services`**, **`servicePages`**, **`prices`**, **`faq`**, **`team`**, **`testimonials`**, **`advantages`**, **`stats`**, **`steps`**, **`quickLinks`** — Content modules from `src/data/*`
-- **`gallery`** — About-gallery alt templates and before/after case labels (service gallery alts also live under each `servicePages[slug].gallery`)
+- Default locale has **no** `/sr` prefix (`x-default` → Serbian).
+- Each HTML shell gets `lang`, `data-locale`, and `hreflang` alternate links (via `vite-plugin-i18n`).
+- Generated `/en`, `/de`, `/ru` HTML files are created at dev/build time (gitignored).
 
-`servicePages` is keyed by slug (e.g. `implantologija`) and includes full paragraphs, process steps, feature sections, and gallery alts.
+## Language switcher
 
-## Consumption status
+- Codes **SR | EN | DE | RU** in the top bar and mobile drawer.
+- Choosing a language sets cookie `hos_locale` and navigates to the same page under that locale.
+- Returning visitors who open a **default** (`/`) URL are redirected to the cookied locale (skipped for bots).
 
-The app **does not yet load or apply** these files. The language switch in the top bar is a UI stub (`i18n TODO`). This catalog is a translation resource only — no runtime wiring yet.
+## SEO prerender
 
-## Adding `en.json` later
+`npm run build` ends with `tsx scripts/prerender-dist.ts`, which fills every HTML file in `dist/` with:
 
-1. Copy `sr.json` → `en.json`.
-2. Translate every string value; **keep the same key paths and array shapes**.
-3. Leave non-translatable tokens as-is where appropriate (brand name, prices, phone numbers) or localize selectively.
-4. When the app gains a real i18n layer, load `sr.json` / `en.json` by locale and replace the hardcoded / data-module strings.
+- Localized body sections (`data-render`, service/team main content)
+- `<title>`, meta description, canonical URL
+- Open Graph / Twitter tags
+- `hreflang` alternates
+- JSON-LD `Dentist` schema on the home page
+- Localized `aria-label` / skip-link text
 
-Do not refactor the site to consume these files until that i18n work is intentionally started.
+Client JS still hydrates the same slots for interactivity. Crawlers see the full text in the raw HTML.
+
+In **dev**, Vite also prerenders via `ssrLoadModule` when you open `/`, `/en/`, etc.
+
+Set production origin with `VITE_SITE_ORIGIN` (used for canonical / hreflang / og:url).
+
+## Editing copy
+
+1. Edit the appropriate `*.json` (keep keys/array shapes identical across locales).
+2. Structural things (image paths, phone `tel:` links, WhatsApp) stay in `src/data/*` and are merged in `content.ts`.

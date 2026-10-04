@@ -47,6 +47,11 @@ deployment-token*
 # Vite
 .vite/
 
+# Generated locale HTML shells (created by vite-plugin-i18n)
+/en/
+/de/
+/ru/
+
 # Test / coverage
 coverage/
 

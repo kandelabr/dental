@@ -1,17 +1,25 @@
 import { $$ } from './dom'
-import { site } from '../data/site'
-import { services } from '../data/services'
-import { steps } from '../data/steps'
-import { stats } from '../data/stats'
-import { about } from '../data/about'
-import { advantages } from '../data/advantages'
-import { testimonials } from '../data/testimonials'
-import { gallery, beforeAfterCases } from '../data/gallery'
-import { prices } from '../data/prices'
-import { faq } from '../data/faq'
-import { getServicePage } from '../data/servicePages'
-import { teamIntro, teamMembers } from '../data/team'
-import { quickLinks, quickLinkHref } from '../data/quickLinks'
+import {
+  getSite,
+  getServices,
+  getSteps,
+  getStats,
+  getAbout,
+  getAdvantages,
+  getTestimonials,
+  getGallery,
+  getBeforeAfterCases,
+  getPrices,
+  getFaq,
+  getServicePage,
+  getTeamIntro,
+  getTeamMembers,
+  getQuickLinks,
+  quickLinkHref,
+  ui,
+  homeCopy,
+} from '../i18n/content'
+import { getMessages } from '../i18n/messages'
 import { homeHref, homeSection, serviceHref, teamHref } from './paths'
 
 const socialIcons: Record<string, string> = {
@@ -22,19 +30,21 @@ const socialIcons: Record<string, string> = {
 }
 
 function brandLink(opts?: { compact?: boolean; showTagline?: boolean }): string {
+  const site = getSite()
+  const tagline = ui().brand.tagline
   const compact = opts?.compact ?? false
   const showTagline = opts?.showTagline ?? !compact
-  const imgSize = compact ? 'h-9 w-9' : 'h-12 w-12'
-  const titleSize = compact ? 'text-xl' : 'text-2xl'
+  const imgSize = compact ? 'h-9 w-9' : 'h-10 w-10 sm:h-11 sm:w-11 xl:h-12 xl:w-12'
+  const titleSize = compact ? 'text-xl' : 'text-base sm:text-lg xl:text-xl 2xl:text-2xl'
   return `
-  <a href="${homeHref()}" class="flex items-center gap-3 min-w-0">
+  <a href="${homeHref()}" class="flex items-center gap-2 xl:gap-3 min-w-0 max-w-[min(100%,14rem)] sm:max-w-[16rem] xl:max-w-none shrink">
     <img src="/assets/logo.jpg" alt="${site.name}" class="${imgSize} shrink-0 rounded-full object-cover ring-1 ring-white/15" width="48" height="48" decoding="async" />
-    <span class="flex flex-col leading-none min-w-0">
-      <span class="font-display ${titleSize} tracking-wide truncate">${site.name}</span>
+    <span class="flex min-w-0 flex-col leading-none">
+      <span class="font-display ${titleSize} tracking-wide whitespace-nowrap truncate">${site.name}</span>
       ${
         showTagline
-          ? `<span class="mt-1.5 h-px w-8 bg-gold-500"></span>
-      <span class="mt-1.5 text-[10px] tracking-[0.3em] uppercase">Stomatološka ordinacija</span>`
+          ? `<span class="mt-1.5 hidden h-px w-8 bg-gold-500 lg:block"></span>
+      <span class="mt-1.5 hidden text-[9px] xl:text-[10px] tracking-[0.18em] xl:tracking-[0.3em] uppercase whitespace-nowrap lg:block">${tagline}</span>`
           : ''
       }
     </span>
@@ -42,6 +52,7 @@ function brandLink(opts?: { compact?: boolean; showTagline?: boolean }): string 
 }
 
 function socialLinks(sizeClass: string): string {
+  const site = getSite()
   return Object.entries(site.social)
     .map(
       ([key, href]) => `
@@ -60,28 +71,72 @@ function stars(rating: number): string {
   return Array.from({ length: 5 }, (_, i) => starIcon(i < rating)).join('')
 }
 
+function hoursShort(): string {
+  return getMessages().site.hoursShort
+}
+
 // ---------- Topbar ----------
 
+function renderTopbarHours(): string {
+  return hoursShort()
+}
+
 function renderTopbarSocial(): string {
-  return `${socialLinks('h-4 w-4')}<span class="h-4 w-px bg-white/20"></span><button type="button" data-lang-switch class="flex items-center gap-1 text-[13px] tracking-wide"><span data-lang-option="sr" class="text-gold-500">SR</span>&nbsp;|&nbsp;<span data-lang-option="en" class="text-ivory-50/70 hover:text-gold-500 transition-colors">EN</span></button>`
+  return `${socialLinks('h-4 w-4')}<span class="h-4 w-px bg-white/20"></span><div data-lang-switch class="flex items-center"></div>`
+}
+
+// ---------- Hero ----------
+
+function renderHero(): string {
+  const hero = homeCopy().hero
+  const common = ui().common
+  const star = `<svg class="h-4 w-4 text-gold-500 shrink-0" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.6 6.6L21 9l-5 4.6L17.4 21 12 17.3 6.6 21 8 13.6 3 9l6.4-.4z" /></svg>`
+  return `
+  <div class="max-w-[720px]">
+    <p class="eyebrow text-gold-300">${hero.eyebrow}</p>
+    <h1 class="mt-6 text-[2.5rem] leading-[1.05] md:text-7xl lg:text-[5.75rem] text-ivory-50">
+      ${hero.title}<br /><span class="italic text-gold-300">${hero.titleAccent}</span>
+    </h1>
+    <p class="mt-8 max-w-[46ch] text-[0.9375rem] md:text-[1.0625rem] leading-relaxed text-stone-300">
+      ${hero.lead}
+    </p>
+    <div class="mt-10 flex flex-col sm:flex-row gap-4">
+      <a href="${homeSection('kontakt')}" class="btn-gold">${common.bookFreeExam}</a>
+      <a href="${homeSection('nas-rad')}" class="btn-ghost text-ivory-50 border-ivory-50/25">${common.viewOurWork}</a>
+    </div>
+    <p class="mt-4 text-[13px] tracking-wide text-stone-300/80">${common.freeFirstExam}</p>
+    <div class="mt-10 pt-8 border-t border-white/10 flex flex-nowrap gap-x-8 gap-y-3 overflow-x-auto no-scrollbar">
+      ${hero.highlights
+        .map(
+          (h) => `
+        <span class="flex items-center gap-2 whitespace-nowrap text-[13px] text-stone-300">${star}${h}</span>`,
+        )
+        .join('')}
+    </div>
+  </div>`
 }
 
 // ---------- Header ----------
 
 function renderHeader(): string {
-  const navLinks: [string, string][] = [
-    [homeSection('pocetna'), 'Početna'],
-    [homeSection('usluge'), 'Usluge'],
-    [homeSection('nas-rad'), 'Naš rad'],
-    [homeSection('cenovnik'), 'Cenovnik'],
-    [homeSection('o-nama'), 'O nama'],
-    [homeSection('iskustva'), 'Iskustva'],
-    [homeSection('kontakt'), 'Kontakt'],
+  const site = getSite()
+  const nav = ui().nav
+  const services = getServices()
+  const quickLinks = getQuickLinks()
+
+  const navLinks: { href: string; label: string; key: string }[] = [
+    { href: homeSection('pocetna'), label: nav.items.home, key: 'home' },
+    { href: homeSection('usluge'), label: nav.items.services, key: 'services' },
+    { href: homeSection('nas-rad'), label: nav.items.work, key: 'work' },
+    { href: homeSection('cenovnik'), label: nav.items.prices, key: 'prices' },
+    { href: homeSection('o-nama'), label: nav.items.about, key: 'about' },
+    { href: homeSection('iskustva'), label: nav.items.testimonials, key: 'testimonials' },
+    { href: homeSection('kontakt'), label: nav.items.contact, key: 'contact' },
   ]
 
   const navHtml = navLinks
-    .map(([href, label]) => {
-      if (label === 'Usluge') {
+    .map(({ href, label, key }) => {
+      if (key === 'services') {
         return `
         <div class="relative" data-dropdown>
           <a href="${href}" data-nav-link data-dropdown-trigger class="nav-link" aria-expanded="false" aria-controls="services-dropdown">
@@ -110,65 +165,68 @@ function renderHeader(): string {
     .join('')
 
   return `
-  <div id="header-inner" class="transition-all duration-500 border-b border-transparent text-ivory-50">
-    <div class="container-lux flex items-center justify-between h-24" id="header-bar">
+  <div id="header-inner" class="w-full max-w-full transition-all duration-500 border-b border-transparent text-ivory-50">
+    <div class="container-lux flex w-full max-w-full min-w-0 items-center gap-3 sm:gap-4 xl:gap-6 h-24" id="header-bar">
       ${brandLink()}
 
-      <nav class="hidden lg:flex items-center gap-9" aria-label="Glavna navigacija">
+      <nav data-fit-nav class="hidden lg:flex flex-1 min-w-0 items-center justify-center gap-4 xl:gap-6 2xl:gap-8" aria-label="${nav.ariaMain}" style="--nav-scale:1">
         ${navHtml}
       </nav>
 
-      <div class="flex items-center gap-4">
-        <a href="${homeSection('kontakt')}" class="btn-gold hidden lg:inline-flex">Zakaži pregled</a>
-        <button type="button" data-drawer-open aria-label="Otvori meni" aria-expanded="false" class="lg:hidden flex h-11 w-11 items-center justify-center rounded-full border border-current/25">
+      <div class="flex shrink-0 items-center gap-3 xl:gap-4 ml-auto lg:ml-0">
+        <a href="${homeSection('kontakt')}" class="btn-gold hidden lg:inline-flex !px-4 xl:!px-7 text-[11px] xl:text-[13px] tracking-[0.12em] whitespace-nowrap">${nav.bookAppointment}</a>
+        <button type="button" data-drawer-open aria-label="${nav.openMenu}" aria-expanded="false" class="relative z-10 lg:hidden flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-current/25">
           <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
         </button>
       </div>
     </div>
 
-    <nav aria-label="Brzi linkovi" class="border-t border-white/10">
-      <div class="container-lux flex items-center gap-6 md:gap-8 overflow-x-auto no-scrollbar py-2.5 text-[12px] md:text-[13px] uppercase tracking-[0.12em]">
+    <nav aria-label="${nav.ariaQuickLinks}" class="w-full max-w-full overflow-hidden border-t border-white/10">
+      <div data-fit-quicklinks class="container-lux flex w-full min-w-0 max-w-full items-center gap-4 md:gap-6 xl:gap-8 overflow-x-auto overscroll-x-contain no-scrollbar py-2.5 text-[11px] md:text-[12px] xl:text-[13px] uppercase tracking-[0.08em] md:tracking-[0.1em] xl:tracking-[0.12em]" style="--ql-scale:1">
         ${quickLinks
           .map(
             (link, i) => `
-          <a href="${quickLinkHref(link)}" class="shrink-0 text-ivory-50/75 hover:text-gold-300 transition-colors whitespace-nowrap ${i > 0 ? 'md:border-l md:border-white/15 md:pl-8' : ''}">${link.label}</a>`,
+          <a href="${quickLinkHref(link)}" class="shrink-0 text-ivory-50/75 hover:text-gold-300 transition-colors whitespace-nowrap ${i > 0 ? 'md:border-l md:border-white/15 md:pl-5 xl:pl-8' : ''}">${link.label}</a>`,
           )
           .join('')}
       </div>
     </nav>
   </div>
 
-  <div data-drawer class="fixed inset-0 z-[60] bg-ink-950 text-ivory-50 translate-x-full transition-transform duration-500 ease-lux lg:hidden overflow-y-auto">
-    <div class="container-lux flex items-center justify-between h-20">
-      ${brandLink({ compact: true, showTagline: false })}
-      <button type="button" data-drawer-close aria-label="Zatvori meni" class="flex h-11 w-11 items-center justify-center rounded-full border border-white/20">
-        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 6l12 12M18 6L6 18"/></svg>
-      </button>
-    </div>
-    <nav class="container-lux flex flex-col gap-1 pb-10" aria-label="Mobilna navigacija">
-      ${navLinks
-        .map(([href, label], i) =>
-          label === 'Usluge'
-            ? `
-          <div data-drawer-accordion>
-            <button type="button" data-drawer-accordion-trigger class="flex w-full items-center justify-between py-4 min-h-[52px] font-display text-3xl" style="transition-delay:${i * 60}ms" data-stagger>
-              ${label} <span data-drawer-accordion-icon aria-hidden="true">+</span>
-            </button>
-            <div data-drawer-accordion-panel class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-400 ease-lux overflow-hidden">
-              <div class="min-h-0 flex flex-col gap-3 pb-4">
-                ${services.map((s) => `<a href="${serviceHref(s.slug)}" data-drawer-link class="text-lg text-stone-300 hover:text-gold-500 py-1.5 min-h-[44px] flex items-center">${s.name}</a>`).join('')}
+  <div class="fixed inset-0 z-[60] overflow-hidden pointer-events-none lg:hidden" aria-hidden="true">
+    <div data-drawer class="pointer-events-auto h-full w-full overflow-y-auto bg-ink-950 text-ivory-50 translate-x-full transition-transform duration-500 ease-lux">
+      <div class="container-lux flex items-center justify-between h-20">
+        ${brandLink({ compact: true, showTagline: false })}
+        <button type="button" data-drawer-close aria-label="${nav.closeMenu}" class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/20">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+      <nav class="container-lux flex flex-col gap-1 pb-10" aria-label="${nav.ariaMobile}">
+        ${navLinks
+          .map(({ href, label, key }, i) =>
+            key === 'services'
+              ? `
+            <div data-drawer-accordion>
+              <button type="button" data-drawer-accordion-trigger class="flex w-full items-center justify-between py-4 min-h-[52px] font-display text-3xl" style="transition-delay:${i * 60}ms" data-stagger>
+                ${label} <span data-drawer-accordion-icon aria-hidden="true">+</span>
+              </button>
+              <div data-drawer-accordion-panel class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-400 ease-lux overflow-hidden">
+                <div class="min-h-0 flex flex-col gap-3 pb-4">
+                  ${services.map((s) => `<a href="${serviceHref(s.slug)}" data-drawer-link class="text-lg text-stone-300 hover:text-gold-500 py-1.5 min-h-[44px] flex items-center">${s.name}</a>`).join('')}
+                </div>
               </div>
-            </div>
-          </div>`
-            : `<a href="${href}" data-drawer-link data-stagger style="transition-delay:${i * 60}ms" class="py-4 min-h-[52px] flex items-center font-display text-3xl border-b border-white/10">${label}</a>`,
-        )
-        .join('')}
-    </nav>
-    <div class="container-lux flex flex-col gap-4 pb-12 border-t border-white/10 pt-8">
-      <a href="${site.phoneHref}" class="text-xl font-display">${site.phone}</a>
-      <span class="text-stone-300 text-sm">Pon–Pet 12:00–20:00 · Sub po pozivu</span>
-      <div class="flex items-center gap-4 pt-2">${socialLinks('h-5 w-5')}</div>
-      <a href="${homeSection('kontakt')}" data-drawer-link class="btn-gold w-full mt-2">Zakaži pregled</a>
+            </div>`
+              : `<a href="${href}" data-drawer-link data-stagger style="transition-delay:${i * 60}ms" class="py-4 min-h-[52px] flex items-center font-display text-3xl border-b border-white/10">${label}</a>`,
+          )
+          .join('')}
+      </nav>
+      <div class="container-lux flex flex-col gap-4 pb-12 border-t border-white/10 pt-8">
+        <a href="${site.phoneHref}" class="text-xl font-display">${site.phone}</a>
+        <span class="text-stone-300 text-sm">${hoursShort()}</span>
+        <div class="flex items-center gap-4 pt-2">${socialLinks('h-5 w-5')}</div>
+        <div data-lang-switch class="flex items-center pt-1"></div>
+        <a href="${homeSection('kontakt')}" data-drawer-link class="btn-gold w-full mt-2">${nav.bookAppointment}</a>
+      </div>
     </div>
   </div>
   <div data-drawer-backdrop class="fixed inset-0 z-[55] bg-ink-950/60 opacity-0 pointer-events-none transition-opacity duration-500 lg:hidden"></div>
@@ -178,6 +236,7 @@ function renderHeader(): string {
 // ---------- Stats ----------
 
 function renderStats(): string {
+  const stats = getStats()
   return `
   <div class="grid grid-cols-2 lg:grid-cols-4 gap-y-10 lg:divide-x divide-ivory-200">
     ${stats
@@ -197,10 +256,12 @@ function renderStats(): string {
 // ---------- Steps ----------
 
 function renderSteps(): string {
+  const steps = getSteps()
+  const copy = ui().sections.steps
   return `
   <div class="text-center reveal">
-    <p class="eyebrow justify-center">Kako počinjemo</p>
-    <h2 class="mt-5 text-3xl md:text-5xl lg:text-[3.5rem] text-ink-900">Tri koraka do vašeg novog osmeha</h2>
+    <p class="eyebrow justify-center">${copy.eyebrow}</p>
+    <h2 class="mt-5 text-3xl md:text-5xl lg:text-[3.5rem] text-ink-900">${copy.title}</h2>
   </div>
   <div class="relative mt-16 grid gap-12 md:grid-cols-3 md:gap-8">
     <div class="hidden md:block absolute top-[52px] left-[16%] right-[16%] h-px bg-gradient-to-r from-transparent via-gold-500/40 to-transparent"></div>
@@ -222,6 +283,9 @@ function renderSteps(): string {
 // ---------- About ----------
 
 function renderAbout(): string {
+  const about = getAbout()
+  const copy = ui().sections.about
+  const common = ui().common
   return `
   <div class="grid lg:grid-cols-2 gap-16 items-center">
     <div class="relative reveal max-w-lg mx-auto lg:mx-0">
@@ -240,9 +304,9 @@ function renderAbout(): string {
       </span>
     </div>
     <div class="reveal" data-delay="100">
-      <p class="eyebrow">O nama</p>
+      <p class="eyebrow">${copy.eyebrow}</p>
       ${about.paragraphs.map((p) => `<p class="mt-6 text-[0.9375rem] md:text-[1.0625rem] leading-relaxed text-stone-500">${p}</p>`).join('')}
-      <a href="${teamHref()}" class="btn-dark mt-10">Upoznajte naš tim</a>
+      <a href="${teamHref()}" class="btn-dark mt-10">${common.meetTeam}</a>
     </div>
   </div>`
 }
@@ -250,12 +314,14 @@ function renderAbout(): string {
 // ---------- Services ----------
 
 function renderServices(): string {
+  const services = getServices()
+  const copy = ui().sections.services
   return `
   <div class="text-center reveal">
-    <p class="eyebrow justify-center">Naše usluge</p>
-    <h2 class="mt-5 text-3xl md:text-5xl lg:text-[3.5rem] text-ink-900">Kompletna stomatologija na jednom mestu</h2>
+    <p class="eyebrow justify-center">${copy.eyebrow}</p>
+    <h2 class="mt-5 text-3xl md:text-5xl lg:text-[3.5rem] text-ink-900">${copy.title}</h2>
     <p class="mt-5 max-w-[56ch] mx-auto text-[0.9375rem] md:text-[1.0625rem] leading-relaxed text-stone-500">
-      Od preventivne do kompleksnih rekonstrukcija - sve usluge objedinjene u jednoj ordinaciji
+      ${copy.lead}
     </p>
   </div>
   <div class="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -283,7 +349,10 @@ function renderServices(): string {
 // ---------- Spotlight (osiguranje) ----------
 
 function renderSpotlight(): string {
-  const insurers = ['Dunav osiguranje', 'Triglav', 'Globos', 'Delta Generali']
+  const site = getSite()
+  const copy = ui().sections.spotlight
+  const common = ui().common
+  const insurers = copy.insurers
   return `
   <div class="absolute inset-0 opacity-[0.035] pointer-events-none" aria-hidden="true">
     <svg width="100%" height="100%"><filter id="grain-spotlight"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch" /></filter><rect width="100%" height="100%" filter="url(#grain-spotlight)" /></svg>
@@ -292,10 +361,10 @@ function renderSpotlight(): string {
 
   <div class="relative grid lg:grid-cols-[1.05fr_1fr] gap-16 items-center">
     <div class="reveal">
-      <p class="eyebrow">Osiguranje</p>
-      <h2 class="mt-5 text-3xl md:text-5xl lg:text-[3.5rem] text-ivory-50">Refundacija uz <span class="italic text-gold-300">10%</span> niže cene</h2>
+      <p class="eyebrow">${copy.eyebrow}</p>
+      <h2 class="mt-5 text-3xl md:text-5xl lg:text-[3.5rem] text-ivory-50">${copy.titlePrefix} <span class="italic text-gold-300">${copy.percent}</span> ${copy.titleSuffix}</h2>
       <p class="mt-6 max-w-[52ch] text-[0.9375rem] md:text-[1.0625rem] leading-relaxed text-stone-300">
-        Sklopljeni su ugovori sa vodećim osiguravajućim kućama u cilju refundacije — korisnici osiguranja ostvaruju terapiju po cenama nižim za 10%.
+        ${copy.lead}
       </p>
       <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-5">
         ${insurers
@@ -309,16 +378,16 @@ function renderSpotlight(): string {
           .join('')}
       </div>
       <div class="mt-10 flex flex-col sm:flex-row gap-4">
-        <a href="#kontakt" class="btn-gold">Zakažite konsultaciju</a>
+        <a href="${homeSection('kontakt')}" class="btn-gold">${common.bookConsultation}</a>
         <a href="${site.phoneHref}" class="btn-ghost text-ivory-50 border-ivory-50/25">${site.phone}</a>
       </div>
     </div>
     <div class="relative reveal" data-delay="120">
       <div class="rounded-[1.75rem] border border-white/10 bg-white/[0.04] p-8 md:p-10 shadow-lift">
-        <p class="font-display text-6xl md:text-7xl text-gold-300">10%</p>
-        <p class="mt-4 text-xl text-ivory-50">niže cene za korisnike osiguranja</p>
+        <p class="font-display text-6xl md:text-7xl text-gold-300">${copy.percent}</p>
+        <p class="mt-4 text-xl text-ivory-50">${copy.cardLead}</p>
         <p class="mt-4 text-[0.9375rem] leading-relaxed text-stone-300">
-          Dunav osiguranje, Triglav, Globos i Delta Generali — refundacija putem sklopljenih ugovora.
+          ${copy.cardNote}
         </p>
         <div class="mt-8 grid grid-cols-2 gap-3">
           ${insurers
@@ -338,20 +407,23 @@ function renderSpotlight(): string {
 // ---------- Work (before/after + gallery) ----------
 
 function renderWork(): string {
+  const beforeAfterCases = getBeforeAfterCases()
+  const gallery = getGallery()
+  const copy = ui().sections.work
   return `
   <div class="text-center reveal">
-    <p class="eyebrow justify-center">Naš rad</p>
-    <h2 class="mt-5 text-3xl md:text-5xl lg:text-[3.5rem] text-ink-900">Rezultati govore umesto nas</h2>
+    <p class="eyebrow justify-center">${copy.eyebrow}</p>
+    <h2 class="mt-5 text-3xl md:text-5xl lg:text-[3.5rem] text-ink-900">${copy.title}</h2>
   </div>
 
   <div class="mt-16 reveal">
-    <div data-before-after class="relative aspect-[16/10] rounded-[1.75rem] overflow-hidden select-none touch-none max-w-3xl mx-auto shadow-soft" tabindex="0" role="slider" aria-label="Poređenje pre i posle terapije" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
-      <img data-ba-after src="${beforeAfterCases[0]!.after}" alt="Posle terapije" class="absolute inset-0 h-full w-full object-cover" loading="lazy" decoding="async" />
+    <div data-before-after class="relative aspect-[16/10] rounded-[1.75rem] overflow-hidden select-none touch-none max-w-3xl mx-auto shadow-soft" tabindex="0" role="slider" aria-label="${copy.beforeAfterAria}" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+      <img data-ba-after src="${beforeAfterCases[0]!.after}" alt="${copy.afterAlt}" class="absolute inset-0 h-full w-full object-cover" loading="lazy" decoding="async" />
       <div data-ba-before-wrap class="absolute inset-0 overflow-hidden" style="clip-path: inset(0 50% 0 0);">
-        <img data-ba-before src="${beforeAfterCases[0]!.before}" alt="Pre terapije" class="h-full w-full object-cover" loading="lazy" decoding="async" />
+        <img data-ba-before src="${beforeAfterCases[0]!.before}" alt="${copy.beforeAlt}" class="h-full w-full object-cover" loading="lazy" decoding="async" />
       </div>
-      <span class="absolute top-4 left-4 rounded-full bg-ink-950/70 px-3 py-1 text-[11px] tracking-widest text-ivory-50">PRE</span>
-      <span class="absolute top-4 right-4 rounded-full bg-ink-950/70 px-3 py-1 text-[11px] tracking-widest text-ivory-50">POSLE</span>
+      <span class="absolute top-4 left-4 rounded-full bg-ink-950/70 px-3 py-1 text-[11px] tracking-widest text-ivory-50">${copy.beforeLabel}</span>
+      <span class="absolute top-4 right-4 rounded-full bg-ink-950/70 px-3 py-1 text-[11px] tracking-widest text-ivory-50">${copy.afterLabel}</span>
       <div data-ba-handle class="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-[2px] bg-gold-500">
         <span class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex h-11 w-11 items-center justify-center rounded-full bg-gold-500 text-ink-900 shadow-gold">↔</span>
       </div>
@@ -383,10 +455,12 @@ function renderWork(): string {
 // ---------- Advantages ----------
 
 function renderAdvantages(): string {
+  const advantages = getAdvantages()
+  const copy = ui().sections.advantages
   return `
   <div class="text-center reveal max-w-3xl mx-auto">
-    <p class="eyebrow justify-center text-gold-300">Prednosti</p>
-    <h2 class="mt-5 text-3xl md:text-5xl lg:text-[3.5rem] text-ivory-50">Zašto pacijenti biraju nas</h2>
+    <p class="eyebrow justify-center text-gold-300">${copy.eyebrow}</p>
+    <h2 class="mt-5 text-3xl md:text-5xl lg:text-[3.5rem] text-ivory-50">${copy.title}</h2>
   </div>
   <div class="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12">
     ${advantages
@@ -407,12 +481,15 @@ function renderAdvantages(): string {
 // ---------- Testimonials ----------
 
 function renderTestimonials(): string {
+  const testimonials = getTestimonials()
+  const copy = ui().sections.testimonials
+  const carousel = ui().carousel
   return `
   <div class="text-center reveal">
-    <p class="eyebrow justify-center">Iskustva</p>
-    <h2 class="mt-5 text-3xl md:text-5xl lg:text-[3.5rem] text-ink-900">Šta kažu naši pacijenti</h2>
+    <p class="eyebrow justify-center">${copy.eyebrow}</p>
+    <h2 class="mt-5 text-3xl md:text-5xl lg:text-[3.5rem] text-ink-900">${copy.title}</h2>
     <div class="mt-4 flex items-center justify-center gap-2">
-      <span class="font-display text-2xl text-petrol-700">4,8 / 5</span>
+      <span class="font-display text-2xl text-petrol-700">${copy.ratingDisplay}</span>
       <span class="flex gap-0.5">${stars(5)}</span>
     </div>
   </div>
@@ -432,8 +509,8 @@ function renderTestimonials(): string {
           .join('')}
       </div>
       <div class="mt-8 flex items-center justify-center gap-4">
-        <button type="button" data-carousel-prev aria-label="Prethodno" class="flex h-11 w-11 items-center justify-center rounded-full border border-ivory-200 hover:bg-petrol-700 hover:text-ivory-50 hover:border-petrol-700 transition-colors">←</button>
-        <button type="button" data-carousel-next aria-label="Sledeće" class="flex h-11 w-11 items-center justify-center rounded-full border border-ivory-200 hover:bg-petrol-700 hover:text-ivory-50 hover:border-petrol-700 transition-colors">→</button>
+        <button type="button" data-carousel-prev aria-label="${carousel.prev}" class="flex h-11 w-11 items-center justify-center rounded-full border border-ivory-200 hover:bg-petrol-700 hover:text-ivory-50 hover:border-petrol-700 transition-colors">←</button>
+        <button type="button" data-carousel-next aria-label="${carousel.next}" class="flex h-11 w-11 items-center justify-center rounded-full border border-ivory-200 hover:bg-petrol-700 hover:text-ivory-50 hover:border-petrol-700 transition-colors">→</button>
       </div>
     </div>
   </div>`
@@ -442,15 +519,18 @@ function renderTestimonials(): string {
 // ---------- Prices ----------
 
 function renderPrices(): string {
+  const prices = getPrices()
+  const copy = ui().sections.prices
+  const common = ui().common
   return `
   <div class="text-center reveal">
-    <p class="eyebrow justify-center">Cenovnik</p>
-    <h2 class="mt-5 text-3xl md:text-5xl lg:text-[3.5rem] text-ink-900">Transparentne cene, bez skrivenih troškova</h2>
-    <p class="mt-4 text-[13px] text-stone-500">Cene su informativne; konačan plan terapije dobijate nakon pregleda.</p>
+    <p class="eyebrow justify-center">${copy.eyebrow}</p>
+    <h2 class="mt-5 text-3xl md:text-5xl lg:text-[3.5rem] text-ink-900">${copy.title}</h2>
+    <p class="mt-4 text-[13px] text-stone-500">${copy.note}</p>
   </div>
 
   <div class="mt-14 reveal">
-    <div data-tabs role="tablist" aria-label="Kategorije cenovnika" class="flex w-full min-w-0 max-w-full gap-2 overflow-x-auto no-scrollbar pb-2 lg:flex-wrap lg:justify-center lg:gap-3 lg:overflow-visible lg:pb-0">
+    <div data-tabs role="tablist" aria-label="${copy.tabsAria}" class="flex w-full min-w-0 max-w-full gap-2 overflow-x-auto no-scrollbar pb-2 lg:flex-wrap lg:justify-center lg:gap-3 lg:overflow-visible lg:pb-0">
       ${prices
         .map(
           (cat, i) => `
@@ -482,7 +562,7 @@ function renderPrices(): string {
     </div>
 
     <div class="mt-10 text-center">
-      <a href="#kontakt" class="btn-ghost">Zakažite besplatan pregled</a>
+      <a href="${homeSection('kontakt')}" class="btn-ghost">${common.bookFreeExam}</a>
     </div>
   </div>`
 }
@@ -490,10 +570,12 @@ function renderPrices(): string {
 // ---------- FAQ ----------
 
 function renderFaq(): string {
+  const faq = getFaq()
+  const copy = ui().sections.faq
   return `
   <div class="text-center reveal">
-    <p class="eyebrow justify-center">Česta pitanja</p>
-    <h2 class="mt-5 text-3xl md:text-5xl lg:text-[3.5rem] text-ink-900">Sve što želite da znate pre terapije</h2>
+    <p class="eyebrow justify-center">${copy.eyebrow}</p>
+    <h2 class="mt-5 text-3xl md:text-5xl lg:text-[3.5rem] text-ink-900">${copy.title}</h2>
   </div>
   <div class="mt-14 max-w-3xl mx-auto reveal" data-accordion data-mode="single">
     ${faq
@@ -518,83 +600,90 @@ function renderFaq(): string {
 // ---------- CTA banner ----------
 
 function renderCta(): string {
+  const site = getSite()
+  const copy = ui().sections.cta
+  const common = ui().common
   return `
   <div class="absolute inset-0 pointer-events-none" aria-hidden="true" style="background: radial-gradient(60% 60% at 50% 30%, rgba(200,169,107,0.18), transparent 70%);"></div>
   <div class="absolute inset-0 opacity-[0.035] pointer-events-none" aria-hidden="true">
     <svg width="100%" height="100%"><filter id="grain-cta"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch" /></filter><rect width="100%" height="100%" filter="url(#grain-cta)" /></svg>
   </div>
   <div class="relative reveal">
-    <h2 class="text-3xl md:text-5xl lg:text-[3.5rem] text-ivory-50">Vaš novi osmeh počinje jednim pozivom</h2>
+    <h2 class="text-3xl md:text-5xl lg:text-[3.5rem] text-ivory-50">${copy.title}</h2>
     <p class="mt-5 max-w-[52ch] mx-auto text-[0.9375rem] md:text-[1.0625rem] leading-relaxed text-stone-300">
-      Zakažite besplatan pregled već danas i saznajte tačan plan i cenu vaše terapije.
+      ${copy.text}
     </p>
     <div class="mt-9 flex flex-col sm:flex-row items-center justify-center gap-6">
-      <a href="#kontakt" class="btn-gold">Zakaži pregled</a>
+      <a href="${homeSection('kontakt')}" class="btn-gold">${ui().nav.bookAppointment}</a>
       <a href="${site.phoneHref}" class="flex items-center gap-2 font-display text-2xl text-ivory-50 hover:text-gold-300 transition-colors">
         <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.5 21 3 13.5 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1z"/></svg>
         ${site.phone}
       </a>
     </div>
-    <p class="mt-5 text-[13px] tracking-wide text-stone-300/80">Prvi pregled je besplatan.</p>
+    <p class="mt-5 text-[13px] tracking-wide text-stone-300/80">${common.freeFirstExam}</p>
   </div>`
 }
 
 // ---------- Contact ----------
 
 function renderContact(): string {
+  const site = getSite()
+  const services = getServices()
+  const copy = ui().sections.contact
+  const form = ui().form
   return `
   <div class="grid lg:grid-cols-2 gap-14">
     <div class="reveal">
-      <p class="eyebrow">Kontakt</p>
-      <h2 class="mt-5 text-3xl md:text-5xl lg:text-[3.5rem] text-ink-900">Zakažite svoj termin</h2>
-      <p class="mt-4 text-[0.9375rem] md:text-[1.0625rem] text-petrol-700 font-medium tracking-wide">Prvi pregled je besplatan.</p>
+      <p class="eyebrow">${copy.eyebrow}</p>
+      <h2 class="mt-5 text-3xl md:text-5xl lg:text-[3.5rem] text-ink-900">${copy.title}</h2>
+      <p class="mt-4 text-[0.9375rem] md:text-[1.0625rem] text-petrol-700 font-medium tracking-wide">${copy.freeExamNote}</p>
 
       <form id="contact-form" novalidate class="mt-10 rounded-[1.75rem] border border-ivory-200 bg-ivory-100 p-8 md:p-10">
         <div data-form-fields class="space-y-5">
           <div>
-            <label for="field-name" class="block text-sm text-stone-500 mb-2">Ime i prezime*</label>
+            <label for="field-name" class="block text-sm text-stone-500 mb-2">${form.labels.name}</label>
             <input id="field-name" name="name" type="text" autocomplete="name" class="field" data-field="name" />
             <p data-error-for="name" class="mt-1.5 hidden text-[13px] text-red-500"></p>
           </div>
           <div>
-            <label for="field-phone" class="block text-sm text-stone-500 mb-2">Telefon*</label>
+            <label for="field-phone" class="block text-sm text-stone-500 mb-2">${form.labels.phone}</label>
             <input id="field-phone" name="phone" type="tel" autocomplete="tel" class="field" data-field="phone" />
             <p data-error-for="phone" class="mt-1.5 hidden text-[13px] text-red-500"></p>
           </div>
           <div>
-            <label for="field-email" class="block text-sm text-stone-500 mb-2">Email</label>
+            <label for="field-email" class="block text-sm text-stone-500 mb-2">${form.labels.email}</label>
             <input id="field-email" name="email" type="email" autocomplete="email" class="field" data-field="email" />
             <p data-error-for="email" class="mt-1.5 hidden text-[13px] text-red-500"></p>
           </div>
           <div>
-            <label for="field-service" class="block text-sm text-stone-500 mb-2">Usluga</label>
+            <label for="field-service" class="block text-sm text-stone-500 mb-2">${form.labels.service}</label>
             <select id="field-service" name="service" class="field" data-field="service">
               ${services.map((s) => `<option value="${s.slug}">${s.name}</option>`).join('')}
-              <option value="nesiguran" selected>Nisam siguran/na</option>
+              <option value="nesiguran" selected>${form.unsureOption}</option>
             </select>
           </div>
           <div>
-            <label for="field-message" class="block text-sm text-stone-500 mb-2">Poruka</label>
+            <label for="field-message" class="block text-sm text-stone-500 mb-2">${form.labels.message}</label>
             <textarea id="field-message" name="message" rows="4" class="field" data-field="message"></textarea>
           </div>
           <label class="flex items-start gap-3 text-[13px] text-stone-500">
             <input type="checkbox" name="consent" data-field="consent" class="mt-1 h-5 w-5 shrink-0 rounded border-ivory-200 text-gold-500 focus:ring-gold-500/30" />
-            <span>Slažem se sa obradom podataka*</span>
+            <span>${form.labels.consent}</span>
           </label>
           <p data-error-for="consent" class="hidden text-[13px] text-red-500"></p>
         </div>
 
         <button type="submit" data-submit-btn class="btn-gold w-full mt-8">
-          <span data-submit-label>Pošalji zahtev</span>
+          <span data-submit-label>${form.submit}</span>
         </button>
 
         <div data-success class="hidden text-center py-6">
           <span class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-gold-500 text-ink-900">
             <svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L19 7"/></svg>
           </span>
-          <h3 class="mt-5 font-display text-2xl text-ink-900">Hvala vam!</h3>
-          <p class="mt-2 text-stone-500">Kontaktiraćemo vas u roku od 24h.</p>
-          <button type="button" data-reset-form class="mt-5 text-petrol-500 hover:text-gold-600 text-sm font-medium">Pošalji novi zahtev</button>
+          <h3 class="mt-5 font-display text-2xl text-ink-900">${form.successTitle}</h3>
+          <p class="mt-2 text-stone-500">${form.successText}</p>
+          <button type="button" data-reset-form class="mt-5 text-petrol-500 hover:text-gold-600 text-sm font-medium">${form.reset}</button>
         </div>
       </form>
     </div>
@@ -605,26 +694,26 @@ function renderContact(): string {
           <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gold-100 text-petrol-700">
             <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s7-6.5 7-11.5A7 7 0 0 0 5 9.5C5 14.5 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
           </span>
-          <div><p class="text-sm text-stone-500">Adresa</p><p class="text-ink-900">${site.address}</p></div>
+          <div><p class="text-sm text-stone-500">${copy.labels.address}</p><p class="text-ink-900">${site.address}</p></div>
         </div>
         <div class="flex gap-4 py-5 border-b border-ivory-200">
           <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gold-100 text-petrol-700">
             <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.5 21 3 13.5 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1z"/></svg>
           </span>
-          <div><p class="text-sm text-stone-500">Telefon</p><a href="${site.phoneHref}" class="text-ink-900 hover:text-gold-600">${site.phone}</a></div>
+          <div><p class="text-sm text-stone-500">${copy.labels.phone}</p><a href="${site.phoneHref}" class="text-ink-900 hover:text-gold-600">${site.phone}</a></div>
         </div>
         <div class="flex gap-4 py-5 border-b border-ivory-200">
           <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gold-100 text-petrol-700">
             <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18v12H3z"/><path d="M3 6l9 7 9-7"/></svg>
           </span>
-          <div><p class="text-sm text-stone-500">Email</p><a href="mailto:${site.email}" class="text-ink-900 hover:text-gold-600">${site.email}</a></div>
+          <div><p class="text-sm text-stone-500">${copy.labels.email}</p><a href="mailto:${site.email}" class="text-ink-900 hover:text-gold-600">${site.email}</a></div>
         </div>
         <div class="flex gap-4 py-5 border-b border-ivory-200">
           <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gold-100 text-petrol-700">
             <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
           </span>
           <div>
-            <p class="text-sm text-stone-500">Radno vreme</p>
+            <p class="text-sm text-stone-500">${copy.labels.hours}</p>
             ${site.hours.map((h) => `<p class="text-ink-900">${h.day}: ${h.time}</p>`).join('')}
           </div>
         </div>
@@ -643,7 +732,7 @@ function renderContact(): string {
 
       <div class="mt-8 overflow-hidden rounded-2xl aspect-[16/10] grayscale hover:grayscale-0 transition duration-700">
         <iframe
-          title="Lokacija ordinacije na mapi"
+          title="${copy.mapTitle}"
           src="https://www.google.com/maps?q=Prizrenska+7+Stari+grad+Beograd&output=embed"
           class="h-full w-full border-0"
           loading="lazy"
@@ -657,13 +746,17 @@ function renderContact(): string {
 // ---------- Footer ----------
 
 function renderFooter(): string {
+  const site = getSite()
+  const services = getServices()
+  const nav = ui().nav
+  const footer = ui().footer
   const navLinks: [string, string][] = [
-    [homeSection('pocetna'), 'Početna'],
-    [homeSection('usluge'), 'Usluge'],
-    [homeSection('nas-rad'), 'Naš rad'],
-    [homeSection('cenovnik'), 'Cenovnik'],
-    [homeSection('o-nama'), 'O nama'],
-    [homeSection('kontakt'), 'Kontakt'],
+    [homeSection('pocetna'), nav.items.home],
+    [homeSection('usluge'), nav.items.services],
+    [homeSection('nas-rad'), nav.items.work],
+    [homeSection('cenovnik'), nav.items.prices],
+    [homeSection('o-nama'), nav.items.about],
+    [homeSection('kontakt'), nav.items.contact],
   ]
   return `
   <div class="container-lux">
@@ -671,18 +764,18 @@ function renderFooter(): string {
       <div>
         ${brandLink({ showTagline: false })}
         <p class="mt-4 text-[0.9375rem] leading-relaxed text-stone-300 max-w-[32ch]">
-          Premium stomatološka ordinacija posvećena bezbolnoj terapiji, digitalnoj dijagnostici i dugotrajnim rezultatima.
+          ${footer.blurb}
         </p>
         <div class="mt-6 flex items-center gap-4">${socialLinks('h-5 w-5')}</div>
       </div>
       <div>
-        <p class="eyebrow">Navigacija</p>
+        <p class="eyebrow">${footer.navigation}</p>
         <ul class="mt-5 space-y-3">
           ${navLinks.map(([href, label]) => `<li><a href="${href}" class="hover:text-gold-500 transition-colors">${label}</a></li>`).join('')}
         </ul>
       </div>
       <div>
-        <p class="eyebrow">Usluge</p>
+        <p class="eyebrow">${footer.services}</p>
         <ul class="mt-5 space-y-3">
           ${services
             .slice(0, 6)
@@ -691,12 +784,12 @@ function renderFooter(): string {
         </ul>
       </div>
       <div>
-        <p class="eyebrow">Kontakt</p>
+        <p class="eyebrow">${footer.contact}</p>
         <ul class="mt-5 space-y-3">
           <li>${site.address}</li>
           <li><a href="${site.phoneHref}" class="hover:text-gold-500 transition-colors">${site.phone}</a></li>
           <li><a href="mailto:${site.email}" class="hover:text-gold-500 transition-colors">${site.email}</a></li>
-          <li>Pon–Pet 12:00–20:00 · Sub po pozivu</li>
+          <li>${hoursShort()}</li>
         </ul>
       </div>
     </div>
@@ -704,10 +797,10 @@ function renderFooter(): string {
     <div class="hairline mt-16"></div>
 
     <div class="pt-6 pb-[max(1.25rem,env(safe-area-inset-bottom))] flex flex-col md:flex-row gap-3 justify-between text-[13px]">
-      <span>© 2026 ${site.name}. Sva prava zadržana.</span>
+      <span>${footer.copyright}</span>
       <span class="flex gap-4">
-        <a href="#" class="hover:text-gold-500 transition-colors">Uslovi korišćenja</a>
-        <a href="#" class="hover:text-gold-500 transition-colors">Politika privatnosti</a>
+        <a href="#" class="hover:text-gold-500 transition-colors">${footer.terms}</a>
+        <a href="#" class="hover:text-gold-500 transition-colors">${footer.privacy}</a>
       </span>
     </div>
   </div>`
@@ -716,9 +809,11 @@ function renderFooter(): string {
 // ---------- Floating actions ----------
 
 function renderFloatingActions(): string {
+  const site = getSite()
+  const floating = ui().floating
   return `
   <div class="fixed bottom-5 right-5 z-40 flex flex-col items-end gap-3">
-    <button type="button" data-back-to-top aria-label="Nazad na vrh" class="hidden h-12 w-12 items-center justify-center rounded-full border border-ivory-200 bg-white/80 backdrop-blur shadow-soft transition-opacity">
+    <button type="button" data-back-to-top aria-label="${floating.backToTop}" class="hidden h-12 w-12 items-center justify-center rounded-full border border-ivory-200 bg-white/80 backdrop-blur shadow-soft transition-opacity">
       <svg class="h-5 w-5 text-ink-900" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
     </button>
 
@@ -734,15 +829,17 @@ function renderFloatingActions(): string {
       </a>
     </div>
 
-    <button type="button" data-fab-main aria-label="Kontakt opcije" aria-expanded="false" class="relative flex h-14 w-14 items-center justify-center rounded-full bg-gold-500 text-ink-900 shadow-gold">
+    <button type="button" data-fab-main aria-label="${floating.contactOptions}" aria-expanded="false" class="relative flex h-14 w-14 items-center justify-center rounded-full bg-gold-500 text-ink-900 shadow-gold">
       <span class="absolute inset-0 rounded-full bg-gold-500 animate-ping opacity-40" aria-hidden="true"></span>
       <svg class="relative h-6 w-6" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.5 21 3 13.5 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1z"/></svg>
     </button>
   </div>`
 }
 
-const RENDERERS: Record<string, () => string> = {
+export const RENDERERS: Record<string, () => string> = {
+  'topbar-hours': renderTopbarHours,
   'topbar-social': renderTopbarSocial,
+  hero: renderHero,
   header: renderHeader,
   stats: renderStats,
   steps: renderSteps,
@@ -762,11 +859,14 @@ const RENDERERS: Record<string, () => string> = {
 
 export function renderServicePage(slug: string): string {
   const page = getServicePage(slug)
+  const common = ui().common
+  const services = getServices()
+
   if (!page) {
     return `
     <div class="container-lux py-32 text-center">
-      <h1 class="text-4xl text-ink-900">Usluga nije pronađena</h1>
-      <a href="${homeSection('usluge')}" class="btn-gold mt-8 inline-flex">Nazad na usluge</a>
+      <h1 class="text-4xl text-ink-900">${common.serviceNotFound}</h1>
+      <a href="${homeSection('usluge')}" class="btn-gold mt-8 inline-flex">${common.backToServices}</a>
     </div>`
   }
 
@@ -778,7 +878,7 @@ export function renderServicePage(slug: string): string {
   <section class="bg-ink-900 text-ivory-50 py-20 md:py-28">
     <div class="container-lux">
       <div class="reveal max-w-3xl">
-        <p class="eyebrow text-gold-300">Indikacije</p>
+        <p class="eyebrow text-gold-300">${common.indications}</p>
         <h2 class="mt-5 text-3xl md:text-5xl text-ivory-50">${page.benefitsTitle}</h2>
       </div>
       <div class="mt-14 grid gap-8 md:grid-cols-3">
@@ -800,7 +900,7 @@ export function renderServicePage(slug: string): string {
     <div class="container-lux grid lg:grid-cols-2 gap-14">
       <div class="reveal">
         <p class="eyebrow text-gold-300">${page.benefitsTitle}</p>
-        <h2 class="mt-5 text-3xl md:text-5xl text-ivory-50">Jasan odgovor na vašu situaciju</h2>
+        <h2 class="mt-5 text-3xl md:text-5xl text-ivory-50">${common.clearAnswerTitle}</h2>
       </div>
       <ul class="reveal space-y-4" data-delay="80">
         ${page.benefits
@@ -881,23 +981,23 @@ export function renderServicePage(slug: string): string {
     <div class="absolute inset-0 bg-gradient-to-t from-ink-950 via-transparent to-ink-950/40"></div>
     <div class="relative container-lux pb-16 pt-40 md:pb-24 md:pt-48">
       <a href="${homeSection('usluge')}" class="inline-flex items-center gap-2 text-[13px] uppercase tracking-[0.14em] text-ivory-50/70 hover:text-gold-300 transition-colors">
-        ← Sve usluge
+        ${common.allServicesLink}
       </a>
       <p class="eyebrow text-gold-300 mt-8">${page.eyebrow}</p>
       <h1 class="mt-5 max-w-[18ch] text-[2.35rem] leading-[1.08] md:text-6xl lg:text-[4.5rem] text-ivory-50">${page.headline}</h1>
       <p class="mt-6 max-w-[48ch] text-[0.9375rem] md:text-[1.0625rem] leading-relaxed text-stone-300">${page.lead}</p>
       <div class="mt-10 flex flex-col sm:flex-row gap-4">
-        <a href="${homeSection('kontakt')}" class="btn-gold">Zakažite besplatan pregled</a>
-        <a href="${homeSection('cenovnik')}" class="btn-ghost text-ivory-50 border-ivory-50/25">Pogledajte cenovnik</a>
+        <a href="${homeSection('kontakt')}" class="btn-gold">${common.bookFreeExam}</a>
+        <a href="${homeSection('cenovnik')}" class="btn-ghost text-ivory-50 border-ivory-50/25">${common.viewPrices}</a>
       </div>
-      <p class="mt-4 text-[13px] tracking-wide text-stone-300/80">Prvi pregled je besplatan.</p>
+      <p class="mt-4 text-[13px] tracking-wide text-stone-300/80">${common.freeFirstExam}</p>
     </div>
   </section>
 
   <section ${page.introId ? `id="${page.introId}"` : ''} class="bg-ivory-50 py-20 md:py-28 scroll-mt-28">
     <div class="container-lux grid lg:grid-cols-2 gap-14 items-center">
       <div class="reveal">
-        <p class="eyebrow">O usluzi</p>
+        <p class="eyebrow">${common.aboutService}</p>
         <h2 class="mt-5 text-3xl md:text-5xl text-ink-900">${page.introTitle}</h2>
         ${page.introText.map((t) => `<p class="mt-5 text-[0.9375rem] md:text-[1.0625rem] leading-relaxed text-stone-500">${t}</p>`).join('')}
         ${page.introTagline ? `<p class="mt-8 font-display italic text-xl md:text-2xl text-petrol-700">${page.introTagline}</p>` : ''}
@@ -938,7 +1038,7 @@ export function renderServicePage(slug: string): string {
   <section class="bg-ivory-100 py-20 md:py-28">
     <div class="container-lux">
       <div class="text-center reveal max-w-3xl mx-auto">
-        <p class="eyebrow justify-center">${page.processEyebrow ?? 'Proces'}</p>
+        <p class="eyebrow justify-center">${page.processEyebrow ?? common.process}</p>
         <h2 class="mt-5 text-3xl md:text-5xl text-ink-900">${page.processTitle}</h2>
       </div>
       <div class="mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -964,7 +1064,7 @@ export function renderServicePage(slug: string): string {
   <section class="bg-ivory-50 py-20 md:py-28">
     <div class="container-lux">
       <div class="reveal text-center">
-        <p class="eyebrow justify-center">Galerija</p>
+        <p class="eyebrow justify-center">${common.gallery}</p>
       </div>
       <div class="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4">
         ${page.gallery
@@ -987,8 +1087,8 @@ export function renderServicePage(slug: string): string {
     <div class="relative container-lux reveal">
       <h2 class="text-3xl md:text-5xl text-ivory-50">${page.ctaTitle}</h2>
       <p class="mt-5 max-w-[48ch] mx-auto text-[0.9375rem] md:text-[1.0625rem] leading-relaxed text-stone-300">${page.ctaText}</p>
-      <a href="${homeSection('kontakt')}" class="btn-gold mt-9 inline-flex">Zakažite besplatan pregled</a>
-      <p class="mt-4 text-[13px] tracking-wide text-stone-300/80">Prvi pregled je besplatan.</p>
+      <a href="${homeSection('kontakt')}" class="btn-gold mt-9 inline-flex">${common.bookFreeExam}</a>
+      <p class="mt-4 text-[13px] tracking-wide text-stone-300/80">${common.freeFirstExam}</p>
     </div>
   </section>
 
@@ -996,10 +1096,10 @@ export function renderServicePage(slug: string): string {
     <div class="container-lux">
       <div class="reveal flex flex-col md:flex-row md:items-end md:justify-between gap-6">
         <div>
-          <p class="eyebrow">Još usluga</p>
-          <h2 class="mt-5 text-3xl md:text-4xl text-ink-900">Pogledajte i ostale specijalnosti</h2>
+          <p class="eyebrow">${common.moreServices}</p>
+          <h2 class="mt-5 text-3xl md:text-4xl text-ink-900">${common.moreServicesTitle}</h2>
         </div>
-        <a href="${homeSection('usluge')}" class="btn-ghost">Sve usluge</a>
+        <a href="${homeSection('usluge')}" class="btn-ghost">${common.allServices}</a>
       </div>
       <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
         ${otherServices
@@ -1008,7 +1108,7 @@ export function renderServicePage(slug: string): string {
           <a href="${serviceHref(s.slug)}" class="group rounded-2xl border border-ivory-200 bg-white p-6 transition-colors hover:border-gold-500/40">
             <span class="font-display text-2xl text-ink-900 group-hover:text-petrol-700 transition-colors">${s.name}</span>
             <p class="mt-3 text-[13px] leading-relaxed text-stone-500">${s.description}</p>
-            <span class="mt-5 inline-flex text-gold-600 text-sm tracking-wide">Saznajte više →</span>
+            <span class="mt-5 inline-flex text-gold-600 text-sm tracking-wide">${common.learnMore}</span>
           </a>`,
           )
           .join('')}
@@ -1018,6 +1118,11 @@ export function renderServicePage(slug: string): string {
 }
 
 export function renderTeamPage(): string {
+  const teamIntro = getTeamIntro()
+  const teamMembers = getTeamMembers()
+  const teamPage = ui().teamPage
+  const common = ui().common
+
   return `
   <section class="relative min-h-[60svh] flex items-end overflow-hidden">
     <img src="/assets/o-nama/o_nama.jpg" alt="" class="absolute inset-0 h-full w-full object-cover object-center" loading="eager" fetchpriority="high" decoding="async" />
@@ -1025,10 +1130,10 @@ export function renderTeamPage(): string {
     <div class="absolute inset-0 bg-gradient-to-t from-ink-950 via-transparent to-ink-950/40"></div>
     <div class="relative container-lux pb-16 pt-40 md:pb-24 md:pt-48">
       <a href="${homeSection('o-nama')}" class="inline-flex items-center gap-2 text-[13px] uppercase tracking-[0.14em] text-ivory-50/70 hover:text-gold-300 transition-colors">
-        ← O nama
+        ${common.backToAbout}
       </a>
-      <p class="eyebrow text-gold-300 mt-8">Naš tim</p>
-      <h1 class="mt-5 max-w-[16ch] text-[2.35rem] leading-[1.08] md:text-6xl lg:text-[4.5rem] text-ivory-50">Ljudi iza vašeg novog osmeha</h1>
+      <p class="eyebrow text-gold-300 mt-8">${teamPage.eyebrow}</p>
+      <h1 class="mt-5 max-w-[16ch] text-[2.35rem] leading-[1.08] md:text-6xl lg:text-[4.5rem] text-ivory-50">${teamPage.title}</h1>
       <p class="mt-6 max-w-[52ch] text-[0.9375rem] md:text-[1.0625rem] leading-relaxed text-stone-300">
         ${teamIntro}
       </p>
@@ -1060,12 +1165,12 @@ export function renderTeamPage(): string {
   <section class="relative overflow-hidden bg-petrol-700 py-20 md:py-28 text-center text-ivory-50">
     <div class="absolute inset-0 pointer-events-none" aria-hidden="true" style="background: radial-gradient(60% 60% at 50% 30%, rgba(200,169,107,0.18), transparent 70%);"></div>
     <div class="relative container-lux reveal">
-      <h2 class="text-3xl md:text-5xl text-ivory-50">Spremni da započnete terapiju?</h2>
+      <h2 class="text-3xl md:text-5xl text-ivory-50">${teamPage.ctaTitle}</h2>
       <p class="mt-5 max-w-[48ch] mx-auto text-[0.9375rem] md:text-[1.0625rem] leading-relaxed text-stone-300">
-        Zakažite besplatan pregled i upoznajte tim koji će voditi vašu terapiju od prvog dana.
+        ${teamPage.ctaText}
       </p>
-      <a href="${homeSection('kontakt')}" class="btn-gold mt-9 inline-flex">Zakažite besplatan pregled</a>
-      <p class="mt-4 text-[13px] tracking-wide text-stone-300/80">Prvi pregled je besplatan.</p>
+      <a href="${homeSection('kontakt')}" class="btn-gold mt-9 inline-flex">${common.bookFreeExam}</a>
+      <p class="mt-4 text-[13px] tracking-wide text-stone-300/80">${common.freeFirstExam}</p>
     </div>
   </section>`
 }

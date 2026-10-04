@@ -11,25 +11,25 @@
 </head>
 
 <body>
-  <a href="#main"
+  <a href="#main" id="skip-link"
     class="skip-link fixed left-4 top-4 z-[100] -translate-y-24 rounded-full bg-gold-500 px-6 py-3 text-[13px] font-medium uppercase tracking-[0.16em] text-ink-900 transition-transform duration-300 focus:translate-y-0">
     Preskoči na sadržaj
   </a>
 
   <!-- 0. Top utility bar -->
-  <div id="topbar" class="hidden lg:flex h-11 items-center bg-petrol-700 text-ivory-50/85 text-[13px] relative z-50">
-    <div class="container-lux flex items-center justify-between">
-      <span>Pon–Pet 12:00–20:00 · Sub po pozivu</span>
-      <div class="flex items-center gap-6">
-        <a href="tel:+38162765101" class="hover:text-gold-500 transition-colors">☎ 062 / 765-101</a>
-        <a href="mailto:smilehouseofsmile@gmail.com" class="hover:text-gold-500 transition-colors">✉ smilehouseofsmile@gmail.com</a>
+  <div id="topbar" class="hidden lg:flex h-11 items-center overflow-x-hidden bg-petrol-700 text-ivory-50/85 text-[13px] relative z-50">
+    <div class="container-lux flex min-w-0 max-w-full items-center justify-between gap-3">
+      <span data-render="topbar-hours" class="min-w-0 truncate">Pon–Pet 12:00–20:00 · Sub po pozivu</span>
+      <div class="flex min-w-0 shrink items-center gap-4 xl:gap-6">
+        <a href="tel:+38162765101" class="shrink-0 hover:text-gold-500 transition-colors">☎ 062 / 765-101</a>
+        <a href="mailto:smilehouseofsmile@gmail.com" class="hidden xl:inline hover:text-gold-500 transition-colors">✉ smilehouseofsmile@gmail.com</a>
       </div>
-      <div class="flex items-center gap-4" data-render="topbar-social"></div>
+      <div class="flex shrink-0 items-center gap-4" data-render="topbar-social"></div>
     </div>
   </div>
 
   <!-- 1. Header -->
-  <header id="site-header" class="fixed top-11 left-0 right-0 z-50 transition-all duration-500" data-render="header">
+  <header id="site-header" class="fixed top-11 left-0 right-0 z-50 max-w-full transition-all duration-500" data-render="header">
   </header>
 
   <main id="main">
@@ -52,35 +52,7 @@
         style="background: radial-gradient(60% 50% at 50% 0%, rgba(159,212,206,0.16), transparent 70%);"></div>
 
       <div class="container-lux relative z-10 pt-44 pb-14 md:pt-44 md:pb-16 lg:pt-36 lg:pb-20">
-        <div class="max-w-[720px]">
-          <p class="eyebrow text-gold-300">Stomatološka nega u Beogradu</p>
-          <h1 class="mt-6 text-[2.5rem] leading-[1.05] md:text-7xl lg:text-[5.75rem] text-ivory-50">
-            Kada drugi kažu „ne može“,<br /><span class="italic text-gold-300">mi imamo način.</span>
-          </h1>
-          <p class="mt-8 max-w-[46ch] text-[0.9375rem] md:text-[1.0625rem] leading-relaxed text-stone-300">
-            Sve vrste implantata. Fiksno protetsko rešenje. Jedan tim.
-          </p>
-          <div class="mt-10 flex flex-col sm:flex-row gap-4">
-            <a href="#kontakt" class="btn-gold">Zakažite besplatan pregled</a>
-            <a href="#nas-rad" class="btn-ghost text-ivory-50 border-ivory-50/25">Pogledajte naš rad</a>
-          </div>
-          <p class="mt-4 text-[13px] tracking-wide text-stone-300/80">Prvi pregled je besplatan.</p>
-          <div
-            class="mt-10 pt-8 border-t border-white/10 flex flex-nowrap gap-x-8 gap-y-3 overflow-x-auto no-scrollbar">
-            <span class="flex items-center gap-2 whitespace-nowrap text-[13px] text-stone-300"><svg
-                class="h-4 w-4 text-gold-500 shrink-0" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2l2.6 6.6L21 9l-5 4.6L17.4 21 12 17.3 6.6 21 8 13.6 3 9l6.4-.4z" />
-              </svg>10+ godina iskustva</span>
-            <span class="flex items-center gap-2 whitespace-nowrap text-[13px] text-stone-300"><svg
-                class="h-4 w-4 text-gold-500 shrink-0" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2l2.6 6.6L21 9l-5 4.6L17.4 21 12 17.3 6.6 21 8 13.6 3 9l6.4-.4z" />
-              </svg>1 godina garancije</span>
-            <span class="flex items-center gap-2 whitespace-nowrap text-[13px] text-stone-300"><svg
-                class="h-4 w-4 text-gold-500 shrink-0" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2l2.6 6.6L21 9l-5 4.6L17.4 21 12 17.3 6.6 21 8 13.6 3 9l6.4-.4z" />
-              </svg>Bezbolna terapija u sedaciji</span>
-          </div>
-        </div>
+        <div data-render="hero"></div>
       </div>
     </section>
 

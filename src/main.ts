@@ -1,4 +1,5 @@
 import './style.css'
+import { bootstrapI18n } from './i18n/bootstrap'
 import { mountSections } from './lib/render'
 import { initHeader } from './components/header'
 import { initReveal } from './components/reveal'
@@ -13,6 +14,7 @@ import { initFloatingActions } from './components/floatingActions'
 import { initLangSwitch } from './components/langSwitch'
 
 document.addEventListener('DOMContentLoaded', () => {
+  bootstrapI18n()
   mountSections()
   initHeader()
   initReveal()
