@@ -3,6 +3,8 @@ import { ui } from '../i18n/content'
 
 const PHONE_RE = /^[+0-9\s()-]{6,20}$/
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit'
+const WEB3FORMS_ACCESS_KEY = '6d1c6b88-2435-4ba1-802c-f45ae07997c2'
 
 interface FieldError {
   field: string
@@ -18,12 +20,33 @@ export function initForm(): void {
   const submitLabel = $<HTMLElement>('[data-submit-label]', form)
   const success = $<HTMLElement>('[data-success]', form)
   const resetBtn = $<HTMLButtonElement>('[data-reset-form]', form)
+  const formError = $<HTMLElement>('[data-form-error]', form)
   const formUi = () => ui().form
 
-  on(form, 'submit', (e) => {
+  const setSubmitting = (busy: boolean) => {
+    if (!submitBtn || !submitLabel) return
+    submitBtn.disabled = busy
+    submitBtn.classList.toggle('opacity-70', busy)
+    submitLabel.textContent = busy ? formUi().submitting : formUi().submit
+  }
+
+  const showFormError = (message: string) => {
+    if (!formError) return
+    formError.textContent = message
+    formError.classList.remove('hidden')
+  }
+
+  const clearFormError = () => {
+    if (!formError) return
+    formError.textContent = ''
+    formError.classList.add('hidden')
+  }
+
+  on(form, 'submit', async (e) => {
     e.preventDefault()
     const errors = validate(form)
     clearErrors(form)
+    clearFormError()
 
     if (errors.length) {
       errors.forEach(({ field, message }) => showError(form, field, message))
@@ -33,32 +56,41 @@ export function initForm(): void {
     }
 
     if (!submitBtn || !submitLabel || !fieldsWrap || !success) return
-    submitBtn.disabled = true
-    submitLabel.textContent = formUi().submitting
-    submitBtn.classList.add('opacity-70')
+    setSubmitting(true)
 
-    const data = Object.fromEntries(new FormData(form).entries())
-    window.setTimeout(() => {
-      // eslint-disable-next-line no-console
-      console.log('Kontakt forma — podaci za slanje:', data)
-      // TODO: backend integration
+    try {
+      const payload = new FormData(form)
+      payload.set('access_key', WEB3FORMS_ACCESS_KEY)
+      payload.set('subject', 'Novi zahtev sa sajta — House of Smile')
+      payload.set('from_name', 'House of Smile kontakt forma')
+
+      const response = await fetch(WEB3FORMS_ENDPOINT, {
+        method: 'POST',
+        body: payload,
+      })
+      const result = (await response.json()) as { success?: boolean; message?: string }
+
+      if (!response.ok || !result.success) {
+        throw new Error(result.message || 'Web3Forms error')
+      }
+
       fieldsWrap.classList.add('hidden')
       submitBtn.classList.add('hidden')
       success.classList.remove('hidden')
-    }, 900)
+    } catch {
+      showFormError(formUi().submitError)
+      setSubmitting(false)
+    }
   })
 
   on(resetBtn, 'click', () => {
     form.reset()
     clearErrors(form)
+    clearFormError()
     fieldsWrap?.classList.remove('hidden')
     submitBtn?.classList.remove('hidden')
     success?.classList.add('hidden')
-    if (submitBtn) {
-      submitBtn.disabled = false
-      submitBtn.classList.remove('opacity-70')
-    }
-    if (submitLabel) submitLabel.textContent = formUi().submit
+    setSubmitting(false)
   })
 }
 

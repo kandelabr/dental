@@ -148,6 +148,7 @@
       "unsureOption": "Ich bin mir nicht sicher",
       "submit": "Anfrage senden",
       "submitting": "Wird gesendet...",
+      "submitError": "Senden fehlgeschlagen. Bitte erneut versuchen oder anrufen.",
       "successTitle": "Vielen Dank!",
       "successText": "Wir melden uns innerhalb von 24 Stunden bei Ihnen.",
       "reset": "Neue Anfrage senden",

@@ -639,6 +639,7 @@ function renderContact(): string {
       <p class="mt-4 text-[0.9375rem] md:text-[1.0625rem] text-petrol-700 font-medium tracking-wide">${copy.freeExamNote}</p>
 
       <form id="contact-form" novalidate class="mt-10 rounded-[1.75rem] border border-ivory-200 bg-ivory-100 p-8 md:p-10">
+        <input type="checkbox" name="botcheck" class="hidden" tabindex="-1" autocomplete="off" aria-hidden="true" />
         <div data-form-fields class="space-y-5">
           <div>
             <label for="field-name" class="block text-sm text-stone-500 mb-2">${form.labels.name}</label>
@@ -676,6 +677,7 @@ function renderContact(): string {
         <button type="submit" data-submit-btn class="btn-gold w-full mt-8">
           <span data-submit-label>${form.submit}</span>
         </button>
+        <p data-form-error class="mt-3 hidden text-center text-[13px] text-red-500" role="alert"></p>
 
         <div data-success class="hidden text-center py-6">
           <span class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-gold-500 text-ink-900">

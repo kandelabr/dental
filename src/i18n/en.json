@@ -148,6 +148,7 @@
       "unsureOption": "I'm not sure",
       "submit": "Send request",
       "submitting": "Sending...",
+      "submitError": "Sending failed. Please try again or call us.",
       "successTitle": "Thank you!",
       "successText": "We will contact you within 24h.",
       "reset": "Send a new request",

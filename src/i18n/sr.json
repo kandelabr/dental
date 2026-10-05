@@ -148,6 +148,7 @@
       "unsureOption": "Nisam siguran/na",
       "submit": "Pošalji zahtev",
       "submitting": "Šaljem...",
+      "submitError": "Slanje nije uspelo. Pokušajte ponovo ili nas pozovite.",
       "successTitle": "Hvala vam!",
       "successText": "Kontaktiraćemo vas u roku od 24h.",
       "reset": "Pošalji novi zahtev",
