@@ -83,12 +83,12 @@
         "percent": "10%",
         "lead": "Заключены договоры с ведущими страховыми компаниями о возмещении расходов — застрахованные пациенты получают лечение по ценам на 10% ниже.",
         "cardLead": "более низкие цены для застрахованных пациентов",
-        "cardNote": "Dunav osiguranje, Triglav, Globos и Delta Generali — возмещение по заключённым договорам.",
+        "cardNote": "Dunav osiguranje, Triglav, Globos и Delta osiguranje — возмещение по заключённым договорам.",
         "insurers": [
           "Dunav osiguranje",
           "Triglav",
           "Globos",
-          "Delta Generali"
+          "Delta osiguranje"
         ]
       },
       "work": {
