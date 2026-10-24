@@ -26,7 +26,7 @@ const SERVICE_SLUGS = [
 const ROOT_PAGES = ['index.html', 'nas-tim.html', ...SERVICE_SLUGS.map((s) => `usluge/${s}.html`)] as const
 
 /** Must be absolute http(s) so Vite does not try to resolve `/en/` as a project directory. */
-const SITE_ORIGIN = (process.env.VITE_SITE_ORIGIN || 'https://www.houseofsmilebgd.rs').replace(/\/$/, '')
+const SITE_ORIGIN = (process.env.VITE_SITE_ORIGIN || 'https://www.houseofsmile.rs').replace(/\/$/, '')
 
 function hreflangLinks(pagePath: string): string {
   const bare = pagePath === 'index.html' ? '/' : `/${pagePath}`

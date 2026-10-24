@@ -9,7 +9,7 @@ import { prerenderPage } from '../src/i18n/prerender'
 import { isLocale, type Locale } from '../src/i18n/locales'
 
 const distDir = join(fileURLToPath(new URL('..', import.meta.url)), 'dist')
-const siteOrigin = (process.env.VITE_SITE_ORIGIN || 'https://www.houseofsmilebgd.rs').replace(/\/$/, '')
+const siteOrigin = (process.env.VITE_SITE_ORIGIN || 'https://www.houseofsmile.rs').replace(/\/$/, '')
 
 function walkHtml(dir: string): string[] {
   const out: string[] = []

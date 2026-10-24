@@ -5,9 +5,14 @@ import { getMessages, setLocale } from './messages'
 import { setPrerenderPath } from './prerender-context'
 import { getServicePage, getSite, ui } from './content'
 
+const runtimeEnv = (globalThis as typeof globalThis & {
+  process?: { env?: Record<string, string | undefined> }
+}).process?.env
+
 const SITE_ORIGIN = String(
   (import.meta as ImportMeta & { env?: { VITE_SITE_ORIGIN?: string } }).env?.VITE_SITE_ORIGIN ||
-    'https://www.houseofsmilebgd.rs',
+    runtimeEnv?.VITE_SITE_ORIGIN ||
+    'https://www.houseofsmile.rs',
 ).replace(/\/$/, '')
 
 const OG_LOCALE: Record<Locale, string> = {
@@ -107,9 +112,6 @@ const SEO_TITLES: Record<Locale, { home: string; team: string; services: Record<
   },
 }
 
-const runtimeEnv = (globalThis as typeof globalThis & {
-  process?: { env?: Record<string, string | undefined> }
-}).process?.env
 const GOOGLE_SITE_VERIFICATION = runtimeEnv?.GOOGLE_SITE_VERIFICATION?.trim()
 
 function escapeHtml(value: string): string {
